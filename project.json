@@ -15947,8 +15947,8 @@
                         "id": "53265534-b9dd-d544-4e33-8dc5789f6f56",
                         "type": "Javascript2",
                         "label": "Action",
-                        "x": -450.0858513296903,
-                        "y": 563.6403650493093,
+                        "x": -447.52752058330384,
+                        "y": 562.361199676116,
                         "parameters": {
                             "code": "//var msgA = new SpeechSynthesisUtterance('Action')\ndefine({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var audio = new Audio('http://users.student.lth.se/dic12jsv/sounds/level0.wav');\n                audio.play();\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100]);\n            }\n    }\n});",
                             "pageShowing": true
@@ -20290,6 +20290,6 @@
         "BackButtom.rootComponent": "/HomeButtom",
         "Remote Control.rootComponent": "/HomeButtom"
     },
-    "rootNodeId": "b31e863e-c306-e628-7c3b-9b71ba3ef393",
+    "rootNodeId": "c45d909a-7a61-f352-84a4-00a86250fbcd",
     "version": "1"
 }
