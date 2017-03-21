@@ -15784,6 +15784,18 @@
                         "fromProperty": "pageHiding",
                         "toId": "214a34c7-a512-2ac2-42b5-772d852fcdc3",
                         "toProperty": "stop"
+                    },
+                    {
+                        "fromId": "0d0e1083-c6dd-f17d-1fff-e0b4fd896971",
+                        "fromProperty": "pageShowing",
+                        "toId": "f82f4b10-54e5-0f6c-7c65-6dc458f91e24",
+                        "toProperty": "pageShowing"
+                    },
+                    {
+                        "fromId": "7dfbff76-6a07-50ca-4f93-ff6a47d0c980",
+                        "fromProperty": "messageReceived",
+                        "toId": "f82f4b10-54e5-0f6c-7c65-6dc458f91e24",
+                        "toProperty": "repeat"
                     }
                 ],
                 "roots": [
@@ -15950,7 +15962,7 @@
                         "x": -450.0858513296903,
                         "y": 563.6403650493093,
                         "parameters": {
-                            "code": "//var msgA = new SpeechSynthesisUtterance('Action')\ndefine({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var audio = new Audio('http://users.student.lth.se/dic12jsv/sounds/level0.wav');\n                audio.play();\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100]);\n            }\n    }\n});",
+                            "code": "//var msgA = new SpeechSynthesisUtterance('Action')\ndefine({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                window.speechSynthesis.speak(msgA);\n                msgA.rate = 2.5;\n                window.navigator.vibrate([100]);\n            }\n    }\n});",
                             "pageShowing": true
                         },
                         "ports": [],
@@ -15995,7 +16007,8 @@
                         "x": -248.80795045125075,
                         "y": 547.7642175287315,
                         "parameters": {
-                            "duration": 2000
+                            "duration": 500,
+                            "startDelay": 100
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -16034,7 +16047,7 @@
                         "x": -451.890933574684,
                         "y": 705.2901192348688,
                         "parameters": {
-                            "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100,30,100]);\n            }\n    }\n});\n\n\n",
+                            "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                msgA.rate = 2.5;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100,30,100]);\n            }\n    }\n});\n\n\n",
                             "pageShowing": true
                         },
                         "ports": [],
@@ -16105,7 +16118,7 @@
                         "x": -253.7520023300076,
                         "y": 692.3586229167365,
                         "parameters": {
-                            "duration": 2000
+                            "duration": 1000
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -16118,7 +16131,7 @@
                         "x": -447.40526798492033,
                         "y": 843.8026699996253,
                         "parameters": {
-                            "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100,30,100,30,100]);\n            }\n    }\n});",
+                            "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                msgA.rate = 2.5;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100,30,100,30,100]);\n            }\n    }\n});",
                             "pageShowing": true
                         },
                         "ports": [],
@@ -16189,7 +16202,7 @@
                         "x": -256.71030170033936,
                         "y": 820.032982469655,
                         "parameters": {
-                            "duration": 2000
+                            "duration": 1000
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -16202,7 +16215,7 @@
                         "x": -450.04370518965527,
                         "y": 1008.7672445857486,
                         "parameters": {
-                            "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100,30,100,30,100,30,100]);\n            }\n    }\n});",
+                            "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                msgA.rate = 2.5;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100,30,100,30,100,30,100]);\n            }\n    }\n});",
                             "pageShowing": true
                         },
                         "ports": [],
@@ -16273,7 +16286,7 @@
                         "x": -256.7954774152028,
                         "y": 983.0085417984691,
                         "parameters": {
-                            "duration": 2000
+                            "duration": 1000
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -16348,6 +16361,37 @@
                             }
                         ],
                         "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "f82f4b10-54e5-0f6c-7c65-6dc458f91e24",
+                        "type": "Javascript2",
+                        "x": -515.8793398060816,
+                        "y": 392.2468321975231,
+                        "parameters": {
+                            "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        repeat: \"boolean\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing || inputs.repeat){\n                var audio = new Audio('http://users.student.lth.se/dic12jsv/sounds/level0.wav');\n                audio.play();\n            }\n    }\n});"
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "name": "pageShowing",
+                                "plug": "input",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "group": "Inputs",
+                                "index": 2
+                            },
+                            {
+                                "name": "repeat",
+                                "plug": "input",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "group": "Inputs",
+                                "index": 3
+                            }
+                        ],
                         "children": []
                     }
                 ]
@@ -17398,6 +17442,18 @@
                         "fromProperty": "messageReceived",
                         "toId": "6476ef8b-b784-38b5-b66e-17bfccd0b365",
                         "toProperty": "navigate"
+                    },
+                    {
+                        "fromId": "2d3a4b75-4f59-0bbb-2c7d-6257d284854e",
+                        "fromProperty": "messageReceived",
+                        "toId": "da161bf1-2073-d2d8-6322-0511c96c0533",
+                        "toProperty": "repeat"
+                    },
+                    {
+                        "fromId": "910c9883-0841-5edc-20a7-979d326c931e",
+                        "fromProperty": "pageShowing",
+                        "toId": "da161bf1-2073-d2d8-6322-0511c96c0533",
+                        "toProperty": "pageShowing"
                     }
                 ],
                 "roots": [
@@ -17548,10 +17604,10 @@
                         "id": "b1ae5449-4905-6fe1-1eca-3889ecb2b62d",
                         "type": "Javascript2",
                         "label": "Action",
-                        "x": 702.4919636684876,
+                        "x": 701.4447175599528,
                         "y": 941.1888395869449,
                         "parameters": {
-                            "code": "//var msgA = new SpeechSynthesisUtterance('Action')\ndefine({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var audio = new Audio('http://users.student.lth.se/dic12jsv/sounds/level1.wav');\n                audio.play();\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100]);\n            }\n    }\n});",
+                            "code": "//var msgA = new SpeechSynthesisUtterance('Action')\ndefine({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                msgA.rate = 2.5;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100]);\n            }\n    }\n});",
                             "pageShowing": false
                         },
                         "ports": [],
@@ -17597,7 +17653,8 @@
                         "x": 917.8081664982288,
                         "y": 956.2139723419023,
                         "parameters": {
-                            "duration": 2000
+                            "duration": 500,
+                            "startDelay": 100
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -17636,7 +17693,7 @@
                         "x": 703.2217748389755,
                         "y": 1073.3017430968087,
                         "parameters": {
-                            "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100,30,100]);\n            }\n    }\n});",
+                            "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                msgA.rate = 2.5;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100,30,100]);\n            }\n    }\n});",
                             "pageShowing": true
                         },
                         "ports": [],
@@ -17707,7 +17764,7 @@
                         "x": 915.3558749082601,
                         "y": 1085.6057720296649,
                         "parameters": {
-                            "duration": 2000
+                            "duration": 1000
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -17720,7 +17777,7 @@
                         "x": 700.2045031380742,
                         "y": 1209.6281337398357,
                         "parameters": {
-                            "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100,30,100,30,100]);\n            }\n    }\n});",
+                            "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                msgA.rate = 2.5;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100,30,100,30,100]);\n            }\n    }\n});",
                             "pageShowing": true
                         },
                         "ports": [],
@@ -17791,7 +17848,7 @@
                         "x": 910.7035299145045,
                         "y": 1233.386011036528,
                         "parameters": {
-                            "duration": 2000
+                            "duration": 1000
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -17804,7 +17861,7 @@
                         "x": 702.0773250572919,
                         "y": 1358.0966741909388,
                         "parameters": {
-                            "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100,30,100,30,100,30,100]);\n            }\n    }\n});",
+                            "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                msgA.rate = 2.5;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100,30,100,30,100,30,100]);\n            }\n    }\n});",
                             "pageShowing": true
                         },
                         "ports": [],
@@ -17873,9 +17930,9 @@
                         "id": "d18a5000-b30c-3cbe-753c-5840f83cf1bc",
                         "type": "Timer",
                         "x": 896.5757982992025,
-                        "y": 1383.4175673998222,
+                        "y": 1384.464813508357,
                         "parameters": {
-                            "duration": 2000
+                            "duration": 1000
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -17996,6 +18053,37 @@
                             }
                         ],
                         "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "da161bf1-2073-d2d8-6322-0511c96c0533",
+                        "type": "Javascript2",
+                        "x": 702.8562694738912,
+                        "y": 746.3157379176389,
+                        "parameters": {
+                            "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        repeat: \"boolean\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing || inputs.repeat){\n                var audio = new Audio('http://users.student.lth.se/dic12jsv/sounds/level1.wav');\n                audio.play();\n            }\n    }\n});"
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "name": "pageShowing",
+                                "plug": "input",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "group": "Inputs",
+                                "index": 2
+                            },
+                            {
+                                "name": "repeat",
+                                "plug": "input",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "group": "Inputs",
+                                "index": 3
+                            }
+                        ],
                         "children": []
                     }
                 ]
@@ -18123,6 +18211,18 @@
                         "fromId": "3ff64b6b-d76b-3d8b-3f14-771e9b3f4f81",
                         "fromProperty": "messageReceived",
                         "toId": "a06ad113-b67b-3a3f-9205-df184bde910f",
+                        "toProperty": "pageShowing"
+                    },
+                    {
+                        "fromId": "461f2afb-7cfd-f770-1c99-73291a6d1cf9",
+                        "fromProperty": "messageReceived",
+                        "toId": "51a55833-c590-6af8-511e-0f85c64f14dc",
+                        "toProperty": "repeat"
+                    },
+                    {
+                        "fromId": "b31e863e-c306-e628-7c3b-9b71ba3ef393",
+                        "fromProperty": "pageShowing",
+                        "toId": "51a55833-c590-6af8-511e-0f85c64f14dc",
                         "toProperty": "pageShowing"
                     }
                 ],
@@ -18277,7 +18377,7 @@
                         "x": 950.6984997544495,
                         "y": 669.0119575571889,
                         "parameters": {
-                            "duration": 2000
+                            "duration": 500
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -18475,6 +18575,37 @@
                         },
                         "ports": [],
                         "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "51a55833-c590-6af8-511e-0f85c64f14dc",
+                        "type": "Javascript2",
+                        "x": 737.4591091522252,
+                        "y": 527.2273151973076,
+                        "parameters": {
+                            "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        repeat: \"boolean\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing || inputs.repeat){\n                var audio = new Audio('http://users.student.lth.se/dic12jsv/sounds/level1.wav');\n                audio.play();\n            }\n    }\n});"
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "name": "pageShowing",
+                                "plug": "input",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "group": "Inputs",
+                                "index": 2
+                            },
+                            {
+                                "name": "repeat",
+                                "plug": "input",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "group": "Inputs",
+                                "index": 3
+                            }
+                        ],
                         "children": []
                     }
                 ]
@@ -19242,6 +19373,18 @@
                         "fromProperty": "messageReceived",
                         "toId": "1ae504f0-d257-cc7d-5d0b-a4beea83de27",
                         "toProperty": "navigate"
+                    },
+                    {
+                        "fromId": "4ad38681-cbc7-2aa0-9d79-5a4027a0a0cd",
+                        "fromProperty": "messageReceived",
+                        "toId": "a5db56cb-f795-5f37-4429-c4b9cc009a66",
+                        "toProperty": "repeat"
+                    },
+                    {
+                        "fromId": "5069b1f7-e869-c4d9-fa0b-d7f9255efc56",
+                        "fromProperty": "pageShowing",
+                        "toId": "a5db56cb-f795-5f37-4429-c4b9cc009a66",
+                        "toProperty": "pageShowing"
                     }
                 ],
                 "roots": [
@@ -19395,7 +19538,7 @@
                         "x": 545.3822969247083,
                         "y": 712.9868248022316,
                         "parameters": {
-                            "code": "//var msgA = new SpeechSynthesisUtterance('Action')\ndefine({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var audio = new Audio('http://users.student.lth.se/dic12jsv/sounds/level2.wav');\n                audio.play();\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100]);\n            }\n    }\n});",
+                            "code": "//var msgA = new SpeechSynthesisUtterance('Action')\ndefine({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                msgA.rate = 2.5;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100]);\n            }\n    }\n});",
                             "pageShowing": false
                         },
                         "ports": [],
@@ -19441,7 +19584,8 @@
                         "x": 760.6984997544495,
                         "y": 728.0119575571889,
                         "parameters": {
-                            "duration": 2000
+                            "duration": 500,
+                            "startDelay": 100
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -19477,10 +19621,10 @@
                         "id": "29fb5885-94d3-e662-220a-ec2c0c61218b",
                         "type": "Javascript2",
                         "label": "Drama",
-                        "x": 546.1121080951962,
+                        "x": 547.1121080951962,
                         "y": 845.0997283120953,
                         "parameters": {
-                            "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100,30,100]);\n            }\n    }\n});",
+                            "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                msgA.rate = 2.5;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100,30,100]);\n            }\n    }\n});",
                             "pageShowing": true
                         },
                         "ports": [],
@@ -19551,7 +19695,7 @@
                         "x": 758.2462081644808,
                         "y": 857.4037572449515,
                         "parameters": {
-                            "duration": 2000
+                            "duration": 1000
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -19564,7 +19708,7 @@
                         "x": 543.0948363942948,
                         "y": 981.4261189551223,
                         "parameters": {
-                            "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100,30,100,30,100]);\n            }\n    }\n});",
+                            "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                msgA.rate = 2.5;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100,30,100,30,100]);\n            }\n    }\n});",
                             "pageShowing": true
                         },
                         "ports": [],
@@ -19635,7 +19779,7 @@
                         "x": 753.5938631707252,
                         "y": 1005.1839962518147,
                         "parameters": {
-                            "duration": 2000
+                            "duration": 1000
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -19648,7 +19792,7 @@
                         "x": 544.9676583135125,
                         "y": 1129.8946594062254,
                         "parameters": {
-                            "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100,30,100,30,100,30,100]);\n            }\n    }\n});",
+                            "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                msgA.rate = 2.5;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100,30,100,30,100,30,100]);\n            }\n    }\n});",
                             "pageShowing": true
                         },
                         "ports": [],
@@ -19719,7 +19863,7 @@
                         "x": 739.4661315554231,
                         "y": 1155.215552615109,
                         "parameters": {
-                            "duration": 2000
+                            "duration": 1000
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -19805,6 +19949,37 @@
                             }
                         ],
                         "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "a5db56cb-f795-5f37-4429-c4b9cc009a66",
+                        "type": "Javascript2",
+                        "x": 543.1841828540194,
+                        "y": 596.5537077665759,
+                        "parameters": {
+                            "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        repeat: \"boolean\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing || inputs.repeat){\n                var audio = new Audio('http://users.student.lth.se/dic12jsv/sounds/level2.wav');\n                audio.play();\n            }\n    }\n});"
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "name": "pageShowing",
+                                "plug": "input",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "group": "Inputs",
+                                "index": 2
+                            },
+                            {
+                                "name": "repeat",
+                                "plug": "input",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "group": "Inputs",
+                                "index": 3
+                            }
+                        ],
                         "children": []
                     }
                 ]
@@ -19927,6 +20102,18 @@
                         "fromProperty": "Label",
                         "toId": "426c88d1-5224-57cd-0e87-37259e98456a",
                         "toProperty": "textToSpeech"
+                    },
+                    {
+                        "fromId": "e5b3e5bc-d355-f9f0-8ff6-f44accfcb20b",
+                        "fromProperty": "messageReceived",
+                        "toId": "215a5129-dcc8-e6b2-8ad1-19de9a6bc36a",
+                        "toProperty": "repeat"
+                    },
+                    {
+                        "fromId": "a1f16b6b-8d3e-3e6d-1338-7b3a1c8e8088",
+                        "fromProperty": "pageShowing",
+                        "toId": "215a5129-dcc8-e6b2-8ad1-19de9a6bc36a",
+                        "toProperty": "pageShowing"
                     }
                 ],
                 "roots": [
@@ -20015,7 +20202,7 @@
                         "x": 604.3822969247083,
                         "y": 668.1362069960098,
                         "parameters": {
-                            "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeech: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var audio = new Audio('http://users.student.lth.se/dic12jsv/sounds/level3.wav');\n                audio.play();\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeech);\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100]);\n            }\n    }\n});",
+                            "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeech: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeech);\n                msgA.rate = 2.5;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100]);\n            }\n    }\n});",
                             "pageShowing": false
                         },
                         "ports": [],
@@ -20100,7 +20287,7 @@
                         "x": 605.1121080951962,
                         "y": 802.0997283120953,
                         "parameters": {
-                            "code": "var msgA;\ndefine({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeech: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                msgA = new SpeechSynthesisUtterance(inputs.textToSpeech);\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100,30,100]);\n            }\n    }\n});",
+                            "code": "var msgA;\ndefine({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeech: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                msgA = new SpeechSynthesisUtterance(inputs.textToSpeech);\n                msgA.rate = 2.5;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100,30,100]);\n            }\n    }\n});",
                             "pageShowing": false
                         },
                         "ports": [],
@@ -20273,6 +20460,37 @@
                             }
                         ],
                         "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "215a5129-dcc8-e6b2-8ad1-19de9a6bc36a",
+                        "type": "Javascript2",
+                        "x": 596.6027684057008,
+                        "y": 490.06594756862137,
+                        "parameters": {
+                            "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        repeat: \"boolean\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing || inputs.repeat){\n                var audio = new Audio('http://users.student.lth.se/dic12jsv/sounds/level3.wav');\n                audio.play();\n            }\n    }\n});"
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "name": "pageShowing",
+                                "plug": "input",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "group": "Inputs",
+                                "index": 2
+                            },
+                            {
+                                "name": "repeat",
+                                "plug": "input",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "group": "Inputs",
+                                "index": 3
+                            }
+                        ],
                         "children": []
                     }
                 ]
