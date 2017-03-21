@@ -20277,13 +20277,6 @@
                     }
                 ]
             }
-        },
-        {
-            "name": "/hejhej",
-            "graph": {
-                "connections": [],
-                "roots": []
-            }
         }
     ],
     "settings": {
