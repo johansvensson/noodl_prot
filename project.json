@@ -109,15 +109,15 @@
                     },
                     {
                         "fromId": "f73f976a-3730-0a7d-c335-862615f38de1",
-                        "fromProperty": "backHome",
-                        "toId": "2c848ce2-bb20-e068-f5fd-3be79d7d6ff6",
-                        "toProperty": "navigate"
-                    },
-                    {
-                        "fromId": "f73f976a-3730-0a7d-c335-862615f38de1",
                         "fromProperty": "repeat",
                         "toId": "9bf87a53-505e-7dac-622a-3ed3f46cda12",
                         "toProperty": "send"
+                    },
+                    {
+                        "fromId": "f73f976a-3730-0a7d-c335-862615f38de1",
+                        "fromProperty": "backHome",
+                        "toId": "2c848ce2-bb20-e068-f5fd-3be79d7d6ff6",
+                        "toProperty": "navigate"
                     }
                 ],
                 "roots": [
@@ -235,8 +235,8 @@
                     {
                         "id": "f73f976a-3730-0a7d-c335-862615f38de1",
                         "type": "Javascript2",
-                        "x": 897.5985988434579,
-                        "y": 294.09528081837465,
+                        "x": 920.6235755609359,
+                        "y": 277.46613096686275,
                         "parameters": {
                             "code": "define({\n    inputs:{\n       startSearch: \"bolean\"  \n    },\n    outputs: {\n        keyLeft: \"boolean\",\n        keyRight: \"boolean\",\n        keyDown: \"boolean\",\n        topLeft: \"boolean\",\n        topRight: \"boolean\",\n        bottomLeft: \"boolean\",\n        bottomRight: \"boolean\",\n        backHome: \"boolean\",\n        repeat: \"boolean\",\n     },\n    setup: function(inputs, outputs) {\n        var self = this;\n        document.addEventListener(\"keydown\", function(e) {\n            if(e.keyCode === 100) {\n                self.sendSignalOnOutput(\"topLeft\");\n                console.log(\"skickar\");\n            }\n            else if(e.keyCode === 101) {\n                self.sendSignalOnOutput(\"topRight\");\n            }\n            else if(e.keyCode === 97) {\n                self.sendSignalOnOutput(\"bottomLeft\");\n            }\n            else if(e.keyCode === 98) {\n                self.sendSignalOnOutput(\"bottomRight\");\n            }\n            else if(e.keyCode === 103) {\n                self.sendSignalOnOutput(\"backHome\");\n            }\n            else if(e.keyCode === 104) {\n                self.sendSignalOnOutput(\"repeat\");\n            }\n        });\n\n}   \n    });\n    "
                         },
@@ -589,12 +589,22 @@
                     {
                         "id": "2c848ce2-bb20-e068-f5fd-3be79d7d6ff6",
                         "type": "Page Navigation",
-                        "x": 886.7908315680631,
-                        "y": 96.60752387418346,
+                        "x": 1183.5571981488908,
+                        "y": 105.56168148653602,
                         "parameters": {
                             "destination": "/StartPage",
                             "resetPageStack": true
                         },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "e42453df-13eb-e05c-1214-2bbbcda03411",
+                        "type": "Reload",
+                        "x": 1029.062089611411,
+                        "y": 150.35600876650147,
+                        "parameters": {},
                         "ports": [],
                         "dynamicports": [],
                         "children": []
@@ -18102,12 +18112,6 @@
                         "toProperty": "pageShowing"
                     },
                     {
-                        "fromId": "75cfbaa2-d536-fe4f-464a-5632b18cc261",
-                        "fromProperty": "index",
-                        "toId": "3e027b67-096f-2106-7e41-143f45da8eb0",
-                        "toProperty": "Label"
-                    },
-                    {
                         "fromId": "b31e863e-c306-e628-7c3b-9b71ba3ef393",
                         "fromProperty": "pageShowing",
                         "toId": "85faed81-931b-0564-b28d-2369ff2f15dd",
@@ -18116,6 +18120,18 @@
                     {
                         "fromId": "85faed81-931b-0564-b28d-2369ff2f15dd",
                         "fromProperty": "timerFinished",
+                        "toId": "a06ad113-b67b-3a3f-9205-df184bde910f",
+                        "toProperty": "pageShowing"
+                    },
+                    {
+                        "fromId": "75cfbaa2-d536-fe4f-464a-5632b18cc261",
+                        "fromProperty": "signalTriggered",
+                        "toId": "82850068-2452-3a02-db25-58d84407bbc8",
+                        "toProperty": "send"
+                    },
+                    {
+                        "fromId": "3ff64b6b-d76b-3d8b-3f14-771e9b3f4f81",
+                        "fromProperty": "messageReceived",
                         "toId": "a06ad113-b67b-3a3f-9205-df184bde910f",
                         "toProperty": "pageShowing"
                     }
@@ -18157,16 +18173,40 @@
                                         "y": 61,
                                         "parameters": {
                                             "Width": {
-                                                "value": 100,
+                                                "value": 45,
                                                 "unit": "%"
                                             },
                                             "Height": {
-                                                "value": 95,
+                                                "value": 100,
                                                 "unit": "%"
                                             },
-                                            "Label": "Podcasts",
+                                            "Label": "Press stop to \nsearch for \ndesired movie",
                                             "Id": "EA",
                                             "Color": "#ee462f"
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "3e027b67-096f-2106-7e41-143f45da8eb0",
+                                        "type": "/UI Kit/Controls/Big Button",
+                                        "x": 20,
+                                        "y": 163,
+                                        "parameters": {
+                                            "Width": {
+                                                "value": 45,
+                                                "unit": "%"
+                                            },
+                                            "Height": {
+                                                "value": 100,
+                                                "unit": "%"
+                                            },
+                                            "Label": "Press to \nrepeat",
+                                            "Id": "EA",
+                                            "Color": "#022fa2",
+                                            "Align Y": "bottom",
+                                            "Align X": "right"
                                         },
                                         "ports": [],
                                         "dynamicports": [],
@@ -18190,31 +18230,7 @@
                                 },
                                 "ports": [],
                                 "dynamicports": [],
-                                "children": [
-                                    {
-                                        "id": "3e027b67-096f-2106-7e41-143f45da8eb0",
-                                        "type": "/UI Kit/Controls/Big Button",
-                                        "x": 20,
-                                        "y": 61,
-                                        "parameters": {
-                                            "Width": {
-                                                "value": 100,
-                                                "unit": "%"
-                                            },
-                                            "Height": {
-                                                "value": 95,
-                                                "unit": "%"
-                                            },
-                                            "Label": "Podcasts",
-                                            "Id": "EA",
-                                            "Color": "#ee462f",
-                                            "Align Y": "bottom"
-                                        },
-                                        "ports": [],
-                                        "dynamicports": [],
-                                        "children": []
-                                    }
-                                ]
+                                "children": []
                             }
                         ]
                     },
@@ -18337,7 +18353,7 @@
                             "topic": "/MoviesSearch/{number}",
                             "rateLimit": true,
                             "maxMessagesPerSecond": 1,
-                            "publishOnInputsChanged": true
+                            "publishOnInputsChanged": false
                         },
                         "ports": [],
                         "dynamicports": [
@@ -18355,10 +18371,10 @@
                         "id": "a06ad113-b67b-3a3f-9205-df184bde910f",
                         "type": "Javascript2",
                         "label": "Lista",
-                        "x": 1728.7953722952552,
+                        "x": 1729.9981767307845,
                         "y": 417.43690804096195,
                         "parameters": {
-                            "code": "var totalTime = 4892/7;\nvar t1;\ndefine({\n    inputs: {\n        pageShowing: \"boolean\",\n    },\n    outputs:{\n        ab: \"boolean\",\n        bac: \"boolean\",\n        cbd: \"boolean\",\n        dce: \"boolean\",\n        edf: \"boolean\",\n        feg: \"boolean\",\n        gfh: \"boolean\",\n        hg: \"boolean\",\n    },\n    run: function(inputs, outputs) {\n        var synth = window.speechSynthesis;\n        var utterThis = new SpeechSynthesisUtterance(\"a,b,c,d,e,f,g,h\");\n        var self1 = this;\n        if(inputs.pageShowing){\n             document.addEventListener(\"keydown\", function(e) {\n                    if((e.key === \"ArrowLeft\") || (e.keyCode === 188)) {\n                        synth.cancel();\n                    }\n                        });\n                        console.log(\"går in i paheshowing\");\n                        synth.speak(utterThis);\n           \n                utterThis.onend = function(event) {\n                if(0<event.elapsedTime && event.elapsedTime<= totalTime ){\n                    self1.sendSignalOnOutput(\"ab\");\n\n                }\n                else if(totalTime<event.elapsedTime && event.elapsedTime<=(totalTime*2)){\n                    self1.sendSignalOnOutput(\"bac\");\n                }\n                else if((totalTime*2)<event.elapsedTime && event.elapsedTime<=(totalTime*3)){\n                    self1.sendSignalOnOutput(\"cbd\");\n              }\n              else if((totalTime*3)<event.elapsedTime && event.elapsedTime<=(totalTime*4)){\n                    self1.sendSignalOnOutput(\"dce\");\n              }\n              else if((totalTime*4)<event.elapsedTime && event.elapsedTime<=(totalTime*5)){\n                    self1.sendSignalOnOutput(\"edf\");\n              }\n              else if((totalTime*5)<event.elapsedTime && event.elapsedTime<=(totalTime*6)){\n                    self1.sendSignalOnOutput(\"feg\");\n              }\n              else if((totalTime*6)<event.elapsedTime && event.elapsedTime<=(totalTime*7)){\n                    self1.sendSignalOnOutput(\"gfh\");\n              }\n              else if((totalTime*7)<event.elapsedTime && event.elapsedTime<=(totalTime*8)){\n                    self1.sendSignalOnOutput(\"hg\");\n              }\n              \n              \n          }\n        }      \n    }\n});\n  ",
+                            "code": "var totalTime = 4892/7;\nvar t1;\ndefine({\n    inputs: {\n        pageShowing: \"boolean\",\n    },\n    outputs:{\n        ab: \"boolean\",\n        bac: \"boolean\",\n        cbd: \"boolean\",\n        dce: \"boolean\",\n        edf: \"boolean\",\n        feg: \"boolean\",\n        gfh: \"boolean\",\n        hg: \"boolean\",\n    },\n    run: function(inputs, outputs) {\n        var synth = window.speechSynthesis;\n        var utterThis = new SpeechSynthesisUtterance(\"a,b,c,d,e,f,g,h\");\n        var self1 = this;\n        if(inputs.pageShowing){\n             document.addEventListener(\"keydown\", function(e) {\n                    if((e.key === \"ArrowLeft\") || (e.keyCode === 100)) {\n                        synth.cancel();\n                    }\n                        });\n                synth.speak(utterThis);\n                utterThis.onend = function(event) {\n                if(0<event.elapsedTime && event.elapsedTime<= totalTime ){\n                    self1.sendSignalOnOutput(\"ab\");\n                }\n                else if(totalTime<event.elapsedTime && event.elapsedTime<=(totalTime*2)){\n                    self1.sendSignalOnOutput(\"bac\");\n                }\n                else if((totalTime*2)<event.elapsedTime && event.elapsedTime<=(totalTime*3)){\n                    self1.sendSignalOnOutput(\"cbd\");\n              }\n              else if((totalTime*3)<event.elapsedTime && event.elapsedTime<=(totalTime*4)){\n                    self1.sendSignalOnOutput(\"dce\");\n              }\n              else if((totalTime*4)<event.elapsedTime && event.elapsedTime<=(totalTime*5)){\n                    self1.sendSignalOnOutput(\"edf\");\n              }\n              else if((totalTime*5)<event.elapsedTime && event.elapsedTime<=(totalTime*6)){\n                    self1.sendSignalOnOutput(\"feg\");\n              }\n              else if((totalTime*6)<event.elapsedTime && event.elapsedTime<=(totalTime*7)){\n                    self1.sendSignalOnOutput(\"gfh\");\n              }\n              else if((totalTime*7)<event.elapsedTime && event.elapsedTime<=(totalTime*8)){\n                    self1.sendSignalOnOutput(\"hg\");\n              }\n              \n              \n          }\n        }      \n    }\n});\n  ",
                             "useExternalFile": "no"
                         },
                         "ports": [],
@@ -18454,6 +18470,18 @@
                         "y": 286.71004609661816,
                         "parameters": {
                             "duration": 1000
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "3ff64b6b-d76b-3d8b-3f14-771e9b3f4f81",
+                        "type": "Receive Message",
+                        "x": 1763.0447139916469,
+                        "y": 747.7531160460395,
+                        "parameters": {
+                            "topic": "/SearchForMovies/2"
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -20278,6 +20306,6 @@
         "BackButtom.rootComponent": "/HomeButtom",
         "Remote Control.rootComponent": "/HomeButtom"
     },
-    "rootNodeId": "c45d909a-7a61-f352-84a4-00a86250fbcd",
+    "rootNodeId": "b31e863e-c306-e628-7c3b-9b71ba3ef393",
     "version": "1"
 }
