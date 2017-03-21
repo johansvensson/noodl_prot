@@ -598,16 +598,6 @@
                         "ports": [],
                         "dynamicports": [],
                         "children": []
-                    },
-                    {
-                        "id": "e42453df-13eb-e05c-1214-2bbbcda03411",
-                        "type": "Reload",
-                        "x": 1029.062089611411,
-                        "y": 150.35600876650147,
-                        "parameters": {},
-                        "ports": [],
-                        "dynamicports": [],
-                        "children": []
                     }
                 ]
             }
@@ -18374,7 +18364,7 @@
                         "x": 1729.9981767307845,
                         "y": 417.43690804096195,
                         "parameters": {
-                            "code": "var totalTime = 4892/7;\nvar t1;\ndefine({\n    inputs: {\n        pageShowing: \"boolean\",\n    },\n    outputs:{\n        ab: \"boolean\",\n        bac: \"boolean\",\n        cbd: \"boolean\",\n        dce: \"boolean\",\n        edf: \"boolean\",\n        feg: \"boolean\",\n        gfh: \"boolean\",\n        hg: \"boolean\",\n    },\n    run: function(inputs, outputs) {\n        var synth = window.speechSynthesis;\n        var utterThis = new SpeechSynthesisUtterance(\"a,b,c,d,e,f,g,h\");\n        var self1 = this;\n        if(inputs.pageShowing){\n             document.addEventListener(\"keydown\", function(e) {\n                    if((e.key === \"ArrowLeft\") || (e.keyCode === 100)) {\n                        synth.cancel();\n                    }\n                        });\n                synth.speak(utterThis);\n                utterThis.onend = function(event) {\n                if(0<event.elapsedTime && event.elapsedTime<= totalTime ){\n                    self1.sendSignalOnOutput(\"ab\");\n                }\n                else if(totalTime<event.elapsedTime && event.elapsedTime<=(totalTime*2)){\n                    self1.sendSignalOnOutput(\"bac\");\n                }\n                else if((totalTime*2)<event.elapsedTime && event.elapsedTime<=(totalTime*3)){\n                    self1.sendSignalOnOutput(\"cbd\");\n              }\n              else if((totalTime*3)<event.elapsedTime && event.elapsedTime<=(totalTime*4)){\n                    self1.sendSignalOnOutput(\"dce\");\n              }\n              else if((totalTime*4)<event.elapsedTime && event.elapsedTime<=(totalTime*5)){\n                    self1.sendSignalOnOutput(\"edf\");\n              }\n              else if((totalTime*5)<event.elapsedTime && event.elapsedTime<=(totalTime*6)){\n                    self1.sendSignalOnOutput(\"feg\");\n              }\n              else if((totalTime*6)<event.elapsedTime && event.elapsedTime<=(totalTime*7)){\n                    self1.sendSignalOnOutput(\"gfh\");\n              }\n              else if((totalTime*7)<event.elapsedTime && event.elapsedTime<=(totalTime*8)){\n                    self1.sendSignalOnOutput(\"hg\");\n              }\n              \n              \n          }\n        }      \n    }\n});\n  ",
+                            "code": "var totalTime = 4892/7;\nvar t1;\ndefine({\n    inputs: {\n        pageShowing: \"boolean\",\n    },\n    outputs:{\n        ab: \"boolean\",\n        bac: \"boolean\",\n        cbd: \"boolean\",\n        dce: \"boolean\",\n        edf: \"boolean\",\n        feg: \"boolean\",\n        gfh: \"boolean\",\n        hg: \"boolean\",\n    },\n    run: function(inputs, outputs) {\n        var synth = window.speechSynthesis;\n        var utterThis = new SpeechSynthesisUtterance(\"a,b,c,d,e,f,g,h\");\n        var self1 = this;\n        if(inputs.pageShowing){\n             document.addEventListener(\"keydown\", function(e) {\n                    if((e.key === \"ArrowLeft\") || (e.keyCode === 100)) {\n                        synth.pause();\n                        synth.resume();\n                        synth.cancel();\n                    }\n                        });\n                synth.speak(utterThis);\n                utterThis.onpause = function(event) {\n                if(0<event.elapsedTime && event.elapsedTime<= totalTime ){\n                    self1.sendSignalOnOutput(\"ab\");\n                }\n                else if(totalTime<event.elapsedTime && event.elapsedTime<=(totalTime*2)){\n                    self1.sendSignalOnOutput(\"bac\");\n                }\n                else if((totalTime*2)<event.elapsedTime && event.elapsedTime<=(totalTime*3)){\n                    self1.sendSignalOnOutput(\"cbd\");\n              }\n              else if((totalTime*3)<event.elapsedTime && event.elapsedTime<=(totalTime*4)){\n                    self1.sendSignalOnOutput(\"dce\");\n              }\n              else if((totalTime*4)<event.elapsedTime && event.elapsedTime<=(totalTime*5)){\n                    self1.sendSignalOnOutput(\"edf\");\n              }\n              else if((totalTime*5)<event.elapsedTime && event.elapsedTime<=(totalTime*6)){\n                    self1.sendSignalOnOutput(\"feg\");\n              }\n              else if((totalTime*6)<event.elapsedTime && event.elapsedTime<=(totalTime*7)){\n                    self1.sendSignalOnOutput(\"gfh\");\n              }\n              else if((totalTime*7)<event.elapsedTime && event.elapsedTime<=(totalTime*8)){\n                    self1.sendSignalOnOutput(\"hg\");\n              }\n              \n              \n          }\n        }      \n    }\n});\n  ",
                             "useExternalFile": "no"
                         },
                         "ports": [],
@@ -19937,12 +19927,6 @@
                         "fromProperty": "Label",
                         "toId": "426c88d1-5224-57cd-0e87-37259e98456a",
                         "toProperty": "textToSpeech"
-                    },
-                    {
-                        "fromId": "a1f16b6b-8d3e-3e6d-1338-7b3a1c8e8088",
-                        "fromProperty": "pageHiding",
-                        "toId": "12d41309-28e0-c736-9652-fdebbf3ff069",
-                        "toProperty": "pageHiding"
                     }
                 ],
                 "roots": [
@@ -20211,7 +20195,7 @@
                         "x": 1703.8574213977392,
                         "y": 452.122062476128,
                         "parameters": {
-                            "code": "var audio = new Audio('http://users.student.lth.se/dic12jsv/sounds/tech_podcast_short2.wav');\ndefine({\n    inputs: {\n        play: \"boolean\",\n        pause: \"boolean\",\n        pageHiding: \"boolean\",\n        \n    },\n    outputs: {\n    },\n    setup: function(inputs, outputs) {\n    },\n    run: function(inputs, outputs) {\n        if(inputs.play && audio.paused) {\n            audio.play();\n            pause = false;\n        }\n        if(inputs.pause){\n            audio.pause();\n            play = false;\n        }\n        if(inputs.pageHiding){\n            audio.load();\n        }\n    }\n});"
+                            "code": "var audio = new Audio('http://users.student.lth.se/dic12jsv/sounds/tech_podcast_short2.wav');\ndefine({\n    inputs: {\n        play: \"boolean\",\n        pause: \"boolean\",\n        pageHiding: \"boolean\",\n        \n    },\n    outputs: {\n    },\n    setup: function(inputs, outputs) {\n    },\n    run: function(inputs, outputs) {\n        if(inputs.play && audio.paused) {\n            audio.play();\n            pause = false;\n        }\n        if(inputs.pause){\n            audio.pause();\n            play = false;\n        }\n        if(inputs.pageHiding){\n            audio.pause();\n            audio.load();\n        }\n    }\n});"
                         },
                         "ports": [],
                         "dynamicports": [
