@@ -238,7 +238,7 @@
                         "x": 897.5985988434579,
                         "y": 294.09528081837465,
                         "parameters": {
-                            "code": "define({\n    inputs:{\n       startSearch: \"bolean\"  \n    },\n    outputs: {\n        keyLeft: \"boolean\",\n        keyRight: \"boolean\",\n        keyDown: \"boolean\",\n        topLeft: \"boolean\",\n        topRight: \"boolean\",\n        bottomLeft: \"boolean\",\n        bottomRight: \"boolean\",\n        backHome: \"boolean\",\n        repeat: \"boolean\",\n     },\n    setup: function(inputs, outputs) {\n        var self = this;\n        document.addEventListener(\"keydown\", function(e) {\n            if(e.keyCode === 100) {\n                self.sendSignalOnOutput(\"topLeft\");\n            }\n            else if(e.keyCode === 101) {\n                self.sendSignalOnOutput(\"topRight\");\n            }\n            else if(e.keyCode === 97) {\n                self.sendSignalOnOutput(\"bottomLeft\");\n            }\n            else if(e.keyCode === 98) {\n                self.sendSignalOnOutput(\"bottomRight\");\n            }\n            else if(e.keyCode === 103) {\n                self.sendSignalOnOutput(\"backHome\");\n            }\n            else if(e.keyCode === 104) {\n                self.sendSignalOnOutput(\"repeat\");\n            }\n        });\n\n}   \n    });\n    "
+                            "code": "define({\n    inputs:{\n       startSearch: \"bolean\"  \n    },\n    outputs: {\n        keyLeft: \"boolean\",\n        keyRight: \"boolean\",\n        keyDown: \"boolean\",\n        topLeft: \"boolean\",\n        topRight: \"boolean\",\n        bottomLeft: \"boolean\",\n        bottomRight: \"boolean\",\n        backHome: \"boolean\",\n        repeat: \"boolean\",\n     },\n    setup: function(inputs, outputs) {\n        var self = this;\n        document.addEventListener(\"keydown\", function(e) {\n            if(e.keyCode === 100) {\n                self.sendSignalOnOutput(\"topLeft\");\n                console.log(\"skickar\");\n            }\n            else if(e.keyCode === 101) {\n                self.sendSignalOnOutput(\"topRight\");\n            }\n            else if(e.keyCode === 97) {\n                self.sendSignalOnOutput(\"bottomLeft\");\n            }\n            else if(e.keyCode === 98) {\n                self.sendSignalOnOutput(\"bottomRight\");\n            }\n            else if(e.keyCode === 103) {\n                self.sendSignalOnOutput(\"backHome\");\n            }\n            else if(e.keyCode === 104) {\n                self.sendSignalOnOutput(\"repeat\");\n            }\n        });\n\n}   \n    });\n    "
                         },
                         "ports": [],
                         "dynamicports": [
@@ -383,7 +383,7 @@
                         "x": 910.9089821140224,
                         "y": 478.41474944801377,
                         "parameters": {
-                            "input 0": false,
+                            "input 0": true,
                             "input 1": true,
                             "input 2": true,
                             "input 3": true,
@@ -400,7 +400,7 @@
                         "x": 1287.7697779851094,
                         "y": 1043.3124924938131,
                         "parameters": {
-                            "topic": "/SearchForMovies/1"
+                            "topic": "/MoviesSearch/1"
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -424,7 +424,7 @@
                         "x": 1278.4609855651775,
                         "y": 1276.5123783574832,
                         "parameters": {
-                            "topic": "/SearchForMovies/3"
+                            "topic": "/MoviesSearch/3"
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -460,7 +460,7 @@
                         "x": 1287.1414166259494,
                         "y": 1156.433082016806,
                         "parameters": {
-                            "topic": "/SearchForMovies/2"
+                            "topic": "/MoviesSearch/2"
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -469,10 +469,10 @@
                     {
                         "id": "9203c897-c9ec-43fa-a5c6-5ad52fe7298a",
                         "type": "Receive Message",
-                        "x": 1280.0965204756235,
+                        "x": 1281.160780153201,
                         "y": 1404.9966709096911,
                         "parameters": {
-                            "topic": "/SearchForMovies/4"
+                            "topic": "/MoviesSearch/4"
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -493,10 +493,10 @@
                     {
                         "id": "8d232f59-e009-0913-e5fd-2621a2d1f611",
                         "type": "Receive Message",
-                        "x": 1261.5346390245832,
+                        "x": 1262.5988987021606,
                         "y": 1653.001499223135,
                         "parameters": {
-                            "topic": "/SearchForMovies/6"
+                            "topic": "/MoviesSearch/6"
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -532,7 +532,7 @@
                         "x": 1260.9619810542465,
                         "y": 1532.922202882458,
                         "parameters": {
-                            "topic": "/SearchForMovies/5"
+                            "topic": "/MoviesSearch/5"
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -544,7 +544,7 @@
                         "x": 1275.0616216384722,
                         "y": 1868.4566837789241,
                         "parameters": {
-                            "topic": "/SearchForMovies/8"
+                            "topic": "/MoviesSearch/8"
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -580,7 +580,7 @@
                         "x": 1278.1901992805788,
                         "y": 1766.883565500464,
                         "parameters": {
-                            "topic": "/SearchForMovies/7"
+                            "topic": "/MoviesSearch/7"
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -589,8 +589,8 @@
                     {
                         "id": "2c848ce2-bb20-e068-f5fd-3be79d7d6ff6",
                         "type": "Page Navigation",
-                        "x": 860.2036879018016,
-                        "y": 62.57597998136879,
+                        "x": 886.7908315680631,
+                        "y": 96.60752387418346,
                         "parameters": {
                             "destination": "/StartPage",
                             "resetPageStack": true
@@ -18318,8 +18318,8 @@
                     {
                         "id": "75cfbaa2-d536-fe4f-464a-5632b18cc261",
                         "type": "Signal To Index",
-                        "x": 1992.2581958991345,
-                        "y": 448.77109752790585,
+                        "x": 2124.2581958991345,
+                        "y": 398.77109752790585,
                         "parameters": {
                             "input 0": false,
                             "startIndex": "input 0"
@@ -18331,10 +18331,10 @@
                     {
                         "id": "82850068-2452-3a02-db25-58d84407bbc8",
                         "type": "Send Message",
-                        "x": 2302.2511765304753,
-                        "y": 448.7608122240957,
+                        "x": 2387.2511765304753,
+                        "y": 414.7608122240957,
                         "parameters": {
-                            "topic": "/SearchForMovies/{number}",
+                            "topic": "/MoviesSearch/{number}",
                             "rateLimit": true,
                             "maxMessagesPerSecond": 1,
                             "publishOnInputsChanged": true
@@ -18358,7 +18358,7 @@
                         "x": 1728.7953722952552,
                         "y": 417.43690804096195,
                         "parameters": {
-                            "code": "var totalTime = 4892/7;\nvar t1;\ndefine({\n    inputs: {\n        pageShowing: \"boolean\",\n    },\n    outputs:{\n        ab: \"boolean\",\n        bac: \"boolean\",\n        cbd: \"boolean\",\n        dce: \"boolean\",\n        edf: \"boolean\",\n        feg: \"boolean\",\n        gfh: \"boolean\",\n        hg: \"boolean\",\n    },\n    run: function(inputs, outputs) {\n        var synth = window.speechSynthesis;\n        var utterThis = new SpeechSynthesisUtterance(\"a,b,c,d,e,f,g,h\");\n        var self1 = this;\n        if(inputs.pageShowing){\n             document.addEventListener(\"keydown\", function(e) {\n                    if((e.key === \"ArrowLeft\") || (e.keyCode === 188)) {\n                        synth.cancel();\n                    }\n                        });\n                        console.log(\"går in i paheshowing\");\n                        synth.speak(utterThis);\n           \n                utterThis.onend = function(event) {\n                if(0<event.elapsedTime && event.elapsedTime<= totalTime ){\n                    self1.sendSignalOnOutput(\"ab\");\n                    console.log(\"borde skickas till 1\")\n\n                }\n                else if(totalTime<event.elapsedTime && event.elapsedTime<=(totalTime*2)){\n                    self1.sendSignalOnOutput(\"bac\");\n                    console.log(\"borde skickas till 2\");\n                }\n                else if((totalTime*2)<event.elapsedTime && event.elapsedTime<=(totalTime*3)){\n                    self1.sendSignalOnOutput(\"cbd\");\n                    console.log(\"borde skickas till 3\");\n              }\n              else if((totalTime*3)<event.elapsedTime && event.elapsedTime<=(totalTime*4)){\n                    self1.sendSignalOnOutput(\"dce\");\n              }\n              else if((totalTime*4)<event.elapsedTime && event.elapsedTime<=(totalTime*5)){\n                    self1.sendSignalOnOutput(\"edf\");\n              }\n              else if((totalTime*5)<event.elapsedTime && event.elapsedTime<=(totalTime*6)){\n                    self1.sendSignalOnOutput(\"feg\");\n              }\n              else if((totalTime*6)<event.elapsedTime && event.elapsedTime<=(totalTime*7)){\n                    self1.sendSignalOnOutput(\"gfh\");\n              }\n              else if((totalTime*7)<event.elapsedTime && event.elapsedTime<=(totalTime*8)){\n                    self1.sendSignalOnOutput(\"hg\");\n              }\n              \n              \n          }\n        }      \n    }\n});\n  ",
+                            "code": "var totalTime = 4892/7;\nvar t1;\ndefine({\n    inputs: {\n        pageShowing: \"boolean\",\n    },\n    outputs:{\n        ab: \"boolean\",\n        bac: \"boolean\",\n        cbd: \"boolean\",\n        dce: \"boolean\",\n        edf: \"boolean\",\n        feg: \"boolean\",\n        gfh: \"boolean\",\n        hg: \"boolean\",\n    },\n    run: function(inputs, outputs) {\n        var synth = window.speechSynthesis;\n        var utterThis = new SpeechSynthesisUtterance(\"a,b,c,d,e,f,g,h\");\n        var self1 = this;\n        if(inputs.pageShowing){\n             document.addEventListener(\"keydown\", function(e) {\n                    if((e.key === \"ArrowLeft\") || (e.keyCode === 188)) {\n                        synth.cancel();\n                    }\n                        });\n                        console.log(\"går in i paheshowing\");\n                        synth.speak(utterThis);\n           \n                utterThis.onend = function(event) {\n                if(0<event.elapsedTime && event.elapsedTime<= totalTime ){\n                    self1.sendSignalOnOutput(\"ab\");\n\n                }\n                else if(totalTime<event.elapsedTime && event.elapsedTime<=(totalTime*2)){\n                    self1.sendSignalOnOutput(\"bac\");\n                }\n                else if((totalTime*2)<event.elapsedTime && event.elapsedTime<=(totalTime*3)){\n                    self1.sendSignalOnOutput(\"cbd\");\n              }\n              else if((totalTime*3)<event.elapsedTime && event.elapsedTime<=(totalTime*4)){\n                    self1.sendSignalOnOutput(\"dce\");\n              }\n              else if((totalTime*4)<event.elapsedTime && event.elapsedTime<=(totalTime*5)){\n                    self1.sendSignalOnOutput(\"edf\");\n              }\n              else if((totalTime*5)<event.elapsedTime && event.elapsedTime<=(totalTime*6)){\n                    self1.sendSignalOnOutput(\"feg\");\n              }\n              else if((totalTime*6)<event.elapsedTime && event.elapsedTime<=(totalTime*7)){\n                    self1.sendSignalOnOutput(\"gfh\");\n              }\n              else if((totalTime*7)<event.elapsedTime && event.elapsedTime<=(totalTime*8)){\n                    self1.sendSignalOnOutput(\"hg\");\n              }\n              \n              \n          }\n        }      \n    }\n});\n  ",
                             "useExternalFile": "no"
                         },
                         "ports": [],
@@ -18450,8 +18450,8 @@
                     {
                         "id": "85faed81-931b-0564-b28d-2369ff2f15dd",
                         "type": "Timer",
-                        "x": 1573.8516179405462,
-                        "y": 411.71004609661816,
+                        "x": 1592.8516179405462,
+                        "y": 286.71004609661816,
                         "parameters": {
                             "duration": 1000
                         },
@@ -18936,7 +18936,7 @@
                                         "value": 33,
                                         "unit": "%"
                                     },
-                                    "Label": "Harry Potter",
+                                    "Label": "Good Will Hunting",
                                     "Align Y": "bottom",
                                     "Color": "#022fa2"
                                 },
@@ -20278,6 +20278,6 @@
         "BackButtom.rootComponent": "/HomeButtom",
         "Remote Control.rootComponent": "/HomeButtom"
     },
-    "rootNodeId": "a1f16b6b-8d3e-3e6d-1338-7b3a1c8e8088",
+    "rootNodeId": "c45d909a-7a61-f352-84a4-00a86250fbcd",
     "version": "1"
 }
