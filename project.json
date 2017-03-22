@@ -116,8 +116,8 @@
                     {
                         "fromId": "f73f976a-3730-0a7d-c335-862615f38de1",
                         "fromProperty": "backHome",
-                        "toId": "2c848ce2-bb20-e068-f5fd-3be79d7d6ff6",
-                        "toProperty": "navigate"
+                        "toId": "81269c3b-09db-73f9-5c50-ec8bbdd47558",
+                        "toProperty": "back"
                     }
                 ],
                 "roots": [
@@ -587,14 +587,11 @@
                         "children": []
                     },
                     {
-                        "id": "2c848ce2-bb20-e068-f5fd-3be79d7d6ff6",
-                        "type": "Page Navigation",
-                        "x": 1183.5571981488908,
-                        "y": 105.56168148653602,
-                        "parameters": {
-                            "destination": "/StartPage",
-                            "resetPageStack": true
-                        },
+                        "id": "81269c3b-09db-73f9-5c50-ec8bbdd47558",
+                        "type": "Page Navigation Back",
+                        "x": 1247.4583636316938,
+                        "y": 288.988099683032,
+                        "parameters": {},
                         "ports": [],
                         "dynamicports": [],
                         "children": []
@@ -15959,7 +15956,7 @@
                         "id": "53265534-b9dd-d544-4e33-8dc5789f6f56",
                         "type": "Javascript2",
                         "label": "Action",
-                        "x": -450.0858513296903,
+                        "x": -453.0858513296903,
                         "y": 563.6403650493093,
                         "parameters": {
                             "code": "//var msgA = new SpeechSynthesisUtterance('Action')\ndefine({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                window.speechSynthesis.speak(msgA);\n                msgA.rate = 2.5;\n                window.navigator.vibrate([100]);\n            }\n    }\n});",
@@ -16044,7 +16041,7 @@
                         "id": "1216a5ba-f276-92c0-4537-f5e87b646361",
                         "type": "Javascript2",
                         "label": "Drama",
-                        "x": -451.890933574684,
+                        "x": -452.890933574684,
                         "y": 705.2901192348688,
                         "parameters": {
                             "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                msgA.rate = 2.5;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100,30,100]);\n            }\n    }\n});\n\n\n",
@@ -16366,8 +16363,8 @@
                     {
                         "id": "f82f4b10-54e5-0f6c-7c65-6dc458f91e24",
                         "type": "Javascript2",
-                        "x": -515.8793398060816,
-                        "y": 392.2468321975231,
+                        "x": -448.8793398060816,
+                        "y": 404.2468321975231,
                         "parameters": {
                             "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        repeat: \"boolean\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing || inputs.repeat){\n                var audio = new Audio('http://users.student.lth.se/dic12jsv/sounds/level0.wav');\n                audio.play();\n            }\n    }\n});"
                         },
@@ -16501,7 +16498,7 @@
                         "id": "d3b5afb3-f822-dae1-4e14-a6fc39aad2bc",
                         "type": "Send Message",
                         "x": 488.5,
-                        "y": 587.5,
+                        "y": 585.5,
                         "parameters": {
                             "topic": "/Home",
                             "publishOnInputsChanged": true,
@@ -20495,6 +20492,26 @@
                     }
                 ]
             }
+        },
+        {
+            "name": "/Blank Main ",
+            "graph": {
+                "connections": [],
+                "roots": [
+                    {
+                        "id": "2626a13f-3242-ac6b-fa96-d43dbdf78179",
+                        "type": "Page",
+                        "x": 470,
+                        "y": 338,
+                        "parameters": {
+                            "title": "Default"
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    }
+                ]
+            }
         }
     ],
     "settings": {
@@ -20508,6 +20525,6 @@
         "BackButtom.rootComponent": "/HomeButtom",
         "Remote Control.rootComponent": "/HomeButtom"
     },
-    "rootNodeId": "b31e863e-c306-e628-7c3b-9b71ba3ef393",
+    "rootNodeId": "2626a13f-3242-ac6b-fa96-d43dbdf78179",
     "version": "1"
 }
