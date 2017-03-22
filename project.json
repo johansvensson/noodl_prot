@@ -15956,7 +15956,7 @@
                         "id": "53265534-b9dd-d544-4e33-8dc5789f6f56",
                         "type": "Javascript2",
                         "label": "Action",
-                        "x": -450.0858513296903,
+                        "x": -451.0858513296903,
                         "y": 563.6403650493093,
                         "parameters": {
                             "code": "//var msgA = new SpeechSynthesisUtterance('Action')\ndefine({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                window.speechSynthesis.speak(msgA);\n                msgA.rate = 2.5;\n                window.navigator.vibrate([100]);\n            }\n    }\n});",
@@ -16734,6 +16734,30 @@
                         "fromProperty": "Blend",
                         "toId": "cb3fedc6-037d-637c-5b95-7fe0e4b09508",
                         "toProperty": "blendValue"
+                    },
+                    {
+                        "fromId": "3dee4f88-0942-ff6c-b57f-da3a500c58b7",
+                        "fromProperty": "messageReceived",
+                        "toId": "da7521a8-bd72-30c6-6f3a-43c1de7489d3",
+                        "toProperty": "repeat"
+                    },
+                    {
+                        "fromId": "935c91a0-d6d0-e2f8-bc9f-c45c3c518fee",
+                        "fromProperty": "pageShowing",
+                        "toId": "da7521a8-bd72-30c6-6f3a-43c1de7489d3",
+                        "toProperty": "pageShowing"
+                    },
+                    {
+                        "fromId": "1a096bce-c920-dacd-6796-78bb1c3b5a7a",
+                        "fromProperty": "Tap",
+                        "toId": "21e52c36-b44d-64ce-4bba-f671c9235cf7",
+                        "toProperty": "navigate"
+                    },
+                    {
+                        "fromId": "d36b74c9-62b8-3fc8-22fd-6d88ae13937a",
+                        "fromProperty": "Tap",
+                        "toId": "df84a3e8-61ba-7f0b-5e19-1b3b97b3bbea",
+                        "toProperty": "navigate"
                     }
                 ],
                 "roots": [
@@ -16780,7 +16804,7 @@
                                                 "value": 90,
                                                 "unit": "%"
                                             },
-                                            "Label": "FLights",
+                                            "Label": "Flight info",
                                             "Id": "EA",
                                             "Color": "#ee462f"
                                         },
@@ -16846,7 +16870,7 @@
                                                 "unit": "%"
                                             },
                                             "Color": "#4fa209",
-                                            "Label": "PLane\ninformation",
+                                            "Label": "Weather Sun",
                                             "Id": "C"
                                         },
                                         "ports": [],
@@ -16869,7 +16893,7 @@
                                                 "value": 90,
                                                 "unit": "%"
                                             },
-                                            "Label": "Something",
+                                            "Label": "Weather Rain",
                                             "Id": "D"
                                         },
                                         "ports": [],
@@ -16933,7 +16957,8 @@
                         "x": 857.6984997544495,
                         "y": 665.0119575571889,
                         "parameters": {
-                            "duration": 2000
+                            "duration": 500,
+                            "startDelay": 100
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -17043,7 +17068,7 @@
                         "x": 855.2462081644808,
                         "y": 794.4037572449516,
                         "parameters": {
-                            "duration": 2000
+                            "duration": 1000
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -17127,7 +17152,7 @@
                         "x": 850.5938631707252,
                         "y": 942.1839962518146,
                         "parameters": {
-                            "duration": 2000
+                            "duration": 1000
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -17211,7 +17236,7 @@
                         "x": 836.4661315554231,
                         "y": 1092.215552615109,
                         "parameters": {
-                            "duration": 2000
+                            "duration": 1000
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -17224,6 +17249,61 @@
                         "y": 352,
                         "parameters": {
                             "topic": "/Rep/Service"
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "21e52c36-b44d-64ce-4bba-f671c9235cf7",
+                        "type": "Page Navigation",
+                        "x": 1679.542148710187,
+                        "y": 990.0847067179142,
+                        "parameters": {
+                            "destination": "/Weather-Sun"
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "da7521a8-bd72-30c6-6f3a-43c1de7489d3",
+                        "type": "Javascript2",
+                        "x": 673.259707286329,
+                        "y": 484.55453605253024,
+                        "parameters": {
+                            "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        repeat: \"boolean\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing || inputs.repeat){\n                var audio = new Audio('http://users.student.lth.se/dic12jsv/sounds/level1.wav');\n                audio.play();\n            }\n    }\n});"
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "name": "pageShowing",
+                                "plug": "input",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "group": "Inputs",
+                                "index": 2
+                            },
+                            {
+                                "name": "repeat",
+                                "plug": "input",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "group": "Inputs",
+                                "index": 3
+                            }
+                        ],
+                        "children": []
+                    },
+                    {
+                        "id": "df84a3e8-61ba-7f0b-5e19-1b3b97b3bbea",
+                        "type": "Page Navigation",
+                        "x": 1680.45764900805,
+                        "y": 1110.9118554904248,
+                        "parameters": {
+                            "destination": "/Weather-Rain"
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -17508,8 +17588,8 @@
                                     {
                                         "id": "f0e4fdb4-b691-0679-d1f8-61b2005efa32",
                                         "type": "/UI Kit/Controls/Big Button",
-                                        "x": 20,
-                                        "y": 163,
+                                        "x": 1407.3504973721822,
+                                        "y": 1101.3724521847034,
                                         "parameters": {
                                             "Width": {
                                                 "value": 45,
@@ -17551,8 +17631,8 @@
                                     {
                                         "id": "b73bf80f-1f43-6cb1-fc76-b58260b8fc1f",
                                         "type": "/UI Kit/Controls/Big Button",
-                                        "x": 20,
-                                        "y": 61,
+                                        "x": 1407.3504973721822,
+                                        "y": 1264.3724521847034,
                                         "parameters": {
                                             "Width": {
                                                 "value": 45,
@@ -18055,7 +18135,7 @@
                     {
                         "id": "da161bf1-2073-d2d8-6322-0511c96c0533",
                         "type": "Javascript2",
-                        "x": 702.8562694738912,
+                        "x": 703.8562694738912,
                         "y": 746.3157379176389,
                         "parameters": {
                             "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        repeat: \"boolean\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing || inputs.repeat){\n                var audio = new Audio('http://users.student.lth.se/dic12jsv/sounds/level1.wav');\n                audio.play();\n            }\n    }\n});"
@@ -25000,6 +25080,364 @@
                         },
                         "ports": [],
                         "dynamicports": [],
+                        "children": []
+                    }
+                ]
+            }
+        },
+        {
+            "name": "/Weather-Sun",
+            "graph": {
+                "connections": [
+                    {
+                        "fromId": "cac3d6f6-1f33-c2a7-5ebb-f40bfc578dc9",
+                        "fromProperty": "messageReceived",
+                        "toId": "df22640c-6bc4-fffc-b100-7e5df2c5cd62",
+                        "toProperty": "repeat"
+                    },
+                    {
+                        "fromId": "24f1e84f-2292-5d60-a059-5329e6ec4303",
+                        "fromProperty": "pageShowing",
+                        "toId": "df22640c-6bc4-fffc-b100-7e5df2c5cd62",
+                        "toProperty": "pageShowing"
+                    },
+                    {
+                        "fromId": "24f1e84f-2292-5d60-a059-5329e6ec4303",
+                        "fromProperty": "pageShowing",
+                        "toId": "22a26905-56cb-b4a4-b001-fe2b5cfb052d",
+                        "toProperty": "pageShowing"
+                    }
+                ],
+                "roots": [
+                    {
+                        "id": "24f1e84f-2292-5d60-a059-5329e6ec4303",
+                        "type": "Page",
+                        "label": "Weather-Sun",
+                        "x": 1549.2408306284028,
+                        "y": 621.1704373999901,
+                        "parameters": {
+                            "title": "Weather-Sun",
+                            "transition": "none"
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": [
+                            {
+                                "id": "8f4447a1-d72b-512d-26e5-79e2576762b5",
+                                "type": "Group",
+                                "version": 2,
+                                "label": "Topp",
+                                "x": 1569.2408306284028,
+                                "y": 718.1704373999901,
+                                "parameters": {
+                                    "height": {
+                                        "value": 50,
+                                        "unit": "%"
+                                    }
+                                },
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": [
+                                    {
+                                        "id": "89a63fd0-9658-5d6d-992b-0f0852f3a204",
+                                        "type": "/UI Kit/Controls/Big Button",
+                                        "x": 1589.2408306284028,
+                                        "y": 779.1704373999901,
+                                        "parameters": {
+                                            "Width": {
+                                                "value": 45,
+                                                "unit": "%"
+                                            },
+                                            "Height": {
+                                                "value": 90,
+                                                "unit": "%"
+                                            },
+                                            "Label": "N/A",
+                                            "Id": "EA",
+                                            "Color": "#ee462f"
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "1a3fdbb8-9d7b-511f-7070-b0f90b152087",
+                                        "type": "/UI Kit/Controls/Big Button",
+                                        "x": 1589.2408306284028,
+                                        "y": 825.1704373999901,
+                                        "parameters": {
+                                            "Width": {
+                                                "value": 45,
+                                                "unit": "%"
+                                            },
+                                            "Color": "#022fa2",
+                                            "Align X": "right",
+                                            "Height": {
+                                                "value": 90,
+                                                "unit": "%"
+                                            },
+                                            "Label": "N/A",
+                                            "Id": "EB"
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": "cac3d6f6-1f33-c2a7-5ebb-f40bfc578dc9",
+                        "type": "Receive Message",
+                        "x": 1546.9817379774502,
+                        "y": 454,
+                        "parameters": {
+                            "topic": "/Rep/Weather"
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "df22640c-6bc4-fffc-b100-7e5df2c5cd62",
+                        "type": "Javascript2",
+                        "x": 886.7466027301118,
+                        "y": 545.1137231329255,
+                        "parameters": {
+                            "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        repeat: \"boolean\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing || inputs.repeat){\n                var audio = new Audio('http://users.student.lth.se/dic12jsv/sounds/level1.wav');\n                audio.play();\n            }\n    }\n});"
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "name": "pageShowing",
+                                "plug": "input",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "group": "Inputs",
+                                "index": 2
+                            },
+                            {
+                                "name": "repeat",
+                                "plug": "input",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "group": "Inputs",
+                                "index": 3
+                            }
+                        ],
+                        "children": []
+                    },
+                    {
+                        "id": "22a26905-56cb-b4a4-b001-fe2b5cfb052d",
+                        "type": "Javascript2",
+                        "x": 896,
+                        "y": 711,
+                        "parameters": {
+                            "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        repeat: \"boolean\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var audio = new Audio('http://users.student.lth.se/dic12jsv/sounds/summer_birds.wav');\n                audio.play();\n                var textToSpeak = \"The weather in Honkong is sunny today. No clouds to be seen.\";\n                var msgA = new SpeechSynthesisUtterance(textToSpeak);\n                window.speechSynthesis.speak(msgA);\n                msgA.rate = 1;\n                //window.navigator.vibrate([100]);\n            }\n    }\n});"
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "name": "pageShowing",
+                                "plug": "input",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "group": "Inputs",
+                                "index": 2
+                            },
+                            {
+                                "name": "repeat",
+                                "plug": "input",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "group": "Inputs",
+                                "index": 3
+                            }
+                        ],
+                        "children": []
+                    }
+                ]
+            }
+        },
+        {
+            "name": "/Weather-Rain",
+            "graph": {
+                "connections": [
+                    {
+                        "fromId": "ca928a66-467a-fe35-b307-900840fa51e5",
+                        "fromProperty": "messageReceived",
+                        "toId": "ee06ec00-d6ce-8cdb-8a9c-bbb2016e41cc",
+                        "toProperty": "repeat"
+                    },
+                    {
+                        "fromId": "3a26b628-b52a-f9dd-ef9f-69cd6d6c7b6a",
+                        "fromProperty": "pageShowing",
+                        "toId": "ee06ec00-d6ce-8cdb-8a9c-bbb2016e41cc",
+                        "toProperty": "pageShowing"
+                    },
+                    {
+                        "fromId": "3a26b628-b52a-f9dd-ef9f-69cd6d6c7b6a",
+                        "fromProperty": "pageShowing",
+                        "toId": "f7c0cfbd-9bf0-5b0b-acc3-2e996125d975",
+                        "toProperty": "pageShowing"
+                    }
+                ],
+                "roots": [
+                    {
+                        "id": "3a26b628-b52a-f9dd-ef9f-69cd6d6c7b6a",
+                        "type": "Page",
+                        "label": "Weather-Rain",
+                        "x": 1065.494227898291,
+                        "y": 654.1704373999901,
+                        "parameters": {
+                            "title": "Weather-Rain",
+                            "transition": "none"
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": [
+                            {
+                                "id": "73a54722-093b-4bdd-6cd7-284984ba4a0c",
+                                "type": "Group",
+                                "version": 2,
+                                "label": "Topp",
+                                "x": 1569.2408306284028,
+                                "y": 718.1704373999901,
+                                "parameters": {
+                                    "height": {
+                                        "value": 50,
+                                        "unit": "%"
+                                    }
+                                },
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": [
+                                    {
+                                        "id": "dc4f4543-4ceb-da1f-981f-3afa495f8f9a",
+                                        "type": "/UI Kit/Controls/Big Button",
+                                        "x": 1589.2408306284028,
+                                        "y": 779.1704373999901,
+                                        "parameters": {
+                                            "Width": {
+                                                "value": 45,
+                                                "unit": "%"
+                                            },
+                                            "Height": {
+                                                "value": 90,
+                                                "unit": "%"
+                                            },
+                                            "Label": "N/A",
+                                            "Id": "EA",
+                                            "Color": "#ee462f"
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "c5d4d72f-c83b-87c4-032b-4bbc1b0e1f64",
+                                        "type": "/UI Kit/Controls/Big Button",
+                                        "x": 1589.2408306284028,
+                                        "y": 825.1704373999901,
+                                        "parameters": {
+                                            "Width": {
+                                                "value": 45,
+                                                "unit": "%"
+                                            },
+                                            "Color": "#022fa2",
+                                            "Align X": "right",
+                                            "Height": {
+                                                "value": 90,
+                                                "unit": "%"
+                                            },
+                                            "Label": "N/A",
+                                            "Id": "EB"
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": "ca928a66-467a-fe35-b307-900840fa51e5",
+                        "type": "Receive Message",
+                        "x": 1063.2351352473383,
+                        "y": 487,
+                        "parameters": {
+                            "topic": "/Rep/Weather"
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "ee06ec00-d6ce-8cdb-8a9c-bbb2016e41cc",
+                        "type": "Javascript2",
+                        "x": 403,
+                        "y": 578.1137231329255,
+                        "parameters": {
+                            "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        repeat: \"boolean\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing || inputs.repeat){\n                var audio = new Audio('http://users.student.lth.se/dic12jsv/sounds/level1.wav');\n                audio.play();\n            }\n    }\n});"
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "name": "pageShowing",
+                                "plug": "input",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "group": "Inputs",
+                                "index": 2
+                            },
+                            {
+                                "name": "repeat",
+                                "plug": "input",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "group": "Inputs",
+                                "index": 3
+                            }
+                        ],
+                        "children": []
+                    },
+                    {
+                        "id": "f7c0cfbd-9bf0-5b0b-acc3-2e996125d975",
+                        "type": "Javascript2",
+                        "x": 412.2533972698882,
+                        "y": 744,
+                        "parameters": {
+                            "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        repeat: \"boolean\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var audio = new Audio('http://users.student.lth.se/dic12jsv/sounds/rainfall_converted.wav');\n                audio.play();\n                var textToSpeak = \"Most parts becoming wet if rather cloudy, with rain returning to some areas from around midnight onwards. Light winds.\";\n                var msgA = new SpeechSynthesisUtterance(textToSpeak);\n                window.speechSynthesis.speak(msgA);\n                msgA.rate = 1;\n                //window.navigator.vibrate([100]);\n            }\n    }\n});"
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "name": "pageShowing",
+                                "plug": "input",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "group": "Inputs",
+                                "index": 2
+                            },
+                            {
+                                "name": "repeat",
+                                "plug": "input",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "group": "Inputs",
+                                "index": 3
+                            }
+                        ],
                         "children": []
                     }
                 ]
