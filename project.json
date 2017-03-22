@@ -116,8 +116,8 @@
                     {
                         "fromId": "f73f976a-3730-0a7d-c335-862615f38de1",
                         "fromProperty": "backHome",
-                        "toId": "2c848ce2-bb20-e068-f5fd-3be79d7d6ff6",
-                        "toProperty": "navigate"
+                        "toId": "81269c3b-09db-73f9-5c50-ec8bbdd47558",
+                        "toProperty": "back"
                     }
                 ],
                 "roots": [
@@ -156,8 +156,7 @@
                                             "color": "#727273"
                                         },
                                         "ports": [],
-                                        "dynamicports": [],
-                                        "children": []
+                                        "dynamicports": []
                                     },
                                     {
                                         "id": "3133ecdd-c747-1c76-fdfa-d098f73ef504",
@@ -174,8 +173,7 @@
                                             "fontFamily": "Arial Black"
                                         },
                                         "ports": [],
-                                        "dynamicports": [],
-                                        "children": []
+                                        "dynamicports": []
                                     }
                                 ]
                             },
@@ -202,8 +200,7 @@
                                             "startPage": "/StartPage"
                                         },
                                         "ports": [],
-                                        "dynamicports": [],
-                                        "children": []
+                                        "dynamicports": []
                                     }
                                 ]
                             }
@@ -229,8 +226,7 @@
                                 "type": "*",
                                 "index": 6
                             }
-                        ],
-                        "children": []
+                        ]
                     },
                     {
                         "id": "f73f976a-3730-0a7d-c335-862615f38de1",
@@ -332,8 +328,7 @@
                                 "group": "Outputs",
                                 "index": 11
                             }
-                        ],
-                        "children": []
+                        ]
                     },
                     {
                         "id": "7dfafc50-4fe3-c5a3-9d5e-e74bfacef308",
@@ -374,8 +369,7 @@
                                 "type": "*",
                                 "index": 8
                             }
-                        ],
-                        "children": []
+                        ]
                     },
                     {
                         "id": "f6f8c377-c03e-0412-033a-35f019b1c0fe",
@@ -391,8 +385,7 @@
                             "startIndex": "input 0"
                         },
                         "ports": [],
-                        "dynamicports": [],
-                        "children": []
+                        "dynamicports": []
                     },
                     {
                         "id": "35854270-0ce1-3cac-c037-4b6198c1cc2a",
@@ -403,8 +396,7 @@
                             "topic": "/MoviesSearch/1"
                         },
                         "ports": [],
-                        "dynamicports": [],
-                        "children": []
+                        "dynamicports": []
                     },
                     {
                         "id": "b2b402be-ed24-6836-1368-273da395e258",
@@ -415,8 +407,7 @@
                             "destination": "/SearchA"
                         },
                         "ports": [],
-                        "dynamicports": [],
-                        "children": []
+                        "dynamicports": []
                     },
                     {
                         "id": "e398c6f8-0db3-8937-8fa8-d910a481144f",
@@ -427,8 +418,7 @@
                             "topic": "/MoviesSearch/3"
                         },
                         "ports": [],
-                        "dynamicports": [],
-                        "children": []
+                        "dynamicports": []
                     },
                     {
                         "id": "19ff4cb3-5754-30a9-a987-096eedfbb1c9",
@@ -439,8 +429,7 @@
                             "destination": "/SearchC"
                         },
                         "ports": [],
-                        "dynamicports": [],
-                        "children": []
+                        "dynamicports": []
                     },
                     {
                         "id": "1e2c8b41-45df-5c74-34fd-93cd0517937a",
@@ -451,8 +440,7 @@
                             "destination": "/SearchB"
                         },
                         "ports": [],
-                        "dynamicports": [],
-                        "children": []
+                        "dynamicports": []
                     },
                     {
                         "id": "9292f66c-1d00-8dcf-8f62-ae6f7d677ddf",
@@ -463,8 +451,7 @@
                             "topic": "/MoviesSearch/2"
                         },
                         "ports": [],
-                        "dynamicports": [],
-                        "children": []
+                        "dynamicports": []
                     },
                     {
                         "id": "9203c897-c9ec-43fa-a5c6-5ad52fe7298a",
@@ -475,8 +462,7 @@
                             "topic": "/MoviesSearch/4"
                         },
                         "ports": [],
-                        "dynamicports": [],
-                        "children": []
+                        "dynamicports": []
                     },
                     {
                         "id": "51da7ed9-d7f7-77c7-47e6-0b1a06190b8e",
@@ -487,8 +473,7 @@
                             "destination": "/SearchD"
                         },
                         "ports": [],
-                        "dynamicports": [],
-                        "children": []
+                        "dynamicports": []
                     },
                     {
                         "id": "8d232f59-e009-0913-e5fd-2621a2d1f611",
@@ -499,8 +484,7 @@
                             "topic": "/MoviesSearch/6"
                         },
                         "ports": [],
-                        "dynamicports": [],
-                        "children": []
+                        "dynamicports": []
                     },
                     {
                         "id": "0f9ab47a-0559-ca66-c659-61256991a627",
@@ -511,8 +495,7 @@
                             "destination": "/SearchF"
                         },
                         "ports": [],
-                        "dynamicports": [],
-                        "children": []
+                        "dynamicports": []
                     },
                     {
                         "id": "c7f40f1b-a6c5-aa2c-3946-e85ace79a250",
@@ -523,8 +506,7 @@
                             "destination": "/SearchE"
                         },
                         "ports": [],
-                        "dynamicports": [],
-                        "children": []
+                        "dynamicports": []
                     },
                     {
                         "id": "e82edeff-f625-2439-76e5-ad5077498294",
@@ -535,8 +517,7 @@
                             "topic": "/MoviesSearch/5"
                         },
                         "ports": [],
-                        "dynamicports": [],
-                        "children": []
+                        "dynamicports": []
                     },
                     {
                         "id": "283abc0f-934b-333e-5a37-973fb8e6bc5d",
@@ -547,8 +528,7 @@
                             "topic": "/MoviesSearch/8"
                         },
                         "ports": [],
-                        "dynamicports": [],
-                        "children": []
+                        "dynamicports": []
                     },
                     {
                         "id": "441dfe6d-66ee-3da2-521c-26a03d75459e",
@@ -559,8 +539,7 @@
                             "destination": "/SearchH"
                         },
                         "ports": [],
-                        "dynamicports": [],
-                        "children": []
+                        "dynamicports": []
                     },
                     {
                         "id": "073e2dbf-c92e-a1c9-4f3a-eb82a11033d7",
@@ -571,8 +550,7 @@
                             "destination": "/SearchG"
                         },
                         "ports": [],
-                        "dynamicports": [],
-                        "children": []
+                        "dynamicports": []
                     },
                     {
                         "id": "1bd07a20-4537-6421-3b47-52ceb6b494ea",
@@ -583,21 +561,16 @@
                             "topic": "/MoviesSearch/7"
                         },
                         "ports": [],
-                        "dynamicports": [],
-                        "children": []
+                        "dynamicports": []
                     },
                     {
-                        "id": "2c848ce2-bb20-e068-f5fd-3be79d7d6ff6",
-                        "type": "Page Navigation",
-                        "x": 1183.5571981488908,
-                        "y": 105.56168148653602,
-                        "parameters": {
-                            "destination": "/StartPage",
-                            "resetPageStack": true
-                        },
+                        "id": "81269c3b-09db-73f9-5c50-ec8bbdd47558",
+                        "type": "Page Navigation Back",
+                        "x": 1247.4583636316938,
+                        "y": 288.988099683032,
+                        "parameters": {},
                         "ports": [],
-                        "dynamicports": [],
-                        "children": []
+                        "dynamicports": []
                     }
                 ]
             }
@@ -15847,8 +15820,7 @@
                                             "Color": "#ee462f"
                                         },
                                         "ports": [],
-                                        "dynamicports": [],
-                                        "children": []
+                                        "dynamicports": []
                                     },
                                     {
                                         "id": "67a59a3f-b539-4165-3cd8-6a215d4b5bfb",
@@ -15870,8 +15842,7 @@
                                             "Id": "B"
                                         },
                                         "ports": [],
-                                        "dynamicports": [],
-                                        "children": []
+                                        "dynamicports": []
                                     }
                                 ]
                             },
@@ -15912,8 +15883,7 @@
                                             "Id": "C"
                                         },
                                         "ports": [],
-                                        "dynamicports": [],
-                                        "children": []
+                                        "dynamicports": []
                                     },
                                     {
                                         "id": "b530db68-7e8a-3476-d3fa-35b98e0ab4c2",
@@ -15935,8 +15905,7 @@
                                             "Id": "D"
                                         },
                                         "ports": [],
-                                        "dynamicports": [],
-                                        "children": []
+                                        "dynamicports": []
                                     }
                                 ]
                             }
@@ -15952,8 +15921,7 @@
                             "resetPageStack": false
                         },
                         "ports": [],
-                        "dynamicports": [],
-                        "children": []
+                        "dynamicports": []
                     },
                     {
                         "id": "53265534-b9dd-d544-4e33-8dc5789f6f56",
@@ -15985,8 +15953,7 @@
                                 "group": "Inputs",
                                 "index": 3
                             }
-                        ],
-                        "children": []
+                        ]
                     },
                     {
                         "id": "fdf5ab2c-8a89-70af-ff61-22804a080c7e",
@@ -15998,8 +15965,7 @@
                             "color 1": "#ffffff"
                         },
                         "ports": [],
-                        "dynamicports": [],
-                        "children": []
+                        "dynamicports": []
                     },
                     {
                         "id": "214a34c7-a512-2ac2-42b5-772d852fcdc3",
@@ -16011,8 +15977,7 @@
                             "startDelay": 100
                         },
                         "ports": [],
-                        "dynamicports": [],
-                        "children": []
+                        "dynamicports": []
                     },
                     {
                         "id": "10f20b9c-4cfd-985b-1d1e-dd1a18798d31",
@@ -16037,8 +16002,7 @@
                                 "index": 1
                             }
                         ],
-                        "dynamicports": [],
-                        "children": []
+                        "dynamicports": []
                     },
                     {
                         "id": "1216a5ba-f276-92c0-4537-f5e87b646361",
@@ -16070,8 +16034,7 @@
                                 "group": "Inputs",
                                 "index": 3
                             }
-                        ],
-                        "children": []
+                        ]
                     },
                     {
                         "id": "b8d719d9-80a3-59d6-a3bd-aef41448d485",
@@ -16083,8 +16046,7 @@
                             "color 1": "#ebebeb"
                         },
                         "ports": [],
-                        "dynamicports": [],
-                        "children": []
+                        "dynamicports": []
                     },
                     {
                         "id": "adeeefbf-4ce3-5a76-5c78-8c64d30dbceb",
@@ -16109,8 +16071,7 @@
                                 "index": 1
                             }
                         ],
-                        "dynamicports": [],
-                        "children": []
+                        "dynamicports": []
                     },
                     {
                         "id": "3cca8fe1-a5c9-f46f-f9d1-328668623d98",
@@ -16121,8 +16082,7 @@
                             "duration": 1000
                         },
                         "ports": [],
-                        "dynamicports": [],
-                        "children": []
+                        "dynamicports": []
                     },
                     {
                         "id": "2965a49e-cd38-0f5e-4431-3bb0b3ec4920",
@@ -16154,8 +16114,7 @@
                                 "group": "Inputs",
                                 "index": 3
                             }
-                        ],
-                        "children": []
+                        ]
                     },
                     {
                         "id": "07a7567a-0f8f-09eb-1c1f-0a640c4f6218",
@@ -16167,8 +16126,7 @@
                             "color 1": "#ebebeb"
                         },
                         "ports": [],
-                        "dynamicports": [],
-                        "children": []
+                        "dynamicports": []
                     },
                     {
                         "id": "97978d66-9509-8ea9-e8c7-0f3e5e9c8c63",
@@ -16193,8 +16151,7 @@
                                 "index": 1
                             }
                         ],
-                        "dynamicports": [],
-                        "children": []
+                        "dynamicports": []
                     },
                     {
                         "id": "16ee5a94-ad2a-25be-f81b-3f4e5529458c",
@@ -16205,8 +16162,7 @@
                             "duration": 1000
                         },
                         "ports": [],
-                        "dynamicports": [],
-                        "children": []
+                        "dynamicports": []
                     },
                     {
                         "id": "8fc45f15-30a9-f1e9-f5c7-679667ab7352",
@@ -16238,8 +16194,7 @@
                                 "group": "Inputs",
                                 "index": 3
                             }
-                        ],
-                        "children": []
+                        ]
                     },
                     {
                         "id": "286022bd-f59a-1722-2e1d-0582e99ddb27",
@@ -16251,8 +16206,7 @@
                             "color 1": "#ebebeb"
                         },
                         "ports": [],
-                        "dynamicports": [],
-                        "children": []
+                        "dynamicports": []
                     },
                     {
                         "id": "7e0758c6-18a7-ca27-6f85-6f12c7ae332e",
@@ -16277,8 +16231,7 @@
                                 "index": 1
                             }
                         ],
-                        "dynamicports": [],
-                        "children": []
+                        "dynamicports": []
                     },
                     {
                         "id": "15aace78-4987-e985-3267-083e86ba6be6",
@@ -16289,8 +16242,7 @@
                             "duration": 1000
                         },
                         "ports": [],
-                        "dynamicports": [],
-                        "children": []
+                        "dynamicports": []
                     },
                     {
                         "id": "7dfbff76-6a07-50ca-4f93-ff6a47d0c980",
@@ -16302,8 +16254,7 @@
                             "topic": "/Rep/MainMenu"
                         },
                         "ports": [],
-                        "dynamicports": [],
-                        "children": []
+                        "dynamicports": []
                     },
                     {
                         "id": "9cf90abc-0a1d-c456-4386-de196afd980e",
@@ -16314,8 +16265,7 @@
                             "destination": "/Service"
                         },
                         "ports": [],
-                        "dynamicports": [],
-                        "children": []
+                        "dynamicports": []
                     },
                     {
                         "id": "9bd51954-867f-550a-59e4-2d0e52f570cb",
@@ -16337,8 +16287,7 @@
                                 "index": 1
                             }
                         ],
-                        "dynamicports": [],
-                        "children": []
+                        "dynamicports": []
                     },
                     {
                         "id": "98b0fe0e-37cf-1c27-2a5d-1df0bb9e7fcf",
@@ -16360,8 +16309,7 @@
                                 "index": 1
                             }
                         ],
-                        "dynamicports": [],
-                        "children": []
+                        "dynamicports": []
                     },
                     {
                         "id": "f82f4b10-54e5-0f6c-7c65-6dc458f91e24",
@@ -16391,8 +16339,7 @@
                                 "group": "Inputs",
                                 "index": 3
                             }
-                        ],
-                        "children": []
+                        ]
                     }
                 ]
             }
@@ -16437,8 +16384,7 @@
                                             "color": "#f9c333"
                                         },
                                         "ports": [],
-                                        "dynamicports": [],
-                                        "children": []
+                                        "dynamicports": []
                                     },
                                     {
                                         "id": "0576e74b-1711-05f6-5853-c89c2413aa9f",
@@ -16456,8 +16402,7 @@
                                             "fontSize": 60
                                         },
                                         "ports": [],
-                                        "dynamicports": [],
-                                        "children": []
+                                        "dynamicports": []
                                     }
                                 ]
                             },
@@ -16475,8 +16420,7 @@
                                     "Color": "#022fa2"
                                 },
                                 "ports": [],
-                                "dynamicports": [],
-                                "children": []
+                                "dynamicports": []
                             },
                             {
                                 "id": "c7e1761c-04ea-8c6b-98fe-b8d7e3e9e090",
@@ -16492,8 +16436,7 @@
                                     "Label": "Press to repeat"
                                 },
                                 "ports": [],
-                                "dynamicports": [],
-                                "children": []
+                                "dynamicports": []
                             }
                         ]
                     },
@@ -16519,8 +16462,7 @@
                                 "index": 1
                             }
                         ],
-                        "dynamicports": [],
-                        "children": []
+                        "dynamicports": []
                     },
                     {
                         "id": "ff94e946-61f8-4ae8-ae59-cd0c9dee28d6",
@@ -16554,8 +16496,7 @@
                                 "index": 1
                             }
                         ],
-                        "dynamicports": [],
-                        "children": []
+                        "dynamicports": []
                     }
                 ]
             }
@@ -24987,6 +24928,26 @@
                     }
                 ]
             }
+        },
+        {
+            "name": "/Blank Main ",
+            "graph": {
+                "connections": [],
+                "roots": [
+                    {
+                        "id": "2626a13f-3242-ac6b-fa96-d43dbdf78179",
+                        "type": "Page",
+                        "x": 470,
+                        "y": 338,
+                        "parameters": {
+                            "title": "Default"
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    }
+                ]
+            }
         }
     ],
     "settings": {
@@ -25000,6 +24961,6 @@
         "BackButtom.rootComponent": "/HomeButtom",
         "Remote Control.rootComponent": "/HomeButtom"
     },
-    "rootNodeId": "b31e863e-c306-e628-7c3b-9b71ba3ef393",
+    "rootNodeId": "2626a13f-3242-ac6b-fa96-d43dbdf78179",
     "version": "1"
 }
