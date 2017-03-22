@@ -25233,10 +25233,10 @@
                     {
                         "id": "22a26905-56cb-b4a4-b001-fe2b5cfb052d",
                         "type": "Javascript2",
-                        "x": 896,
-                        "y": 711,
+                        "x": 885,
+                        "y": 709,
                         "parameters": {
-                            "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        repeat: \"boolean\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var audio = new Audio('http://users.student.lth.se/dic12jsv/sounds/summer_birds.wav');\n                audio.play();\n                var textToSpeak = \"The weather in Honkong is sunny today. No clouds to be seen.\";\n                var msgA = new SpeechSynthesisUtterance(textToSpeak);\n                window.speechSynthesis.speak(msgA);\n                msgA.rate = 1;\n                //window.navigator.vibrate([100]);\n            }\n    }\n});"
+                            "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        repeat: \"boolean\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var audio = new Audio('http://users.student.lth.se/dic12jsv/sounds/summer_birds.wav');\n                audio.play();\n                var textToSpeak = \"The weather in Honkong is sunny today. No clouds to be seen. At lunch the temperature is expected to raise abowe 30 degrees celcius\";\n                var msgA = new SpeechSynthesisUtterance(textToSpeak);\n                window.speechSynthesis.speak(msgA);\n                msgA.rate = 1;\n                //window.navigator.vibrate([100]);\n            }\n    }\n});"
                         },
                         "ports": [],
                         "dynamicports": [
@@ -25412,10 +25412,10 @@
                     {
                         "id": "f7c0cfbd-9bf0-5b0b-acc3-2e996125d975",
                         "type": "Javascript2",
-                        "x": 412.2533972698882,
-                        "y": 744,
+                        "x": 416.2533972698882,
+                        "y": 745,
                         "parameters": {
-                            "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        repeat: \"boolean\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var audio = new Audio('http://users.student.lth.se/dic12jsv/sounds/rainfall_converted.wav');\n                audio.play();\n                var textToSpeak = \"Most parts becoming wet if rather cloudy, with rain returning to some areas from around midnight onwards. Light winds.\";\n                var msgA = new SpeechSynthesisUtterance(textToSpeak);\n                window.speechSynthesis.speak(msgA);\n                msgA.rate = 1;\n                //window.navigator.vibrate([100]);\n            }\n    }\n});"
+                            "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        repeat: \"boolean\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var audio = new Audio('http://users.student.lth.se/dic12jsv/sounds/rainfall_converted.wav');\n                audio.play();\n                var textToSpeak = \"Most parts becoming wet if rather cloudy, with rain returning to some areas from around midnight onwards. Light winds.\";\n                var msgA = new SpeechSynthesisUtterance(textToSpeak);\n                window.speechSynthesis.speak(msgA);\n                msgA.rate = 1;\n                window.navigator.vibrate([1000,500,1000]); // Add/adjust pattern when hardware is is place.\n            }\n    }\n});"
                         },
                         "ports": [],
                         "dynamicports": [
