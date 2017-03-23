@@ -29055,8 +29055,8 @@
                         "id": "2a02804e-d107-d086-a01b-5b19e2b24bdb",
                         "type": "Javascript2",
                         "label": "Action",
-                        "x": 414.0964656400906,
-                        "y": 459.2081939357455,
+                        "x": 415.356097904527,
+                        "y": 460.467826200182,
                         "parameters": {
                             "code": "//var msgA = new SpeechSynthesisUtterance('Action')\ndefine({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                msgA.rate = 2.5;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100]);\n            }\n    }\n});",
                             "pageShowing": true
@@ -29438,7 +29438,7 @@
                         "x": 1420.47623693001,
                         "y": 807.0974438667796,
                         "parameters": {
-                            "destination": "/MoviesButtonSerch/MoviesGH"
+                            "destination": "/MoviesButtonSerch/MoviesEF"
                         },
                         "ports": [],
                         "dynamicports": [],
