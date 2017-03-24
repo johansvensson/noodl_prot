@@ -14426,18 +14426,6 @@
                         "toProperty": "to-Yes"
                     },
                     {
-                        "fromId": "bd63fb70-d27b-49ac-5c51-f80277ac23dd",
-                        "fromProperty": "Label",
-                        "toId": "ec4ace8d-84d9-b68a-79a9-de246261d4f0",
-                        "toProperty": "textToSpeach"
-                    },
-                    {
-                        "fromId": "1135c1ba-07a9-a9da-9bfc-66b7e00fe892",
-                        "fromProperty": "touch.enter",
-                        "toId": "ec4ace8d-84d9-b68a-79a9-de246261d4f0",
-                        "toProperty": "tapped"
-                    },
-                    {
                         "fromId": "1135c1ba-07a9-a9da-9bfc-66b7e00fe892",
                         "fromProperty": "touch.press",
                         "toId": "7c57d1f2-6cae-7088-7c06-31af39fde491",
@@ -14836,38 +14824,6 @@
                             }
                         ],
                         "dynamicports": [],
-                        "children": []
-                    },
-                    {
-                        "id": "ec4ace8d-84d9-b68a-79a9-de246261d4f0",
-                        "type": "Javascript2",
-                        "label": "Repeat label onPress",
-                        "x": 961.4763259338454,
-                        "y": 504.5815280181437,
-                        "parameters": {
-                            "code": "define({\n    inputs: {\n        tapped: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.tapped){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                window.speechSynthesis.speak(msgA);\n               // window.navigator.vibrate([100]);\n            }\n    }\n});"
-                        },
-                        "ports": [],
-                        "dynamicports": [
-                            {
-                                "name": "tapped",
-                                "plug": "input",
-                                "type": {
-                                    "name": "boolean"
-                                },
-                                "group": "Inputs",
-                                "index": 2
-                            },
-                            {
-                                "name": "textToSpeach",
-                                "plug": "input",
-                                "type": {
-                                    "name": "string"
-                                },
-                                "group": "Inputs",
-                                "index": 3
-                            }
-                        ],
                         "children": []
                     },
                     {
@@ -25078,7 +25034,7 @@
                     {
                         "id": "215a5129-dcc8-e6b2-8ad1-19de9a6bc36a",
                         "type": "Javascript2",
-                        "x": 596.6027684057008,
+                        "x": 595.6027684057008,
                         "y": 490.06594756862137,
                         "parameters": {
                             "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        repeat: \"boolean\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing || inputs.repeat){\n                var audio = new Audio('http://users.student.lth.se/dic12jsv/sounds/level3.wav');\n                audio.play();\n            }\n    }\n});"
@@ -25236,7 +25192,7 @@
                     {
                         "id": "df22640c-6bc4-fffc-b100-7e5df2c5cd62",
                         "type": "Javascript2",
-                        "x": 886.7466027301118,
+                        "x": 887.7466027301118,
                         "y": 545.1137231329255,
                         "parameters": {
                             "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        repeat: \"boolean\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing || inputs.repeat){\n                var audio = new Audio('http://users.student.lth.se/dic12jsv/sounds/level2.wav');\n                audio.play();\n            }\n    }\n});"
@@ -25267,10 +25223,10 @@
                     {
                         "id": "22a26905-56cb-b4a4-b001-fe2b5cfb052d",
                         "type": "Javascript2",
-                        "x": 885,
-                        "y": 709,
+                        "x": 886,
+                        "y": 706.9689860139213,
                         "parameters": {
-                            "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        repeat: \"boolean\",\n        pageHiding: \"boolean\"\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var audio = new Audio('http://users.student.lth.se/dic12jsv/sounds/summer_birds.wav');\n                audio.play();\n                var textToSpeak = \"The weather in Honkong is sunny today. No clouds to be seen. At lunch the temperature is expected to raise abowe 30 degrees celcius\";\n                var msgA = new SpeechSynthesisUtterance(textToSpeak);\n                window.speechSynthesis.speak(msgA);\n                msgA.rate = 1;\n                //window.navigator.vibrate([100]);\n                if(inputs.pageHiding){\n                    //Stop TTS\n                     //window.speechSynthesis.cancel();\n                }\n            }\n    }\n});"
+                            "code": "var audio = new Audio('http://users.student.lth.se/dic12jsv/sounds/summer_birds.wav');\n\ndefine({\n    inputs: {\n        pageShowing: \"boolean\",\n        repeat: \"boolean\",\n        pageHiding: \"boolean\"\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                audio.play();\n                var textToSpeak = \"The weather in Honkong is sunny today. No clouds to be seen. At lunch the temperature is expected to raise abowe 30 degrees celcius\";\n                var msgA = new SpeechSynthesisUtterance(textToSpeak);\n                window.speechSynthesis.speak(msgA);\n                msgA.rate = 1;\n                //window.navigator.vibrate([100]);\n            }\n            if(inputs.pageHiding){\n                    audio.pause();\n                    audio.load();\n                }\n    }\n});"
                         },
                         "ports": [],
                         "dynamicports": [
@@ -25371,6 +25327,12 @@
                         "fromProperty": "timerFinished",
                         "toId": "f7c0cfbd-9bf0-5b0b-acc3-2e996125d975",
                         "toProperty": "pageShowing"
+                    },
+                    {
+                        "fromId": "3a26b628-b52a-f9dd-ef9f-69cd6d6c7b6a",
+                        "fromProperty": "pageHiding",
+                        "toId": "f7c0cfbd-9bf0-5b0b-acc3-2e996125d975",
+                        "toProperty": "pageHiding"
                     }
                 ],
                 "roots": [
@@ -25501,7 +25463,7 @@
                         "x": 407.76274627878286,
                         "y": 753.0566954218774,
                         "parameters": {
-                            "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        repeat: \"boolean\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var audio = new Audio('http://users.student.lth.se/dic12jsv/sounds/rainfall_converted.wav');\n                audio.play();\n                var textToSpeak = \"Most parts becoming wet if rather cloudy, with rain returning to some areas from around midnight onwards. Light winds.\";\n                var msgA = new SpeechSynthesisUtterance(textToSpeak);\n                window.speechSynthesis.speak(msgA);\n                msgA.rate = 1;\n                window.navigator.vibrate([1000,500,1000]); // Add/adjust pattern when hardware is is place.\n            }\n    }\n});"
+                            "code": "var audio = new Audio('http://users.student.lth.se/dic12jsv/sounds/rainfall_converted.wav');\n\ndefine({\n    inputs: {\n        pageShowing: \"boolean\",\n        repeat: \"boolean\",\n        pageHiding: \"boolean\"\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                audio.play();\n                var textToSpeak = \"Most parts becoming wet if rather cloudy, with rain returning to some areas from around midnight onwards. Light winds.\";\n                var msgA = new SpeechSynthesisUtterance(textToSpeak);\n                window.speechSynthesis.speak(msgA);\n                msgA.rate = 1;\n                window.navigator.vibrate([1000,500,1000]); // Add/adjust pattern when hardware is is place.\n            }\n            if(inputs.pageHiding){\n            audio.pause();\n            audio.load();\n        }\n    }\n});"
                         },
                         "ports": [],
                         "dynamicports": [
@@ -25522,6 +25484,15 @@
                                 },
                                 "group": "Inputs",
                                 "index": 3
+                            },
+                            {
+                                "name": "pageHiding",
+                                "plug": "input",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "group": "Inputs",
+                                "index": 4
                             }
                         ],
                         "children": []
@@ -29497,6 +29468,6 @@
         "BackButtom.rootComponent": "/HomeButtom",
         "Remote Control.rootComponent": "/HomeButtom"
     },
-    "rootNodeId": "24f1e84f-2292-5d60-a059-5329e6ec4303",
+    "rootNodeId": "2626a13f-3242-ac6b-fa96-d43dbdf78179",
     "version": "1"
 }
