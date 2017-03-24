@@ -118,6 +118,30 @@
                         "fromProperty": "backHome",
                         "toId": "81269c3b-09db-73f9-5c50-ec8bbdd47558",
                         "toProperty": "back"
+                    },
+                    {
+                        "fromId": "226702e6-2b08-057a-20ce-11358ec421b3",
+                        "fromProperty": "currentPageTitle",
+                        "toId": "f73f976a-3730-0a7d-c335-862615f38de1",
+                        "toProperty": "currPage"
+                    },
+                    {
+                        "fromId": "f73f976a-3730-0a7d-c335-862615f38de1",
+                        "fromProperty": "backMovies",
+                        "toId": "f4e1a583-8a74-f3e4-6070-731cda11c00b",
+                        "toProperty": "navigate"
+                    },
+                    {
+                        "fromId": "f73f976a-3730-0a7d-c335-862615f38de1",
+                        "fromProperty": "backEnt",
+                        "toId": "ade36357-e74c-b1ec-6198-6ef2fce6ab12",
+                        "toProperty": "navigate"
+                    },
+                    {
+                        "fromId": "f73f976a-3730-0a7d-c335-862615f38de1",
+                        "fromProperty": "backMain",
+                        "toId": "6fce92de-23e1-24b2-5af6-30aa3d8dbc60",
+                        "toProperty": "navigate"
                     }
                 ],
                 "roots": [
@@ -235,10 +259,10 @@
                     {
                         "id": "f73f976a-3730-0a7d-c335-862615f38de1",
                         "type": "Javascript2",
-                        "x": 921.6235755609359,
-                        "y": 278.76513234859425,
+                        "x": 922.807736748494,
+                        "y": 277.63413041526553,
                         "parameters": {
-                            "code": "define({\n    inputs:{\n       startSearch: \"bolean\"  \n    },\n    outputs: {\n        keyLeft: \"boolean\",\n        keyRight: \"boolean\",\n        keyDown: \"boolean\",\n        topLeft: \"boolean\",\n        topRight: \"boolean\",\n        bottomLeft: \"boolean\",\n        bottomRight: \"boolean\",\n        backHome: \"boolean\",\n        repeat: \"boolean\",\n     },\n    setup: function(inputs, outputs) {\n        var self = this;\n        document.addEventListener(\"keydown\", function(e) {\n            if(e.keyCode === 100) {\n                self.sendSignalOnOutput(\"topLeft\");\n            }\n            else if(e.keyCode === 101) {\n                self.sendSignalOnOutput(\"topRight\");\n            }\n            else if(e.keyCode === 97) {\n                self.sendSignalOnOutput(\"bottomLeft\");\n            }\n            else if(e.keyCode === 98) {\n                self.sendSignalOnOutput(\"bottomRight\");\n            }\n            else if(e.keyCode === 103) {\n                self.sendSignalOnOutput(\"backHome\");\n                window.speechSynthesis.cancel();\n            }\n            else if(e.keyCode === 104) {\n                window.speechSynthesis.cancel();\n                self.sendSignalOnOutput(\"repeat\");\n            }\n        });\n\n}   \n    });\n    "
+                            "code": "define({\n    inputs:{\n       startSearch: \"bolean\",\n       currPage: \"string\",\n    },\n    outputs: {\n        keyLeft: \"boolean\",\n        keyRight: \"boolean\",\n        keyDown: \"boolean\",\n        topLeft: \"boolean\",\n        topRight: \"boolean\",\n        bottomLeft: \"boolean\",\n        bottomRight: \"boolean\",\n        backHome: \"boolean\",\n        repeat: \"boolean\",\n        backMovies: \"string\",\n        backEnt: \"string\",\n        backMain: \"string\"\n     },\n    setup: function(inputs, outputs) {\n        var self = this;\n        document.addEventListener(\"keydown\", function(e) {\n            if(e.keyCode === 100) {\n                self.sendSignalOnOutput(\"topLeft\");\n            }\n            else if(e.keyCode === 101) {\n                self.sendSignalOnOutput(\"topRight\");\n            }\n            else if(e.keyCode === 97) {\n                self.sendSignalOnOutput(\"bottomLeft\");\n            }\n            else if(e.keyCode === 98) {\n                self.sendSignalOnOutput(\"bottomRight\");\n            }\n            else if(e.keyCode === 103) {\n                window.speechSynthesis.cancel();\n                currentPage = inputs.currPage;\n                console.log(\"Just left: \" + currentPage);\n                if(currentPage == \"MoviesAB\" || currentPage == \"MoviesCD\" ||\n                currentPage == \"MoviesEF\" ||currentPage == \"MoviesGH\"){\n                    self.sendSignalOnOutput(\"backMovies\");\n                    console.log(\"In MoviesAB statement\");\n                  //  console.log(\"\")\n                //}else if(currentPage == \"Movies\") {\n                    //self.sendSignalOnOutput(\"backEnt\");\n                //}if(currentPage == \"Entertainment\"){\n                   // self.sendSignalOnOutput(\"backMain\");\n                    }else{\n                        console.log(\"In the normal statement, inget specialfall\");\n                self.sendSignalOnOutput(\"backHome\");\n                }\n            }\n            else if(e.keyCode === 104) {\n                window.speechSynthesis.cancel();\n                self.sendSignalOnOutput(\"repeat\");\n            }\n        });\n\n}   \n    });\n    "
                         },
                         "ports": [],
                         "dynamicports": [
@@ -252,16 +276,16 @@
                                 "index": 2
                             },
                             {
-                                "name": "keyLeft",
+                                "name": "currPage",
+                                "plug": "input",
                                 "type": {
-                                    "name": "boolean"
+                                    "name": "string"
                                 },
-                                "plug": "output",
-                                "group": "Outputs",
+                                "group": "Inputs",
                                 "index": 3
                             },
                             {
-                                "name": "keyRight",
+                                "name": "keyLeft",
                                 "type": {
                                     "name": "boolean"
                                 },
@@ -270,7 +294,7 @@
                                 "index": 4
                             },
                             {
-                                "name": "keyDown",
+                                "name": "keyRight",
                                 "type": {
                                     "name": "boolean"
                                 },
@@ -279,7 +303,7 @@
                                 "index": 5
                             },
                             {
-                                "name": "topLeft",
+                                "name": "keyDown",
                                 "type": {
                                     "name": "boolean"
                                 },
@@ -288,7 +312,7 @@
                                 "index": 6
                             },
                             {
-                                "name": "topRight",
+                                "name": "topLeft",
                                 "type": {
                                     "name": "boolean"
                                 },
@@ -297,7 +321,7 @@
                                 "index": 7
                             },
                             {
-                                "name": "bottomLeft",
+                                "name": "topRight",
                                 "type": {
                                     "name": "boolean"
                                 },
@@ -306,7 +330,7 @@
                                 "index": 8
                             },
                             {
-                                "name": "bottomRight",
+                                "name": "bottomLeft",
                                 "type": {
                                     "name": "boolean"
                                 },
@@ -315,7 +339,7 @@
                                 "index": 9
                             },
                             {
-                                "name": "backHome",
+                                "name": "bottomRight",
                                 "type": {
                                     "name": "boolean"
                                 },
@@ -324,13 +348,49 @@
                                 "index": 10
                             },
                             {
-                                "name": "repeat",
+                                "name": "backHome",
                                 "type": {
                                     "name": "boolean"
                                 },
                                 "plug": "output",
                                 "group": "Outputs",
                                 "index": 11
+                            },
+                            {
+                                "name": "repeat",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "plug": "output",
+                                "group": "Outputs",
+                                "index": 12
+                            },
+                            {
+                                "name": "backMovies",
+                                "type": {
+                                    "name": "string"
+                                },
+                                "plug": "output",
+                                "group": "Outputs",
+                                "index": 13
+                            },
+                            {
+                                "name": "backEnt",
+                                "type": {
+                                    "name": "string"
+                                },
+                                "plug": "output",
+                                "group": "Outputs",
+                                "index": 14
+                            },
+                            {
+                                "name": "backMain",
+                                "type": {
+                                    "name": "string"
+                                },
+                                "plug": "output",
+                                "group": "Outputs",
+                                "index": 15
                             }
                         ],
                         "children": []
@@ -380,8 +440,8 @@
                     {
                         "id": "f6f8c377-c03e-0412-033a-35f019b1c0fe",
                         "type": "Signal To Index",
-                        "x": 910.9089821140224,
-                        "y": 478.41474944801377,
+                        "x": 924.6949937139944,
+                        "y": 521.558795847902,
                         "parameters": {
                             "input 0": false,
                             "input 1": false,
@@ -589,9 +649,51 @@
                     {
                         "id": "81269c3b-09db-73f9-5c50-ec8bbdd47558",
                         "type": "Page Navigation Back",
-                        "x": 1247.4583636316938,
-                        "y": 288.988099683032,
+                        "x": 1244.0127425143849,
+                        "y": 266.0172922343059,
                         "parameters": {},
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "f4e1a583-8a74-f3e4-6070-731cda11c00b",
+                        "type": "Page Navigation",
+                        "label": "To Movies",
+                        "x": 1243.6729807038018,
+                        "y": 391.80118239721605,
+                        "parameters": {
+                            "destination": "/Movies",
+                            "resetPageStack": false
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "ade36357-e74c-b1ec-6198-6ef2fce6ab12",
+                        "type": "Page Navigation",
+                        "label": "To Entertainment",
+                        "x": 1246.3373133061239,
+                        "y": 485.8320256519592,
+                        "parameters": {
+                            "destination": "/Entertainment",
+                            "resetPageStack": false
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "6fce92de-23e1-24b2-5af6-30aa3d8dbc60",
+                        "type": "Page Navigation",
+                        "label": "To Main Menu",
+                        "x": 1247.0731473258072,
+                        "y": 591.1685002585649,
+                        "parameters": {
+                            "destination": "/StartPage",
+                            "resetPageStack": true
+                        },
                         "ports": [],
                         "dynamicports": [],
                         "children": []
@@ -15770,8 +15872,8 @@
                                 "type": "Group",
                                 "version": 2,
                                 "label": "Topp",
-                                "x": 211,
-                                "y": 480,
+                                "x": 20,
+                                "y": 117,
                                 "parameters": {
                                     "height": {
                                         "value": 50,
@@ -17237,8 +17339,8 @@
                     {
                         "id": "da7521a8-bd72-30c6-6f3a-43c1de7489d3",
                         "type": "Javascript2",
-                        "x": 673.259707286329,
-                        "y": 484.55453605253024,
+                        "x": 631.27363451364,
+                        "y": 488.37145175913827,
                         "parameters": {
                             "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        repeat: \"boolean\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing || inputs.repeat){\n                var audio = new Audio('http://users.student.lth.se/dic12jsv/sounds/level1.wav');\n                audio.play();\n            }\n    }\n});"
                         },
@@ -25130,6 +25232,12 @@
                         "fromProperty": "pageHiding",
                         "toId": "22a26905-56cb-b4a4-b001-fe2b5cfb052d",
                         "toProperty": "pageHiding"
+                    },
+                    {
+                        "fromId": "cac3d6f6-1f33-c2a7-5ebb-f40bfc578dc9",
+                        "fromProperty": "messageReceived",
+                        "toId": "22a26905-56cb-b4a4-b001-fe2b5cfb052d",
+                        "toProperty": "pageShowing"
                     }
                 ],
                 "roots": [
@@ -25167,7 +25275,7 @@
                                 "id": "efd2b087-cf83-e477-50c4-5e4fb4b62cc2",
                                 "type": "Rectangle",
                                 "x": 20,
-                                "y": 158,
+                                "y": 178,
                                 "parameters": {
                                     "color": "#ffffff"
                                 },
@@ -25192,8 +25300,8 @@
                     {
                         "id": "df22640c-6bc4-fffc-b100-7e5df2c5cd62",
                         "type": "Javascript2",
-                        "x": 887.7466027301118,
-                        "y": 545.1137231329255,
+                        "x": 888.7466027301118,
+                        "y": 544.1137231329255,
                         "parameters": {
                             "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        repeat: \"boolean\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing || inputs.repeat){\n                var audio = new Audio('http://users.student.lth.se/dic12jsv/sounds/level2.wav');\n                audio.play();\n            }\n    }\n});"
                         },
@@ -25275,7 +25383,7 @@
                     {
                         "id": "457c9323-6a0a-1028-9cbb-5b686347cae1",
                         "type": "Animation",
-                        "x": 1170.9633022368166,
+                        "x": 1168.9633022368166,
                         "y": 820.968204173408,
                         "parameters": {
                             "duration": 5000,
@@ -25460,7 +25568,7 @@
                     {
                         "id": "f7c0cfbd-9bf0-5b0b-acc3-2e996125d975",
                         "type": "Javascript2",
-                        "x": 407.76274627878286,
+                        "x": 406.76274627878286,
                         "y": 753.0566954218774,
                         "parameters": {
                             "code": "var audio = new Audio('http://users.student.lth.se/dic12jsv/sounds/rainfall_converted.wav');\n\ndefine({\n    inputs: {\n        pageShowing: \"boolean\",\n        repeat: \"boolean\",\n        pageHiding: \"boolean\"\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                audio.play();\n                var textToSpeak = \"Most parts becoming wet if rather cloudy, with rain returning to some areas from around midnight onwards. Light winds.\";\n                var msgA = new SpeechSynthesisUtterance(textToSpeak);\n                window.speechSynthesis.speak(msgA);\n                msgA.rate = 1;\n                window.navigator.vibrate([1000,500,1000]); // Add/adjust pattern when hardware is is place.\n            }\n            if(inputs.pageHiding){\n            audio.pause();\n            audio.load();\n        }\n    }\n});"
@@ -25756,7 +25864,7 @@
                         "id": "30ba0aae-73e5-0e13-92a2-11086a2b4c24",
                         "type": "Page",
                         "label": "Movies",
-                        "x": 1557.1382175387002,
+                        "x": 1561.1382175387002,
                         "y": 935.469719914822,
                         "parameters": {
                             "title": "Movies",
