@@ -235,10 +235,10 @@
                     {
                         "id": "f73f976a-3730-0a7d-c335-862615f38de1",
                         "type": "Javascript2",
-                        "x": 920.6235755609359,
-                        "y": 277.46613096686275,
+                        "x": 921.6235755609359,
+                        "y": 278.76513234859425,
                         "parameters": {
-                            "code": "define({\n    inputs:{\n       startSearch: \"bolean\"  \n    },\n    outputs: {\n        keyLeft: \"boolean\",\n        keyRight: \"boolean\",\n        keyDown: \"boolean\",\n        topLeft: \"boolean\",\n        topRight: \"boolean\",\n        bottomLeft: \"boolean\",\n        bottomRight: \"boolean\",\n        backHome: \"boolean\",\n        repeat: \"boolean\",\n     },\n    setup: function(inputs, outputs) {\n        var self = this;\n        document.addEventListener(\"keydown\", function(e) {\n            if(e.keyCode === 100) {\n                self.sendSignalOnOutput(\"topLeft\");\n            }\n            else if(e.keyCode === 101) {\n                self.sendSignalOnOutput(\"topRight\");\n            }\n            else if(e.keyCode === 97) {\n                self.sendSignalOnOutput(\"bottomLeft\");\n            }\n            else if(e.keyCode === 98) {\n                self.sendSignalOnOutput(\"bottomRight\");\n            }\n            else if(e.keyCode === 103) {\n                self.sendSignalOnOutput(\"backHome\");\n            }\n            else if(e.keyCode === 104) {\n                self.sendSignalOnOutput(\"repeat\");\n            }\n        });\n\n}   \n    });\n    "
+                            "code": "define({\n    inputs:{\n       startSearch: \"bolean\"  \n    },\n    outputs: {\n        keyLeft: \"boolean\",\n        keyRight: \"boolean\",\n        keyDown: \"boolean\",\n        topLeft: \"boolean\",\n        topRight: \"boolean\",\n        bottomLeft: \"boolean\",\n        bottomRight: \"boolean\",\n        backHome: \"boolean\",\n        repeat: \"boolean\",\n     },\n    setup: function(inputs, outputs) {\n        var self = this;\n        document.addEventListener(\"keydown\", function(e) {\n            if(e.keyCode === 100) {\n                self.sendSignalOnOutput(\"topLeft\");\n            }\n            else if(e.keyCode === 101) {\n                self.sendSignalOnOutput(\"topRight\");\n            }\n            else if(e.keyCode === 97) {\n                self.sendSignalOnOutput(\"bottomLeft\");\n            }\n            else if(e.keyCode === 98) {\n                self.sendSignalOnOutput(\"bottomRight\");\n            }\n            else if(e.keyCode === 103) {\n                self.sendSignalOnOutput(\"backHome\");\n                window.speechSynthesis.cancel();\n            }\n            else if(e.keyCode === 104) {\n                window.speechSynthesis.cancel();\n                self.sendSignalOnOutput(\"repeat\");\n            }\n        });\n\n}   \n    });\n    "
                         },
                         "ports": [],
                         "dynamicports": [
@@ -383,11 +383,11 @@
                         "x": 910.9089821140224,
                         "y": 478.41474944801377,
                         "parameters": {
-                            "input 0": true,
-                            "input 1": true,
-                            "input 2": true,
-                            "input 3": true,
-                            "input 4": true,
+                            "input 0": false,
+                            "input 1": false,
+                            "input 2": false,
+                            "input 3": false,
+                            "input 4": false,
                             "startIndex": "input 0"
                         },
                         "ports": [],
@@ -16254,8 +16254,8 @@
                     {
                         "id": "7e0758c6-18a7-ca27-6f85-6f12c7ae332e",
                         "type": "Animation",
-                        "x": -659.1446178950537,
-                        "y": 960.6435749337688,
+                        "x": -660.1446178950537,
+                        "y": 959.6435749337688,
                         "parameters": {
                             "Blend.startMode": "explicit",
                             "Blend.startValue": 0.5,
@@ -17219,7 +17219,7 @@
                     {
                         "id": "6a8702e8-9fc2-9fd7-5b9e-eeb1e5600023",
                         "type": "Animation",
-                        "x": 410,
+                        "x": 408.7596025698785,
                         "y": 1051.2452613504418,
                         "parameters": {
                             "Blend.startMode": "explicit",
@@ -17717,7 +17717,7 @@
                         "id": "b1ae5449-4905-6fe1-1eca-3889ecb2b62d",
                         "type": "Javascript2",
                         "label": "Action",
-                        "x": 701.4447175599528,
+                        "x": 702.8693640863136,
                         "y": 941.1888395869449,
                         "parameters": {
                             "code": "//var msgA = new SpeechSynthesisUtterance('Action')\ndefine({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                msgA.rate = 2.5;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100]);\n            }\n    }\n});",
@@ -24230,7 +24230,7 @@
                         "y": 845.0997283120953,
                         "parameters": {
                             "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                msgA.rate = 2.5;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100,30,100]);\n            }\n    }\n});",
-                            "pageShowing": true
+                            "pageShowing": false
                         },
                         "ports": [],
                         "dynamicports": [
@@ -24310,11 +24310,11 @@
                         "id": "aba7ce9c-7c7a-7032-e759-ddf92e4845dc",
                         "type": "Javascript2",
                         "label": "Animation",
-                        "x": 543.0948363942948,
+                        "x": 540.5755718654218,
                         "y": 981.4261189551223,
                         "parameters": {
                             "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                msgA.rate = 2.5;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100,30,100,30,100]);\n            }\n    }\n});",
-                            "pageShowing": true
+                            "pageShowing": false
                         },
                         "ports": [],
                         "dynamicports": [
@@ -24394,11 +24394,11 @@
                         "id": "c6bb8f63-01c6-b91e-3e3d-fa976b6133d1",
                         "type": "Javascript2",
                         "label": "Animation",
-                        "x": 544.9676583135125,
-                        "y": 1129.8946594062254,
+                        "x": 539.9291292557665,
+                        "y": 1132.4139239350984,
                         "parameters": {
                             "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                msgA.rate = 2.5;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100,30,100,30,100,30,100]);\n            }\n    }\n});",
-                            "pageShowing": true
+                            "pageShowing": false
                         },
                         "ports": [],
                         "dynamicports": [
@@ -24719,6 +24719,12 @@
                         "fromProperty": "pageShowing",
                         "toId": "215a5129-dcc8-e6b2-8ad1-19de9a6bc36a",
                         "toProperty": "pageShowing"
+                    },
+                    {
+                        "fromId": "a1f16b6b-8d3e-3e6d-1338-7b3a1c8e8088",
+                        "fromProperty": "pageHiding",
+                        "toId": "12d41309-28e0-c736-9652-fdebbf3ff069",
+                        "toProperty": "pageHiding"
                     }
                 ],
                 "roots": [
@@ -24853,7 +24859,8 @@
                         "x": 819.6984997544495,
                         "y": 685.0119575571889,
                         "parameters": {
-                            "duration": 2000
+                            "duration": 500,
+                            "startDelay": 100
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -24963,7 +24970,7 @@
                         "x": 817.2462081644808,
                         "y": 814.4037572449515,
                         "parameters": {
-                            "duration": 2000
+                            "duration": 1000
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -24984,7 +24991,8 @@
                     {
                         "id": "12d41309-28e0-c736-9652-fdebbf3ff069",
                         "type": "Javascript2",
-                        "x": 1703.8574213977392,
+                        "label": "Podcast player",
+                        "x": 1704.8574213977392,
                         "y": 452.122062476128,
                         "parameters": {
                             "code": "var audio = new Audio('http://users.student.lth.se/dic12jsv/sounds/tech_podcast_short2.wav');\ndefine({\n    inputs: {\n        play: \"boolean\",\n        pause: \"boolean\",\n        pageHiding: \"boolean\",\n        \n    },\n    outputs: {\n    },\n    setup: function(inputs, outputs) {\n    },\n    run: function(inputs, outputs) {\n        if(inputs.play && audio.paused) {\n            audio.play();\n            pause = false;\n        }\n        if(inputs.pause){\n            audio.pause();\n            play = false;\n        }\n        if(inputs.pageHiding){\n            audio.pause();\n            audio.load();\n        }\n    }\n});"
@@ -25148,6 +25156,24 @@
                         "fromProperty": "timerFinished",
                         "toId": "22a26905-56cb-b4a4-b001-fe2b5cfb052d",
                         "toProperty": "pageShowing"
+                    },
+                    {
+                        "fromId": "24f1e84f-2292-5d60-a059-5329e6ec4303",
+                        "fromProperty": "pageShowing",
+                        "toId": "457c9323-6a0a-1028-9cbb-5b686347cae1",
+                        "toProperty": "replayToEnd"
+                    },
+                    {
+                        "fromId": "457c9323-6a0a-1028-9cbb-5b686347cae1",
+                        "fromProperty": "Fade In",
+                        "toId": "efd2b087-cf83-e477-50c4-5e4fb4b62cc2",
+                        "toProperty": "opacity"
+                    },
+                    {
+                        "fromId": "24f1e84f-2292-5d60-a059-5329e6ec4303",
+                        "fromProperty": "pageHiding",
+                        "toId": "22a26905-56cb-b4a4-b001-fe2b5cfb052d",
+                        "toProperty": "pageHiding"
                     }
                 ],
                 "roots": [
@@ -25179,53 +25205,19 @@
                                 },
                                 "ports": [],
                                 "dynamicports": [],
-                                "children": [
-                                    {
-                                        "id": "89a63fd0-9658-5d6d-992b-0f0852f3a204",
-                                        "type": "/UI Kit/Controls/Big Button",
-                                        "x": 1589.2408306284028,
-                                        "y": 779.1704373999901,
-                                        "parameters": {
-                                            "Width": {
-                                                "value": 45,
-                                                "unit": "%"
-                                            },
-                                            "Height": {
-                                                "value": 90,
-                                                "unit": "%"
-                                            },
-                                            "Label": "N/A",
-                                            "Id": "EA",
-                                            "Color": "#ee462f"
-                                        },
-                                        "ports": [],
-                                        "dynamicports": [],
-                                        "children": []
-                                    },
-                                    {
-                                        "id": "1a3fdbb8-9d7b-511f-7070-b0f90b152087",
-                                        "type": "/UI Kit/Controls/Big Button",
-                                        "x": 1589.2408306284028,
-                                        "y": 825.1704373999901,
-                                        "parameters": {
-                                            "Width": {
-                                                "value": 45,
-                                                "unit": "%"
-                                            },
-                                            "Color": "#022fa2",
-                                            "Align X": "right",
-                                            "Height": {
-                                                "value": 90,
-                                                "unit": "%"
-                                            },
-                                            "Label": "N/A",
-                                            "Id": "EB"
-                                        },
-                                        "ports": [],
-                                        "dynamicports": [],
-                                        "children": []
-                                    }
-                                ]
+                                "children": []
+                            },
+                            {
+                                "id": "efd2b087-cf83-e477-50c4-5e4fb4b62cc2",
+                                "type": "Rectangle",
+                                "x": 20,
+                                "y": 158,
+                                "parameters": {
+                                    "color": "#ffffff"
+                                },
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": []
                             }
                         ]
                     },
@@ -25278,7 +25270,7 @@
                         "x": 885,
                         "y": 709,
                         "parameters": {
-                            "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        repeat: \"boolean\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var audio = new Audio('http://users.student.lth.se/dic12jsv/sounds/summer_birds.wav');\n                audio.play();\n                var textToSpeak = \"The weather in Honkong is sunny today. No clouds to be seen. At lunch the temperature is expected to raise abowe 30 degrees celcius\";\n                var msgA = new SpeechSynthesisUtterance(textToSpeak);\n                window.speechSynthesis.speak(msgA);\n                msgA.rate = 1;\n                //window.navigator.vibrate([100]);\n            }\n    }\n});"
+                            "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        repeat: \"boolean\",\n        pageHiding: \"boolean\"\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var audio = new Audio('http://users.student.lth.se/dic12jsv/sounds/summer_birds.wav');\n                audio.play();\n                var textToSpeak = \"The weather in Honkong is sunny today. No clouds to be seen. At lunch the temperature is expected to raise abowe 30 degrees celcius\";\n                var msgA = new SpeechSynthesisUtterance(textToSpeak);\n                window.speechSynthesis.speak(msgA);\n                msgA.rate = 1;\n                //window.navigator.vibrate([100]);\n                if(inputs.pageHiding){\n                    //Stop TTS\n                     //window.speechSynthesis.cancel();\n                }\n            }\n    }\n});"
                         },
                         "ports": [],
                         "dynamicports": [
@@ -25299,6 +25291,15 @@
                                 },
                                 "group": "Inputs",
                                 "index": 3
+                            },
+                            {
+                                "name": "pageHiding",
+                                "plug": "input",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "group": "Inputs",
+                                "index": 4
                             }
                         ],
                         "children": []
@@ -25312,6 +25313,31 @@
                             "duration": 500
                         },
                         "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "457c9323-6a0a-1028-9cbb-5b686347cae1",
+                        "type": "Animation",
+                        "x": 1170.9633022368166,
+                        "y": 820.968204173408,
+                        "parameters": {
+                            "duration": 5000,
+                            "easingCurve": "easeOut",
+                            "Fade In.startMode": "explicit",
+                            "Fade In.endValue": 1
+                        },
+                        "ports": [
+                            {
+                                "name": "Fade In",
+                                "plug": "output",
+                                "type": {
+                                    "name": "number"
+                                },
+                                "group": "Animation Values",
+                                "index": 1
+                            }
+                        ],
                         "dynamicports": [],
                         "children": []
                     }
@@ -25402,8 +25428,8 @@
                                     {
                                         "id": "c5d4d72f-c83b-87c4-032b-4bbc1b0e1f64",
                                         "type": "/UI Kit/Controls/Big Button",
-                                        "x": 1589.2408306284028,
-                                        "y": 825.1704373999901,
+                                        "x": 20,
+                                        "y": 107,
                                         "parameters": {
                                             "Width": {
                                                 "value": 45,
@@ -25441,7 +25467,7 @@
                     {
                         "id": "ee06ec00-d6ce-8cdb-8a9c-bbb2016e41cc",
                         "type": "Javascript2",
-                        "x": 403,
+                        "x": 405.0625089058236,
                         "y": 578.1137231329255,
                         "parameters": {
                             "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        repeat: \"boolean\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing || inputs.repeat){\n                var audio = new Audio('http://users.student.lth.se/dic12jsv/sounds/level2.wav');\n                audio.play();\n            }\n    }\n});"
@@ -25906,7 +25932,7 @@
                         "y": 1063.9868248022317,
                         "parameters": {
                             "code": "//var msgA = new SpeechSynthesisUtterance('Action')\ndefine({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                msgA.rate = 2.5;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100]);\n            }\n    }\n});",
-                            "pageShowing": true
+                            "pageShowing": false
                         },
                         "ports": [],
                         "dynamicports": [
@@ -25992,7 +26018,7 @@
                         "y": 1196.0997283120953,
                         "parameters": {
                             "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                msgA.rate = 2.5;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100,30,100]);\n            }\n    }\n});",
-                            "pageShowing": true
+                            "pageShowing": false
                         },
                         "ports": [],
                         "dynamicports": [
@@ -26076,7 +26102,7 @@
                         "y": 1332.4261189551223,
                         "parameters": {
                             "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                msgA.rate = 2.5;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100,30,100,30,100]);\n            }\n    }\n});",
-                            "pageShowing": true
+                            "pageShowing": false
                         },
                         "ports": [],
                         "dynamicports": [
@@ -26160,7 +26186,7 @@
                         "y": 1480.8946594062254,
                         "parameters": {
                             "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                msgA.rate = 2.5;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100,30,100,30,100,30,100]);\n            }\n    }\n});",
-                            "pageShowing": true
+                            "pageShowing": false
                         },
                         "ports": [],
                         "dynamicports": [
@@ -26727,7 +26753,7 @@
                         "y": 426.6715102694495,
                         "parameters": {
                             "code": "//var msgA = new SpeechSynthesisUtterance('Action')\ndefine({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                msgA.rate = 2.5;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100]);\n            }\n    }\n});",
-                            "pageShowing": true
+                            "pageShowing": false
                         },
                         "ports": [],
                         "dynamicports": [
@@ -26813,7 +26839,7 @@
                         "y": 558.7844137793131,
                         "parameters": {
                             "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                msgA.rate = 2.5;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100,30,100]);\n            }\n    }\n});",
-                            "pageShowing": true
+                            "pageShowing": false
                         },
                         "ports": [],
                         "dynamicports": [
@@ -26897,7 +26923,7 @@
                         "y": 695.1108044223402,
                         "parameters": {
                             "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                msgA.rate = 2.5;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100,30,100,30,100]);\n            }\n    }\n});",
-                            "pageShowing": true
+                            "pageShowing": false
                         },
                         "ports": [],
                         "dynamicports": [
@@ -26981,7 +27007,7 @@
                         "y": 843.5793448734432,
                         "parameters": {
                             "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                msgA.rate = 2.5;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100,30,100,30,100,30,100]);\n            }\n    }\n});",
-                            "pageShowing": true
+                            "pageShowing": false
                         },
                         "ports": [],
                         "dynamicports": [
@@ -27494,7 +27520,7 @@
                         "y": 773.0492349038045,
                         "parameters": {
                             "code": "//var msgA = new SpeechSynthesisUtterance('Action')\ndefine({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                msgA.rate = 2.5;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100]);\n            }\n    }\n});",
-                            "pageShowing": true
+                            "pageShowing": false
                         },
                         "ports": [],
                         "dynamicports": [
@@ -27580,7 +27606,7 @@
                         "y": 905.1621384136681,
                         "parameters": {
                             "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                msgA.rate = 2.5;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100,30,100]);\n            }\n    }\n});",
-                            "pageShowing": true
+                            "pageShowing": false
                         },
                         "ports": [],
                         "dynamicports": [
@@ -27660,11 +27686,11 @@
                         "id": "f4f53ab1-104c-1cbf-bee8-99af7fbb2403",
                         "type": "Javascript2",
                         "label": "Animation",
-                        "x": 939.2235363668254,
+                        "x": 935.5023440764609,
                         "y": 1041.4885290566951,
                         "parameters": {
                             "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                msgA.rate = 2.5;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100,30,100,30,100]);\n            }\n    }\n});",
-                            "pageShowing": true
+                            "pageShowing": false
                         },
                         "ports": [],
                         "dynamicports": [
@@ -27748,7 +27774,7 @@
                         "y": 1189.9570695077982,
                         "parameters": {
                             "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                msgA.rate = 2.5;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100,30,100,30,100,30,100]);\n            }\n    }\n});",
-                            "pageShowing": true
+                            "pageShowing": false
                         },
                         "ports": [],
                         "dynamicports": [
@@ -28286,7 +28312,7 @@
                         "y": 638.2685826091026,
                         "parameters": {
                             "code": "//var msgA = new SpeechSynthesisUtterance('Action')\ndefine({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                msgA.rate = 2.5;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100]);\n            }\n    }\n});",
-                            "pageShowing": true
+                            "pageShowing": false
                         },
                         "ports": [],
                         "dynamicports": [
@@ -28368,11 +28394,11 @@
                         "id": "d2013ed4-7198-f0f5-3015-0f0d0caf6a9c",
                         "type": "Javascript2",
                         "label": "Drama",
-                        "x": 729.7222654813944,
+                        "x": 724.2807689133951,
                         "y": 770.3814861189662,
                         "parameters": {
                             "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                msgA.rate = 2.5;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100,30,100]);\n            }\n    }\n});",
-                            "pageShowing": true
+                            "pageShowing": false
                         },
                         "ports": [],
                         "dynamicports": [
@@ -28456,7 +28482,7 @@
                         "y": 906.7078767619932,
                         "parameters": {
                             "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                msgA.rate = 2.5;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100,30,100,30,100]);\n            }\n    }\n});",
-                            "pageShowing": true
+                            "pageShowing": false
                         },
                         "ports": [],
                         "dynamicports": [
@@ -28540,7 +28566,7 @@
                         "y": 1055.1764172130963,
                         "parameters": {
                             "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                msgA.rate = 2.5;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100,30,100,30,100,30,100]);\n            }\n    }\n});",
-                            "pageShowing": true
+                            "pageShowing": false
                         },
                         "ports": [],
                         "dynamicports": [
@@ -29059,7 +29085,7 @@
                         "y": 460.467826200182,
                         "parameters": {
                             "code": "//var msgA = new SpeechSynthesisUtterance('Action')\ndefine({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                msgA.rate = 2.5;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100]);\n            }\n    }\n});",
-                            "pageShowing": true
+                            "pageShowing": false
                         },
                         "ports": [],
                         "dynamicports": [
@@ -29145,7 +29171,7 @@
                         "y": 591.3210974456091,
                         "parameters": {
                             "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                msgA.rate = 2.5;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100,30,100]);\n            }\n    }\n});",
-                            "pageShowing": true
+                            "pageShowing": false
                         },
                         "ports": [],
                         "dynamicports": [
@@ -29229,7 +29255,7 @@
                         "y": 727.6474880886361,
                         "parameters": {
                             "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                msgA.rate = 2.5;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100,30,100,30,100]);\n            }\n    }\n});",
-                            "pageShowing": true
+                            "pageShowing": false
                         },
                         "ports": [],
                         "dynamicports": [
@@ -29313,7 +29339,7 @@
                         "y": 876.1160285397392,
                         "parameters": {
                             "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                msgA.rate = 2.5;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100,30,100,30,100,30,100]);\n            }\n    }\n});",
-                            "pageShowing": true
+                            "pageShowing": false
                         },
                         "ports": [],
                         "dynamicports": [
@@ -29404,7 +29430,7 @@
                     {
                         "id": "08aba30a-ddd4-8d8b-9d28-501e6bff6f62",
                         "type": "Javascript2",
-                        "x": 412.4981562424239,
+                        "x": 418.7963175646063,
                         "y": 290.16749187945663,
                         "parameters": {
                             "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        repeat: \"boolean\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing || inputs.repeat){\n                var audio = new Audio('http://users.student.lth.se/dic12jsv/sounds/level3.wav');\n                audio.play();\n            }\n    }\n});"
@@ -29471,6 +29497,6 @@
         "BackButtom.rootComponent": "/HomeButtom",
         "Remote Control.rootComponent": "/HomeButtom"
     },
-    "rootNodeId": "2626a13f-3242-ac6b-fa96-d43dbdf78179",
+    "rootNodeId": "24f1e84f-2292-5d60-a059-5329e6ec4303",
     "version": "1"
 }
