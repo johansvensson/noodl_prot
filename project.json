@@ -15571,12 +15571,6 @@
             "graph": {
                 "connections": [
                     {
-                        "fromId": "214a34c7-a512-2ac2-42b5-772d852fcdc3",
-                        "fromProperty": "timerFinished",
-                        "toId": "53265534-b9dd-d544-4e33-8dc5789f6f56",
-                        "toProperty": "pageShowing"
-                    },
-                    {
                         "fromId": "10f20b9c-4cfd-985b-1d1e-dd1a18798d31",
                         "fromProperty": "Blend",
                         "toId": "fdf5ab2c-8a89-70af-ff61-22804a080c7e",
@@ -15589,34 +15583,10 @@
                         "toProperty": "blendValue"
                     },
                     {
-                        "fromId": "214a34c7-a512-2ac2-42b5-772d852fcdc3",
-                        "fromProperty": "timerFinished",
-                        "toId": "3cca8fe1-a5c9-f46f-f9d1-328668623d98",
-                        "toProperty": "start"
-                    },
-                    {
-                        "fromId": "3cca8fe1-a5c9-f46f-f9d1-328668623d98",
-                        "fromProperty": "timerFinished",
-                        "toId": "1216a5ba-f276-92c0-4537-f5e87b646361",
-                        "toProperty": "pageShowing"
-                    },
-                    {
                         "fromId": "97978d66-9509-8ea9-e8c7-0f3e5e9c8c63",
                         "fromProperty": "Blend",
                         "toId": "07a7567a-0f8f-09eb-1c1f-0a640c4f6218",
                         "toProperty": "blendValue"
-                    },
-                    {
-                        "fromId": "16ee5a94-ad2a-25be-f81b-3f4e5529458c",
-                        "fromProperty": "timerFinished",
-                        "toId": "2965a49e-cd38-0f5e-4431-3bb0b3ec4920",
-                        "toProperty": "pageShowing"
-                    },
-                    {
-                        "fromId": "3cca8fe1-a5c9-f46f-f9d1-328668623d98",
-                        "fromProperty": "timerFinished",
-                        "toId": "16ee5a94-ad2a-25be-f81b-3f4e5529458c",
-                        "toProperty": "start"
                     },
                     {
                         "fromId": "7e0758c6-18a7-ca27-6f85-6f12c7ae332e",
@@ -15625,58 +15595,10 @@
                         "toProperty": "blendValue"
                     },
                     {
-                        "fromId": "15aace78-4987-e985-3267-083e86ba6be6",
-                        "fromProperty": "timerFinished",
-                        "toId": "8fc45f15-30a9-f1e9-f5c7-679667ab7352",
-                        "toProperty": "pageShowing"
-                    },
-                    {
-                        "fromId": "0d0e1083-c6dd-f17d-1fff-e0b4fd896971",
-                        "fromProperty": "pageHiding",
-                        "toId": "3cca8fe1-a5c9-f46f-f9d1-328668623d98",
-                        "toProperty": "stop"
-                    },
-                    {
-                        "fromId": "0d0e1083-c6dd-f17d-1fff-e0b4fd896971",
-                        "fromProperty": "pageHiding",
-                        "toId": "16ee5a94-ad2a-25be-f81b-3f4e5529458c",
-                        "toProperty": "stop"
-                    },
-                    {
-                        "fromId": "0d0e1083-c6dd-f17d-1fff-e0b4fd896971",
-                        "fromProperty": "pageHiding",
-                        "toId": "15aace78-4987-e985-3267-083e86ba6be6",
-                        "toProperty": "stop"
-                    },
-                    {
                         "fromId": "fdf5ab2c-8a89-70af-ff61-22804a080c7e",
                         "fromProperty": "result",
                         "toId": "978a278a-5132-ac57-d003-005837593a70",
                         "toProperty": "Color"
-                    },
-                    {
-                        "fromId": "978a278a-5132-ac57-d003-005837593a70",
-                        "fromProperty": "Label",
-                        "toId": "53265534-b9dd-d544-4e33-8dc5789f6f56",
-                        "toProperty": "textToSpeach"
-                    },
-                    {
-                        "fromId": "67a59a3f-b539-4165-3cd8-6a215d4b5bfb",
-                        "fromProperty": "Label",
-                        "toId": "1216a5ba-f276-92c0-4537-f5e87b646361",
-                        "toProperty": "textToSpeach"
-                    },
-                    {
-                        "fromId": "e592ddfa-e183-de7a-06c5-f6630eb8642e",
-                        "fromProperty": "Label",
-                        "toId": "2965a49e-cd38-0f5e-4431-3bb0b3ec4920",
-                        "toProperty": "textToSpeach"
-                    },
-                    {
-                        "fromId": "b530db68-7e8a-3476-d3fa-35b98e0ab4c2",
-                        "fromProperty": "Label",
-                        "toId": "8fc45f15-30a9-f1e9-f5c7-679667ab7352",
-                        "toProperty": "textToSpeach"
                     },
                     {
                         "fromId": "b8d719d9-80a3-59d6-a3bd-aef41448d485",
@@ -15697,46 +15619,10 @@
                         "toProperty": "Color"
                     },
                     {
-                        "fromId": "16ee5a94-ad2a-25be-f81b-3f4e5529458c",
-                        "fromProperty": "timerFinished",
-                        "toId": "15aace78-4987-e985-3267-083e86ba6be6",
-                        "toProperty": "start"
-                    },
-                    {
                         "fromId": "978a278a-5132-ac57-d003-005837593a70",
                         "fromProperty": "Tap",
                         "toId": "d7a08425-19cc-9afd-6bdc-7d13c5bbaaaf",
                         "toProperty": "navigate"
-                    },
-                    {
-                        "fromId": "7dfbff76-6a07-50ca-4f93-ff6a47d0c980",
-                        "fromProperty": "messageReceived",
-                        "toId": "214a34c7-a512-2ac2-42b5-772d852fcdc3",
-                        "toProperty": "start"
-                    },
-                    {
-                        "fromId": "214a34c7-a512-2ac2-42b5-772d852fcdc3",
-                        "fromProperty": "timerFinished",
-                        "toId": "10f20b9c-4cfd-985b-1d1e-dd1a18798d31",
-                        "toProperty": "replayToEnd"
-                    },
-                    {
-                        "fromId": "3cca8fe1-a5c9-f46f-f9d1-328668623d98",
-                        "fromProperty": "timerFinished",
-                        "toId": "adeeefbf-4ce3-5a76-5c78-8c64d30dbceb",
-                        "toProperty": "replayToEnd"
-                    },
-                    {
-                        "fromId": "16ee5a94-ad2a-25be-f81b-3f4e5529458c",
-                        "fromProperty": "timerFinished",
-                        "toId": "97978d66-9509-8ea9-e8c7-0f3e5e9c8c63",
-                        "toProperty": "replayToEnd"
-                    },
-                    {
-                        "fromId": "15aace78-4987-e985-3267-083e86ba6be6",
-                        "fromProperty": "timerFinished",
-                        "toId": "7e0758c6-18a7-ca27-6f85-6f12c7ae332e",
-                        "toProperty": "replayToEnd"
                     },
                     {
                         "fromId": "67a59a3f-b539-4165-3cd8-6a215d4b5bfb",
@@ -15755,18 +15641,6 @@
                         "fromProperty": "messageReceived",
                         "toId": "9cf90abc-0a1d-c456-4386-de196afd980e",
                         "toProperty": "navigate"
-                    },
-                    {
-                        "fromId": "0d0e1083-c6dd-f17d-1fff-e0b4fd896971",
-                        "fromProperty": "pageShowing",
-                        "toId": "214a34c7-a512-2ac2-42b5-772d852fcdc3",
-                        "toProperty": "start"
-                    },
-                    {
-                        "fromId": "0d0e1083-c6dd-f17d-1fff-e0b4fd896971",
-                        "fromProperty": "pageHiding",
-                        "toId": "214a34c7-a512-2ac2-42b5-772d852fcdc3",
-                        "toProperty": "stop"
                     },
                     {
                         "fromId": "0d0e1083-c6dd-f17d-1fff-e0b4fd896971",
@@ -15803,6 +15677,66 @@
                         "fromProperty": "messageReceived",
                         "toId": "964d6d46-7460-70c6-c7b6-e473e92ad377",
                         "toProperty": "navigate"
+                    },
+                    {
+                        "fromId": "978a278a-5132-ac57-d003-005837593a70",
+                        "fromProperty": "Label",
+                        "toId": "f32c2597-ad02-dc51-35ba-35fdbf958df8",
+                        "toProperty": "text1"
+                    },
+                    {
+                        "fromId": "67a59a3f-b539-4165-3cd8-6a215d4b5bfb",
+                        "fromProperty": "Label",
+                        "toId": "f32c2597-ad02-dc51-35ba-35fdbf958df8",
+                        "toProperty": "text2"
+                    },
+                    {
+                        "fromId": "e592ddfa-e183-de7a-06c5-f6630eb8642e",
+                        "fromProperty": "Label",
+                        "toId": "f32c2597-ad02-dc51-35ba-35fdbf958df8",
+                        "toProperty": "text3"
+                    },
+                    {
+                        "fromId": "b530db68-7e8a-3476-d3fa-35b98e0ab4c2",
+                        "fromProperty": "Label",
+                        "toId": "f32c2597-ad02-dc51-35ba-35fdbf958df8",
+                        "toProperty": "text4"
+                    },
+                    {
+                        "fromId": "f32c2597-ad02-dc51-35ba-35fdbf958df8",
+                        "fromProperty": "vib1",
+                        "toId": "10f20b9c-4cfd-985b-1d1e-dd1a18798d31",
+                        "toProperty": "replayToEnd"
+                    },
+                    {
+                        "fromId": "f32c2597-ad02-dc51-35ba-35fdbf958df8",
+                        "fromProperty": "vib2",
+                        "toId": "adeeefbf-4ce3-5a76-5c78-8c64d30dbceb",
+                        "toProperty": "replayToEnd"
+                    },
+                    {
+                        "fromId": "f32c2597-ad02-dc51-35ba-35fdbf958df8",
+                        "fromProperty": "vib3",
+                        "toId": "97978d66-9509-8ea9-e8c7-0f3e5e9c8c63",
+                        "toProperty": "replayToEnd"
+                    },
+                    {
+                        "fromId": "f32c2597-ad02-dc51-35ba-35fdbf958df8",
+                        "fromProperty": "vib4",
+                        "toId": "7e0758c6-18a7-ca27-6f85-6f12c7ae332e",
+                        "toProperty": "replayToEnd"
+                    },
+                    {
+                        "fromId": "7dfbff76-6a07-50ca-4f93-ff6a47d0c980",
+                        "fromProperty": "messageReceived",
+                        "toId": "f32c2597-ad02-dc51-35ba-35fdbf958df8",
+                        "toProperty": "pageShow"
+                    },
+                    {
+                        "fromId": "0d0e1083-c6dd-f17d-1fff-e0b4fd896971",
+                        "fromProperty": "pageShowing",
+                        "toId": "f32c2597-ad02-dc51-35ba-35fdbf958df8",
+                        "toProperty": "pageShow"
                     }
                 ],
                 "roots": [
@@ -15963,39 +15897,6 @@
                         "children": []
                     },
                     {
-                        "id": "53265534-b9dd-d544-4e33-8dc5789f6f56",
-                        "type": "Javascript2",
-                        "label": "Action",
-                        "x": -451.0858513296903,
-                        "y": 565.1323205800785,
-                        "parameters": {
-                            "code": "//var msgA = new SpeechSynthesisUtterance('Action')\ndefine({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                window.speechSynthesis.speak(msgA);\n                msgA.rate = 2.5;\n                window.navigator.vibrate([100]);\n            }\n    }\n});",
-                            "pageShowing": false
-                        },
-                        "ports": [],
-                        "dynamicports": [
-                            {
-                                "name": "pageShowing",
-                                "plug": "input",
-                                "type": {
-                                    "name": "boolean"
-                                },
-                                "group": "Inputs",
-                                "index": 2
-                            },
-                            {
-                                "name": "textToSpeach",
-                                "plug": "input",
-                                "type": {
-                                    "name": "string"
-                                },
-                                "group": "Inputs",
-                                "index": 3
-                            }
-                        ],
-                        "children": []
-                    },
-                    {
                         "id": "fdf5ab2c-8a89-70af-ff61-22804a080c7e",
                         "type": "Color Blend",
                         "x": -65.53384321178862,
@@ -16009,23 +15910,10 @@
                         "children": []
                     },
                     {
-                        "id": "214a34c7-a512-2ac2-42b5-772d852fcdc3",
-                        "type": "Timer",
-                        "x": -248.80795045125075,
-                        "y": 547.7642175287315,
-                        "parameters": {
-                            "duration": 500,
-                            "startDelay": 100
-                        },
-                        "ports": [],
-                        "dynamicports": [],
-                        "children": []
-                    },
-                    {
                         "id": "10f20b9c-4cfd-985b-1d1e-dd1a18798d31",
                         "type": "Animation",
-                        "x": -649.0833621368407,
-                        "y": 567.6383609557403,
+                        "x": -318.0833621368407,
+                        "y": 572.6383609557403,
                         "parameters": {
                             "Blend.startMode": "explicit",
                             "Blend.startValue": 0.5,
@@ -16045,39 +15933,6 @@
                             }
                         ],
                         "dynamicports": [],
-                        "children": []
-                    },
-                    {
-                        "id": "1216a5ba-f276-92c0-4537-f5e87b646361",
-                        "type": "Javascript2",
-                        "label": "Drama",
-                        "x": -451.890933574684,
-                        "y": 705.2901192348688,
-                        "parameters": {
-                            "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                msgA.rate = 2.5;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100,30,100]);\n            }\n    }\n});\n\n\n",
-                            "pageShowing": false
-                        },
-                        "ports": [],
-                        "dynamicports": [
-                            {
-                                "name": "pageShowing",
-                                "plug": "input",
-                                "type": {
-                                    "name": "boolean"
-                                },
-                                "group": "Inputs",
-                                "index": 2
-                            },
-                            {
-                                "name": "textToSpeach",
-                                "plug": "input",
-                                "type": {
-                                    "name": "string"
-                                },
-                                "group": "Inputs",
-                                "index": 3
-                            }
-                        ],
                         "children": []
                     },
                     {
@@ -16096,8 +15951,8 @@
                     {
                         "id": "adeeefbf-4ce3-5a76-5c78-8c64d30dbceb",
                         "type": "Animation",
-                        "x": -652.7401349138609,
-                        "y": 696.5172033756787,
+                        "x": -324.74013491386086,
+                        "y": 710.5172033756787,
                         "parameters": {
                             "Blend.startMode": "explicit",
                             "Blend.startValue": 0.5,
@@ -16117,51 +15972,6 @@
                             }
                         ],
                         "dynamicports": [],
-                        "children": []
-                    },
-                    {
-                        "id": "3cca8fe1-a5c9-f46f-f9d1-328668623d98",
-                        "type": "Timer",
-                        "x": -253.7520023300076,
-                        "y": 692.3586229167365,
-                        "parameters": {
-                            "duration": 1000
-                        },
-                        "ports": [],
-                        "dynamicports": [],
-                        "children": []
-                    },
-                    {
-                        "id": "2965a49e-cd38-0f5e-4431-3bb0b3ec4920",
-                        "type": "Javascript2",
-                        "label": "Animation",
-                        "x": -447.40526798492033,
-                        "y": 843.8026699996253,
-                        "parameters": {
-                            "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                msgA.rate = 2.5;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100,30,100,30,100]);\n            }\n    }\n});",
-                            "pageShowing": false
-                        },
-                        "ports": [],
-                        "dynamicports": [
-                            {
-                                "name": "pageShowing",
-                                "plug": "input",
-                                "type": {
-                                    "name": "boolean"
-                                },
-                                "group": "Inputs",
-                                "index": 2
-                            },
-                            {
-                                "name": "textToSpeach",
-                                "plug": "input",
-                                "type": {
-                                    "name": "string"
-                                },
-                                "group": "Inputs",
-                                "index": 3
-                            }
-                        ],
                         "children": []
                     },
                     {
@@ -16180,8 +15990,8 @@
                     {
                         "id": "97978d66-9509-8ea9-e8c7-0f3e5e9c8c63",
                         "type": "Animation",
-                        "x": -656.5061806903186,
-                        "y": 831.8474631008614,
+                        "x": -328.5061806903186,
+                        "y": 845.8474631008614,
                         "parameters": {
                             "Blend.startMode": "explicit",
                             "Blend.startValue": 0.5,
@@ -16201,51 +16011,6 @@
                             }
                         ],
                         "dynamicports": [],
-                        "children": []
-                    },
-                    {
-                        "id": "16ee5a94-ad2a-25be-f81b-3f4e5529458c",
-                        "type": "Timer",
-                        "x": -256.71030170033936,
-                        "y": 820.032982469655,
-                        "parameters": {
-                            "duration": 1000
-                        },
-                        "ports": [],
-                        "dynamicports": [],
-                        "children": []
-                    },
-                    {
-                        "id": "8fc45f15-30a9-f1e9-f5c7-679667ab7352",
-                        "type": "Javascript2",
-                        "label": "Animation",
-                        "x": -450.04370518965527,
-                        "y": 1008.7672445857486,
-                        "parameters": {
-                            "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                msgA.rate = 2.5;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100,30,100,30,100,30,100]);\n            }\n    }\n});",
-                            "pageShowing": false
-                        },
-                        "ports": [],
-                        "dynamicports": [
-                            {
-                                "name": "pageShowing",
-                                "plug": "input",
-                                "type": {
-                                    "name": "boolean"
-                                },
-                                "group": "Inputs",
-                                "index": 2
-                            },
-                            {
-                                "name": "textToSpeach",
-                                "plug": "input",
-                                "type": {
-                                    "name": "string"
-                                },
-                                "group": "Inputs",
-                                "index": 3
-                            }
-                        ],
                         "children": []
                     },
                     {
@@ -16264,8 +16029,8 @@
                     {
                         "id": "7e0758c6-18a7-ca27-6f85-6f12c7ae332e",
                         "type": "Animation",
-                        "x": -660.1446178950537,
-                        "y": 959.6435749337688,
+                        "x": -332.14461789505367,
+                        "y": 973.6435749337688,
                         "parameters": {
                             "Blend.startMode": "explicit",
                             "Blend.startValue": 0.5,
@@ -16284,18 +16049,6 @@
                                 "index": 1
                             }
                         ],
-                        "dynamicports": [],
-                        "children": []
-                    },
-                    {
-                        "id": "15aace78-4987-e985-3267-083e86ba6be6",
-                        "type": "Timer",
-                        "x": -256.7954774152028,
-                        "y": 983.0085417984691,
-                        "parameters": {
-                            "duration": 1000
-                        },
-                        "ports": [],
                         "dynamicports": [],
                         "children": []
                     },
@@ -16445,6 +16198,109 @@
                         "parameters": {},
                         "ports": [],
                         "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "f32c2597-ad02-dc51-35ba-35fdbf958df8",
+                        "type": "Javascript2",
+                        "x": -709.6780515613151,
+                        "y": 752.5573233041381,
+                        "parameters": {
+                            "code": "define({\r\n    inputs: {\r\n        pageShow: \"boolean\",\r\n        cancelSpeak: \"boolean\",\r\n        text1: \"string\",\r\n        text2: \"string\",\r\n        text3: \"string\",\r\n        text4: \"string\",\r\n    },\r\n    outputs: {\r\n        vib1: \"boolean\",\r\n        vib2: \"boolean\",\r\n        vib3: \"boolean\",\r\n        vib4: \"boolean\",\r\n    },\r\n\r\n    run: function(inputs, outputs) {\r\n            var self2=this;\r\n            var synth = window.speechSynthesis;\r\n            var msg1 = new SpeechSynthesisUtterance(inputs.text1);\r\n            var msg2 = new SpeechSynthesisUtterance(inputs.text2);\r\n            var msg3 = new SpeechSynthesisUtterance(inputs.text3);\r\n            var msg4 = new SpeechSynthesisUtterance(inputs.text4);\r\n            if(inputs.pageShow){   \r\n                synth.speak(msg1);\r\n                synth.speak(msg2);\r\n                synth.speak(msg3);\r\n                synth.speak(msg4);\r\n            }\r\n             \r\n               msg1.onstart = function(event){\r\n                self2.sendSignalOnOutput(\"vib1\");\r\n               }\r\n               msg2.onstart = function(event){\r\n                self2.sendSignalOnOutput(\"vib2\");\r\n               }\r\n               msg3.onstart = function(event){\r\n                self2.sendSignalOnOutput(\"vib3\");\r\n               }\r\n               msg4.onstart = function(event){\r\n                self2.sendSignalOnOutput(\"vib4\");\r\n               }\r\n    }\r\n});"
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "name": "pageShow",
+                                "plug": "input",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "group": "Inputs",
+                                "index": 2
+                            },
+                            {
+                                "name": "cancelSpeak",
+                                "plug": "input",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "group": "Inputs",
+                                "index": 3
+                            },
+                            {
+                                "name": "text1",
+                                "plug": "input",
+                                "type": {
+                                    "name": "string"
+                                },
+                                "group": "Inputs",
+                                "index": 4
+                            },
+                            {
+                                "name": "text2",
+                                "plug": "input",
+                                "type": {
+                                    "name": "string"
+                                },
+                                "group": "Inputs",
+                                "index": 5
+                            },
+                            {
+                                "name": "text3",
+                                "plug": "input",
+                                "type": {
+                                    "name": "string"
+                                },
+                                "group": "Inputs",
+                                "index": 6
+                            },
+                            {
+                                "name": "text4",
+                                "plug": "input",
+                                "type": {
+                                    "name": "string"
+                                },
+                                "group": "Inputs",
+                                "index": 7
+                            },
+                            {
+                                "name": "vib1",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "plug": "output",
+                                "group": "Outputs",
+                                "index": 8
+                            },
+                            {
+                                "name": "vib2",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "plug": "output",
+                                "group": "Outputs",
+                                "index": 9
+                            },
+                            {
+                                "name": "vib3",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "plug": "output",
+                                "group": "Outputs",
+                                "index": 10
+                            },
+                            {
+                                "name": "vib4",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "plug": "output",
+                                "group": "Outputs",
+                                "index": 11
+                            }
+                        ],
                         "children": []
                     }
                 ]
@@ -17277,34 +17133,10 @@
                         "toProperty": "blendValue"
                     },
                     {
-                        "fromId": "27efa44b-5866-283b-c035-2aaee626696a",
-                        "fromProperty": "timerFinished",
-                        "toId": "eb6c2ebd-e39b-4b68-29f5-45788f28123e",
-                        "toProperty": "start"
-                    },
-                    {
-                        "fromId": "eb6c2ebd-e39b-4b68-29f5-45788f28123e",
-                        "fromProperty": "timerFinished",
-                        "toId": "5623f0e6-7c02-2971-cd98-20f032694d62",
-                        "toProperty": "pageShowing"
-                    },
-                    {
                         "fromId": "fbf5e9e8-501c-c4ae-4739-46a9e8ede8bf",
                         "fromProperty": "result",
                         "toId": "f0e4fdb4-b691-0679-d1f8-61b2005efa32",
                         "toProperty": "Color"
-                    },
-                    {
-                        "fromId": "cebb6d1f-3bf5-dab4-ecea-68b25d6a7568",
-                        "fromProperty": "timerFinished",
-                        "toId": "5e8af8e9-5804-b83b-27ee-a8f12f5521fa",
-                        "toProperty": "pageShowing"
-                    },
-                    {
-                        "fromId": "eb6c2ebd-e39b-4b68-29f5-45788f28123e",
-                        "fromProperty": "timerFinished",
-                        "toId": "cebb6d1f-3bf5-dab4-ecea-68b25d6a7568",
-                        "toProperty": "start"
                     },
                     {
                         "fromId": "f50fa79a-1498-6a52-0ef0-aae7d6f7a95c",
@@ -17313,34 +17145,10 @@
                         "toProperty": "Color"
                     },
                     {
-                        "fromId": "82effe30-14e6-a639-7b35-faa8dd92947c",
-                        "fromProperty": "Label",
-                        "toId": "b1ae5449-4905-6fe1-1eca-3889ecb2b62d",
-                        "toProperty": "textToSpeach"
-                    },
-                    {
-                        "fromId": "f0e4fdb4-b691-0679-d1f8-61b2005efa32",
-                        "fromProperty": "Label",
-                        "toId": "5623f0e6-7c02-2971-cd98-20f032694d62",
-                        "toProperty": "textToSpeach"
-                    },
-                    {
-                        "fromId": "b73bf80f-1f43-6cb1-fc76-b58260b8fc1f",
-                        "fromProperty": "Label",
-                        "toId": "5e8af8e9-5804-b83b-27ee-a8f12f5521fa",
-                        "toProperty": "textToSpeach"
-                    },
-                    {
                         "fromId": "5408bdc3-e103-d7c9-2ae6-3e8ad7d0e086",
                         "fromProperty": "Blend",
                         "toId": "831ff661-eba5-a7a4-cc26-3b8c549b048b",
                         "toProperty": "blendValue"
-                    },
-                    {
-                        "fromId": "d18a5000-b30c-3cbe-753c-5840f83cf1bc",
-                        "fromProperty": "timerFinished",
-                        "toId": "b08e2ea6-ce2e-2ba5-72a2-e1c686bae33f",
-                        "toProperty": "pageShowing"
                     },
                     {
                         "fromId": "831ff661-eba5-a7a4-cc26-3b8c549b048b",
@@ -17349,94 +17157,16 @@
                         "toProperty": "Color"
                     },
                     {
-                        "fromId": "98dac579-c1bd-9d24-63c1-cbefa3b51f7c",
-                        "fromProperty": "Label",
-                        "toId": "b08e2ea6-ce2e-2ba5-72a2-e1c686bae33f",
-                        "toProperty": "textToSpeach"
-                    },
-                    {
-                        "fromId": "cebb6d1f-3bf5-dab4-ecea-68b25d6a7568",
-                        "fromProperty": "timerFinished",
-                        "toId": "d18a5000-b30c-3cbe-753c-5840f83cf1bc",
-                        "toProperty": "start"
-                    },
-                    {
-                        "fromId": "2d3a4b75-4f59-0bbb-2c7d-6257d284854e",
-                        "fromProperty": "messageReceived",
-                        "toId": "27efa44b-5866-283b-c035-2aaee626696a",
-                        "toProperty": "start"
-                    },
-                    {
-                        "fromId": "910c9883-0841-5edc-20a7-979d326c931e",
-                        "fromProperty": "pageShowing",
-                        "toId": "27efa44b-5866-283b-c035-2aaee626696a",
-                        "toProperty": "start"
-                    },
-                    {
                         "fromId": "2553774c-635c-8876-7680-0504aa8004c1",
                         "fromProperty": "Blend",
                         "toId": "323b046c-0579-fa13-6a16-8a1f676f0e5f",
                         "toProperty": "blendValue"
                     },
                     {
-                        "fromId": "27efa44b-5866-283b-c035-2aaee626696a",
-                        "fromProperty": "timerFinished",
-                        "toId": "2553774c-635c-8876-7680-0504aa8004c1",
-                        "toProperty": "replayToEnd"
-                    },
-                    {
-                        "fromId": "27efa44b-5866-283b-c035-2aaee626696a",
-                        "fromProperty": "timerFinished",
-                        "toId": "b1ae5449-4905-6fe1-1eca-3889ecb2b62d",
-                        "toProperty": "pageShowing"
-                    },
-                    {
-                        "fromId": "eb6c2ebd-e39b-4b68-29f5-45788f28123e",
-                        "fromProperty": "timerFinished",
-                        "toId": "93a2bb3d-f032-fcd8-566d-8ea54420da74",
-                        "toProperty": "replayToEnd"
-                    },
-                    {
-                        "fromId": "cebb6d1f-3bf5-dab4-ecea-68b25d6a7568",
-                        "fromProperty": "timerFinished",
-                        "toId": "e519d216-eebb-5147-81ef-f534786faa1b",
-                        "toProperty": "replayToEnd"
-                    },
-                    {
-                        "fromId": "d18a5000-b30c-3cbe-753c-5840f83cf1bc",
-                        "fromProperty": "timerFinished",
-                        "toId": "5408bdc3-e103-d7c9-2ae6-3e8ad7d0e086",
-                        "toProperty": "replayToEnd"
-                    },
-                    {
                         "fromId": "82effe30-14e6-a639-7b35-faa8dd92947c",
                         "fromProperty": "Tap",
                         "toId": "8eb2215a-0f50-b9b6-8a7d-e7b6e018c47b",
                         "toProperty": "navigate"
-                    },
-                    {
-                        "fromId": "910c9883-0841-5edc-20a7-979d326c931e",
-                        "fromProperty": "pageHiding",
-                        "toId": "27efa44b-5866-283b-c035-2aaee626696a",
-                        "toProperty": "stop"
-                    },
-                    {
-                        "fromId": "910c9883-0841-5edc-20a7-979d326c931e",
-                        "fromProperty": "pageHiding",
-                        "toId": "eb6c2ebd-e39b-4b68-29f5-45788f28123e",
-                        "toProperty": "stop"
-                    },
-                    {
-                        "fromId": "910c9883-0841-5edc-20a7-979d326c931e",
-                        "fromProperty": "pageHiding",
-                        "toId": "cebb6d1f-3bf5-dab4-ecea-68b25d6a7568",
-                        "toProperty": "stop"
-                    },
-                    {
-                        "fromId": "910c9883-0841-5edc-20a7-979d326c931e",
-                        "fromProperty": "pageHiding",
-                        "toId": "d18a5000-b30c-3cbe-753c-5840f83cf1bc",
-                        "toProperty": "stop"
                     },
                     {
                         "fromId": "e519d216-eebb-5147-81ef-f534786faa1b",
@@ -17497,6 +17227,66 @@
                         "fromProperty": "messageReceived",
                         "toId": "2cfad9cf-e8a3-811f-b8b1-6f90467f5c46",
                         "toProperty": "navigate"
+                    },
+                    {
+                        "fromId": "82effe30-14e6-a639-7b35-faa8dd92947c",
+                        "fromProperty": "Label",
+                        "toId": "025e5e7e-49e6-8969-1d75-9734dfbbfc97",
+                        "toProperty": "text1"
+                    },
+                    {
+                        "fromId": "f0e4fdb4-b691-0679-d1f8-61b2005efa32",
+                        "fromProperty": "Label",
+                        "toId": "025e5e7e-49e6-8969-1d75-9734dfbbfc97",
+                        "toProperty": "text2"
+                    },
+                    {
+                        "fromId": "b73bf80f-1f43-6cb1-fc76-b58260b8fc1f",
+                        "fromProperty": "Label",
+                        "toId": "025e5e7e-49e6-8969-1d75-9734dfbbfc97",
+                        "toProperty": "text3"
+                    },
+                    {
+                        "fromId": "98dac579-c1bd-9d24-63c1-cbefa3b51f7c",
+                        "fromProperty": "Label",
+                        "toId": "025e5e7e-49e6-8969-1d75-9734dfbbfc97",
+                        "toProperty": "text4"
+                    },
+                    {
+                        "fromId": "025e5e7e-49e6-8969-1d75-9734dfbbfc97",
+                        "fromProperty": "vib1",
+                        "toId": "2553774c-635c-8876-7680-0504aa8004c1",
+                        "toProperty": "replayToEnd"
+                    },
+                    {
+                        "fromId": "025e5e7e-49e6-8969-1d75-9734dfbbfc97",
+                        "fromProperty": "vib2",
+                        "toId": "93a2bb3d-f032-fcd8-566d-8ea54420da74",
+                        "toProperty": "replayToEnd"
+                    },
+                    {
+                        "fromId": "025e5e7e-49e6-8969-1d75-9734dfbbfc97",
+                        "fromProperty": "vib3",
+                        "toId": "e519d216-eebb-5147-81ef-f534786faa1b",
+                        "toProperty": "replayToEnd"
+                    },
+                    {
+                        "fromId": "025e5e7e-49e6-8969-1d75-9734dfbbfc97",
+                        "fromProperty": "vib4",
+                        "toId": "5408bdc3-e103-d7c9-2ae6-3e8ad7d0e086",
+                        "toProperty": "replayToEnd"
+                    },
+                    {
+                        "fromId": "910c9883-0841-5edc-20a7-979d326c931e",
+                        "fromProperty": "pageShowing",
+                        "toId": "025e5e7e-49e6-8969-1d75-9734dfbbfc97",
+                        "toProperty": "pageShow"
+                    },
+                    {
+                        "fromId": "2d3a4b75-4f59-0bbb-2c7d-6257d284854e",
+                        "fromProperty": "messageReceived",
+                        "toId": "025e5e7e-49e6-8969-1d75-9734dfbbfc97",
+                        "toProperty": "pageShow"
                     }
                 ],
                 "roots": [
@@ -17644,39 +17434,6 @@
                         ]
                     },
                     {
-                        "id": "b1ae5449-4905-6fe1-1eca-3889ecb2b62d",
-                        "type": "Javascript2",
-                        "label": "Action",
-                        "x": 702.8693640863136,
-                        "y": 941.1888395869449,
-                        "parameters": {
-                            "code": "//var msgA = new SpeechSynthesisUtterance('Action')\ndefine({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                msgA.rate = 2.5;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100]);\n            }\n    }\n});",
-                            "pageShowing": false
-                        },
-                        "ports": [],
-                        "dynamicports": [
-                            {
-                                "name": "pageShowing",
-                                "plug": "input",
-                                "type": {
-                                    "name": "boolean"
-                                },
-                                "group": "Inputs",
-                                "index": 2
-                            },
-                            {
-                                "name": "textToSpeach",
-                                "plug": "input",
-                                "type": {
-                                    "name": "string"
-                                },
-                                "group": "Inputs",
-                                "index": 3
-                            }
-                        ],
-                        "children": []
-                    },
-                    {
                         "id": "323b046c-0579-fa13-6a16-8a1f676f0e5f",
                         "type": "Color Blend",
                         "x": 1127.5350413531646,
@@ -17691,23 +17448,10 @@
                         "children": []
                     },
                     {
-                        "id": "27efa44b-5866-283b-c035-2aaee626696a",
-                        "type": "Timer",
-                        "x": 917.8081664982288,
-                        "y": 956.2139723419023,
-                        "parameters": {
-                            "duration": 500,
-                            "startDelay": 100
-                        },
-                        "ports": [],
-                        "dynamicports": [],
-                        "children": []
-                    },
-                    {
                         "id": "2553774c-635c-8876-7680-0504aa8004c1",
                         "type": "Animation",
-                        "x": 477.94319103354815,
-                        "y": 951.0582996304412,
+                        "x": 877.9431910335481,
+                        "y": 967.0582996304412,
                         "parameters": {
                             "Blend.startMode": "explicit",
                             "Blend.startValue": 0.5,
@@ -17727,39 +17471,6 @@
                             }
                         ],
                         "dynamicports": [],
-                        "children": []
-                    },
-                    {
-                        "id": "5623f0e6-7c02-2971-cd98-20f032694d62",
-                        "type": "Javascript2",
-                        "label": "Drama",
-                        "x": 703.2217748389755,
-                        "y": 1073.3017430968087,
-                        "parameters": {
-                            "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                msgA.rate = 2.5;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100,30,100]);\n            }\n    }\n});",
-                            "pageShowing": false
-                        },
-                        "ports": [],
-                        "dynamicports": [
-                            {
-                                "name": "pageShowing",
-                                "plug": "input",
-                                "type": {
-                                    "name": "boolean"
-                                },
-                                "group": "Inputs",
-                                "index": 2
-                            },
-                            {
-                                "name": "textToSpeach",
-                                "plug": "input",
-                                "type": {
-                                    "name": "string"
-                                },
-                                "group": "Inputs",
-                                "index": 3
-                            }
-                        ],
                         "children": []
                     },
                     {
@@ -17778,8 +17489,8 @@
                     {
                         "id": "93a2bb3d-f032-fcd8-566d-8ea54420da74",
                         "type": "Animation",
-                        "x": 482.6888894814151,
-                        "y": 1080.2078502271843,
+                        "x": 882.6888894814151,
+                        "y": 1096.2078502271843,
                         "parameters": {
                             "Blend.startMode": "explicit",
                             "Blend.startValue": 0.5,
@@ -17799,51 +17510,6 @@
                             }
                         ],
                         "dynamicports": [],
-                        "children": []
-                    },
-                    {
-                        "id": "eb6c2ebd-e39b-4b68-29f5-45788f28123e",
-                        "type": "Timer",
-                        "x": 915.3558749082601,
-                        "y": 1085.6057720296649,
-                        "parameters": {
-                            "duration": 1000
-                        },
-                        "ports": [],
-                        "dynamicports": [],
-                        "children": []
-                    },
-                    {
-                        "id": "5e8af8e9-5804-b83b-27ee-a8f12f5521fa",
-                        "type": "Javascript2",
-                        "label": "Animation",
-                        "x": 700.2045031380742,
-                        "y": 1209.6281337398357,
-                        "parameters": {
-                            "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                msgA.rate = 2.5;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100,30,100,30,100]);\n            }\n    }\n});",
-                            "pageShowing": false
-                        },
-                        "ports": [],
-                        "dynamicports": [
-                            {
-                                "name": "pageShowing",
-                                "plug": "input",
-                                "type": {
-                                    "name": "boolean"
-                                },
-                                "group": "Inputs",
-                                "index": 2
-                            },
-                            {
-                                "name": "textToSpeach",
-                                "plug": "input",
-                                "type": {
-                                    "name": "string"
-                                },
-                                "group": "Inputs",
-                                "index": 3
-                            }
-                        ],
                         "children": []
                     },
                     {
@@ -17862,8 +17528,8 @@
                     {
                         "id": "e519d216-eebb-5147-81ef-f534786faa1b",
                         "type": "Animation",
-                        "x": 477.53009160988927,
-                        "y": 1227.9880892340473,
+                        "x": 877.5300916098893,
+                        "y": 1243.9880892340473,
                         "parameters": {
                             "Blend.startMode": "explicit",
                             "Blend.startValue": 0.5,
@@ -17883,51 +17549,6 @@
                             }
                         ],
                         "dynamicports": [],
-                        "children": []
-                    },
-                    {
-                        "id": "cebb6d1f-3bf5-dab4-ecea-68b25d6a7568",
-                        "type": "Timer",
-                        "x": 910.7035299145045,
-                        "y": 1233.386011036528,
-                        "parameters": {
-                            "duration": 1000
-                        },
-                        "ports": [],
-                        "dynamicports": [],
-                        "children": []
-                    },
-                    {
-                        "id": "b08e2ea6-ce2e-2ba5-72a2-e1c686bae33f",
-                        "type": "Javascript2",
-                        "label": "Animation",
-                        "x": 702.0773250572919,
-                        "y": 1358.0966741909388,
-                        "parameters": {
-                            "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                msgA.rate = 2.5;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100,30,100,30,100,30,100]);\n            }\n    }\n});",
-                            "pageShowing": true
-                        },
-                        "ports": [],
-                        "dynamicports": [
-                            {
-                                "name": "pageShowing",
-                                "plug": "input",
-                                "type": {
-                                    "name": "boolean"
-                                },
-                                "group": "Inputs",
-                                "index": 2
-                            },
-                            {
-                                "name": "textToSpeach",
-                                "plug": "input",
-                                "type": {
-                                    "name": "string"
-                                },
-                                "group": "Inputs",
-                                "index": 3
-                            }
-                        ],
                         "children": []
                     },
                     {
@@ -17946,8 +17567,8 @@
                     {
                         "id": "5408bdc3-e103-d7c9-2ae6-3e8ad7d0e086",
                         "type": "Animation",
-                        "x": 470.10966674377937,
-                        "y": 1342.447276135155,
+                        "x": 870.1096667437794,
+                        "y": 1358.447276135155,
                         "parameters": {
                             "Blend.startMode": "explicit",
                             "Blend.startValue": 0.5,
@@ -17966,18 +17587,6 @@
                                 "index": 1
                             }
                         ],
-                        "dynamicports": [],
-                        "children": []
-                    },
-                    {
-                        "id": "d18a5000-b30c-3cbe-753c-5840f83cf1bc",
-                        "type": "Timer",
-                        "x": 896.5757982992025,
-                        "y": 1384.464813508357,
-                        "parameters": {
-                            "duration": 1000
-                        },
-                        "ports": [],
                         "dynamicports": [],
                         "children": []
                     },
@@ -18151,6 +17760,109 @@
                         },
                         "ports": [],
                         "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "025e5e7e-49e6-8969-1d75-9734dfbbfc97",
+                        "type": "Javascript2",
+                        "x": 509.9337079620684,
+                        "y": 1081.5917262111388,
+                        "parameters": {
+                            "code": "define({\r\n    inputs: {\r\n        pageShow: \"boolean\",\r\n        cancelSpeak: \"boolean\",\r\n        text1: \"string\",\r\n        text2: \"string\",\r\n        text3: \"string\",\r\n        text4: \"string\",\r\n    },\r\n    outputs: {\r\n        vib1: \"boolean\",\r\n        vib2: \"boolean\",\r\n        vib3: \"boolean\",\r\n        vib4: \"boolean\",\r\n    },\r\n\r\n    run: function(inputs, outputs) {\r\n            var self2=this;\r\n            var synth = window.speechSynthesis;\r\n            var msg1 = new SpeechSynthesisUtterance(inputs.text1);\r\n            var msg2 = new SpeechSynthesisUtterance(inputs.text2);\r\n            var msg3 = new SpeechSynthesisUtterance(inputs.text3);\r\n            var msg4 = new SpeechSynthesisUtterance(inputs.text4);\r\n            if(inputs.pageShow){   \r\n                synth.speak(msg1);\r\n                synth.speak(msg2);\r\n                synth.speak(msg3);\r\n                synth.speak(msg4);\r\n            }\r\n             \r\n               msg1.onstart = function(event){\r\n                self2.sendSignalOnOutput(\"vib1\");\r\n               }\r\n               msg2.onstart = function(event){\r\n                self2.sendSignalOnOutput(\"vib2\");\r\n               }\r\n               msg3.onstart = function(event){\r\n                self2.sendSignalOnOutput(\"vib3\");\r\n               }\r\n               msg4.onstart = function(event){\r\n                self2.sendSignalOnOutput(\"vib4\");\r\n               }\r\n    }\r\n});"
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "name": "pageShow",
+                                "plug": "input",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "group": "Inputs",
+                                "index": 2
+                            },
+                            {
+                                "name": "cancelSpeak",
+                                "plug": "input",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "group": "Inputs",
+                                "index": 3
+                            },
+                            {
+                                "name": "text1",
+                                "plug": "input",
+                                "type": {
+                                    "name": "string"
+                                },
+                                "group": "Inputs",
+                                "index": 4
+                            },
+                            {
+                                "name": "text2",
+                                "plug": "input",
+                                "type": {
+                                    "name": "string"
+                                },
+                                "group": "Inputs",
+                                "index": 5
+                            },
+                            {
+                                "name": "text3",
+                                "plug": "input",
+                                "type": {
+                                    "name": "string"
+                                },
+                                "group": "Inputs",
+                                "index": 6
+                            },
+                            {
+                                "name": "text4",
+                                "plug": "input",
+                                "type": {
+                                    "name": "string"
+                                },
+                                "group": "Inputs",
+                                "index": 7
+                            },
+                            {
+                                "name": "vib1",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "plug": "output",
+                                "group": "Outputs",
+                                "index": 8
+                            },
+                            {
+                                "name": "vib2",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "plug": "output",
+                                "group": "Outputs",
+                                "index": 9
+                            },
+                            {
+                                "name": "vib3",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "plug": "output",
+                                "group": "Outputs",
+                                "index": 10
+                            },
+                            {
+                                "name": "vib4",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "plug": "output",
+                                "group": "Outputs",
+                                "index": 11
+                            }
+                        ],
                         "children": []
                     }
                 ]
@@ -23748,34 +23460,10 @@
                         "toProperty": "blendValue"
                     },
                     {
-                        "fromId": "12812247-b6bf-e9c9-075c-9aefd381c661",
-                        "fromProperty": "timerFinished",
-                        "toId": "58ce4c40-84d9-115e-5769-b1566654f510",
-                        "toProperty": "start"
-                    },
-                    {
-                        "fromId": "58ce4c40-84d9-115e-5769-b1566654f510",
-                        "fromProperty": "timerFinished",
-                        "toId": "29fb5885-94d3-e662-220a-ec2c0c61218b",
-                        "toProperty": "pageShowing"
-                    },
-                    {
                         "fromId": "2806f8ea-bbc6-757e-3be8-d6433ed241da",
                         "fromProperty": "result",
                         "toId": "97b94c10-76f5-ed22-8211-abc581b83d07",
                         "toProperty": "Color"
-                    },
-                    {
-                        "fromId": "4d802b63-5212-6c7c-3659-79b2616a74bc",
-                        "fromProperty": "timerFinished",
-                        "toId": "aba7ce9c-7c7a-7032-e759-ddf92e4845dc",
-                        "toProperty": "pageShowing"
-                    },
-                    {
-                        "fromId": "58ce4c40-84d9-115e-5769-b1566654f510",
-                        "fromProperty": "timerFinished",
-                        "toId": "4d802b63-5212-6c7c-3659-79b2616a74bc",
-                        "toProperty": "start"
                     },
                     {
                         "fromId": "a3cb656a-bf0f-be40-927c-6bbc0dc60f0a",
@@ -23784,34 +23472,10 @@
                         "toProperty": "Color"
                     },
                     {
-                        "fromId": "0d6aad3a-98b7-02d5-1703-3a3ce2bae4f8",
-                        "fromProperty": "Label",
-                        "toId": "317177eb-861b-4e61-e47b-627366914ef2",
-                        "toProperty": "textToSpeach"
-                    },
-                    {
-                        "fromId": "97b94c10-76f5-ed22-8211-abc581b83d07",
-                        "fromProperty": "Label",
-                        "toId": "29fb5885-94d3-e662-220a-ec2c0c61218b",
-                        "toProperty": "textToSpeach"
-                    },
-                    {
-                        "fromId": "55ce56e5-7da0-3054-44b4-832022c31d6e",
-                        "fromProperty": "Label",
-                        "toId": "aba7ce9c-7c7a-7032-e759-ddf92e4845dc",
-                        "toProperty": "textToSpeach"
-                    },
-                    {
                         "fromId": "e3c71b61-42d4-a29d-d3ee-626d8a85e551",
                         "fromProperty": "Blend",
                         "toId": "b9e86fd1-a5b4-a30c-d2bc-01dd1cca0c6f",
                         "toProperty": "blendValue"
-                    },
-                    {
-                        "fromId": "e80bb97a-c802-0e64-9964-f63fc98c5851",
-                        "fromProperty": "timerFinished",
-                        "toId": "c6bb8f63-01c6-b91e-3e3d-fa976b6133d1",
-                        "toProperty": "pageShowing"
                     },
                     {
                         "fromId": "b9e86fd1-a5b4-a30c-d2bc-01dd1cca0c6f",
@@ -23820,88 +23484,10 @@
                         "toProperty": "Color"
                     },
                     {
-                        "fromId": "b006fb9e-dad4-4c2a-90a5-b156dfaa0c30",
-                        "fromProperty": "Label",
-                        "toId": "c6bb8f63-01c6-b91e-3e3d-fa976b6133d1",
-                        "toProperty": "textToSpeach"
-                    },
-                    {
-                        "fromId": "4d802b63-5212-6c7c-3659-79b2616a74bc",
-                        "fromProperty": "timerFinished",
-                        "toId": "e80bb97a-c802-0e64-9964-f63fc98c5851",
-                        "toProperty": "start"
-                    },
-                    {
-                        "fromId": "4ad38681-cbc7-2aa0-9d79-5a4027a0a0cd",
-                        "fromProperty": "messageReceived",
-                        "toId": "12812247-b6bf-e9c9-075c-9aefd381c661",
-                        "toProperty": "start"
-                    },
-                    {
-                        "fromId": "5069b1f7-e869-c4d9-fa0b-d7f9255efc56",
-                        "fromProperty": "pageShowing",
-                        "toId": "12812247-b6bf-e9c9-075c-9aefd381c661",
-                        "toProperty": "start"
-                    },
-                    {
                         "fromId": "94b9c14a-9fc2-5886-9ae2-21252b0495c3",
                         "fromProperty": "Blend",
                         "toId": "0deb6b12-b6f4-120e-439b-61b8739c3875",
                         "toProperty": "blendValue"
-                    },
-                    {
-                        "fromId": "12812247-b6bf-e9c9-075c-9aefd381c661",
-                        "fromProperty": "timerFinished",
-                        "toId": "94b9c14a-9fc2-5886-9ae2-21252b0495c3",
-                        "toProperty": "replayToEnd"
-                    },
-                    {
-                        "fromId": "12812247-b6bf-e9c9-075c-9aefd381c661",
-                        "fromProperty": "timerFinished",
-                        "toId": "317177eb-861b-4e61-e47b-627366914ef2",
-                        "toProperty": "pageShowing"
-                    },
-                    {
-                        "fromId": "58ce4c40-84d9-115e-5769-b1566654f510",
-                        "fromProperty": "timerFinished",
-                        "toId": "9920d404-3976-5ce3-ee57-8ef74962e5c4",
-                        "toProperty": "replayToEnd"
-                    },
-                    {
-                        "fromId": "4d802b63-5212-6c7c-3659-79b2616a74bc",
-                        "fromProperty": "timerFinished",
-                        "toId": "7542830d-3b46-b4de-e50f-d276eaa4aee4",
-                        "toProperty": "replayToEnd"
-                    },
-                    {
-                        "fromId": "e80bb97a-c802-0e64-9964-f63fc98c5851",
-                        "fromProperty": "timerFinished",
-                        "toId": "e3c71b61-42d4-a29d-d3ee-626d8a85e551",
-                        "toProperty": "replayToEnd"
-                    },
-                    {
-                        "fromId": "5069b1f7-e869-c4d9-fa0b-d7f9255efc56",
-                        "fromProperty": "pageHiding",
-                        "toId": "12812247-b6bf-e9c9-075c-9aefd381c661",
-                        "toProperty": "stop"
-                    },
-                    {
-                        "fromId": "5069b1f7-e869-c4d9-fa0b-d7f9255efc56",
-                        "fromProperty": "pageHiding",
-                        "toId": "58ce4c40-84d9-115e-5769-b1566654f510",
-                        "toProperty": "stop"
-                    },
-                    {
-                        "fromId": "5069b1f7-e869-c4d9-fa0b-d7f9255efc56",
-                        "fromProperty": "pageHiding",
-                        "toId": "4d802b63-5212-6c7c-3659-79b2616a74bc",
-                        "toProperty": "stop"
-                    },
-                    {
-                        "fromId": "5069b1f7-e869-c4d9-fa0b-d7f9255efc56",
-                        "fromProperty": "pageHiding",
-                        "toId": "e80bb97a-c802-0e64-9964-f63fc98c5851",
-                        "toProperty": "stop"
                     },
                     {
                         "fromId": "7542830d-3b46-b4de-e50f-d276eaa4aee4",
@@ -23968,6 +23554,66 @@
                         "fromProperty": "Tap",
                         "toId": "05622366-eb34-c612-f1fb-dc65f4c72d30",
                         "toProperty": "navigate"
+                    },
+                    {
+                        "fromId": "0d6aad3a-98b7-02d5-1703-3a3ce2bae4f8",
+                        "fromProperty": "Label",
+                        "toId": "62f3de0d-ce62-62ea-6d29-3a08ab7eb6a2",
+                        "toProperty": "text1"
+                    },
+                    {
+                        "fromId": "97b94c10-76f5-ed22-8211-abc581b83d07",
+                        "fromProperty": "Label",
+                        "toId": "62f3de0d-ce62-62ea-6d29-3a08ab7eb6a2",
+                        "toProperty": "text2"
+                    },
+                    {
+                        "fromId": "55ce56e5-7da0-3054-44b4-832022c31d6e",
+                        "fromProperty": "Label",
+                        "toId": "62f3de0d-ce62-62ea-6d29-3a08ab7eb6a2",
+                        "toProperty": "text3"
+                    },
+                    {
+                        "fromId": "b006fb9e-dad4-4c2a-90a5-b156dfaa0c30",
+                        "fromProperty": "Label",
+                        "toId": "62f3de0d-ce62-62ea-6d29-3a08ab7eb6a2",
+                        "toProperty": "text4"
+                    },
+                    {
+                        "fromId": "62f3de0d-ce62-62ea-6d29-3a08ab7eb6a2",
+                        "fromProperty": "vib1",
+                        "toId": "94b9c14a-9fc2-5886-9ae2-21252b0495c3",
+                        "toProperty": "replayToEnd"
+                    },
+                    {
+                        "fromId": "62f3de0d-ce62-62ea-6d29-3a08ab7eb6a2",
+                        "fromProperty": "vib2",
+                        "toId": "9920d404-3976-5ce3-ee57-8ef74962e5c4",
+                        "toProperty": "replayToEnd"
+                    },
+                    {
+                        "fromId": "62f3de0d-ce62-62ea-6d29-3a08ab7eb6a2",
+                        "fromProperty": "vib3",
+                        "toId": "7542830d-3b46-b4de-e50f-d276eaa4aee4",
+                        "toProperty": "replayToEnd"
+                    },
+                    {
+                        "fromId": "62f3de0d-ce62-62ea-6d29-3a08ab7eb6a2",
+                        "fromProperty": "vib4",
+                        "toId": "e3c71b61-42d4-a29d-d3ee-626d8a85e551",
+                        "toProperty": "replayToEnd"
+                    },
+                    {
+                        "fromId": "4ad38681-cbc7-2aa0-9d79-5a4027a0a0cd",
+                        "fromProperty": "messageReceived",
+                        "toId": "62f3de0d-ce62-62ea-6d29-3a08ab7eb6a2",
+                        "toProperty": "pageShow"
+                    },
+                    {
+                        "fromId": "5069b1f7-e869-c4d9-fa0b-d7f9255efc56",
+                        "fromProperty": "pageShowing",
+                        "toId": "62f3de0d-ce62-62ea-6d29-3a08ab7eb6a2",
+                        "toProperty": "pageShow"
                     }
                 ],
                 "roots": [
@@ -24115,39 +23761,6 @@
                         ]
                     },
                     {
-                        "id": "317177eb-861b-4e61-e47b-627366914ef2",
-                        "type": "Javascript2",
-                        "label": "Action",
-                        "x": 545.3822969247083,
-                        "y": 712.9868248022316,
-                        "parameters": {
-                            "code": "//var msgA = new SpeechSynthesisUtterance('Action')\ndefine({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                msgA.rate = 2.5;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100]);\n            }\n    }\n});",
-                            "pageShowing": false
-                        },
-                        "ports": [],
-                        "dynamicports": [
-                            {
-                                "name": "pageShowing",
-                                "plug": "input",
-                                "type": {
-                                    "name": "boolean"
-                                },
-                                "group": "Inputs",
-                                "index": 2
-                            },
-                            {
-                                "name": "textToSpeach",
-                                "plug": "input",
-                                "type": {
-                                    "name": "string"
-                                },
-                                "group": "Inputs",
-                                "index": 3
-                            }
-                        ],
-                        "children": []
-                    },
-                    {
                         "id": "0deb6b12-b6f4-120e-439b-61b8739c3875",
                         "type": "Color Blend",
                         "x": 970.4253746093852,
@@ -24162,23 +23775,10 @@
                         "children": []
                     },
                     {
-                        "id": "12812247-b6bf-e9c9-075c-9aefd381c661",
-                        "type": "Timer",
-                        "x": 760.6984997544495,
-                        "y": 728.0119575571889,
-                        "parameters": {
-                            "duration": 500,
-                            "startDelay": 100
-                        },
-                        "ports": [],
-                        "dynamicports": [],
-                        "children": []
-                    },
-                    {
                         "id": "94b9c14a-9fc2-5886-9ae2-21252b0495c3",
                         "type": "Animation",
-                        "x": 320.8335242897688,
-                        "y": 722.8562848457278,
+                        "x": 754.8335242897688,
+                        "y": 738.8562848457278,
                         "parameters": {
                             "Blend.startMode": "explicit",
                             "Blend.startValue": 0.5,
@@ -24198,39 +23798,6 @@
                             }
                         ],
                         "dynamicports": [],
-                        "children": []
-                    },
-                    {
-                        "id": "29fb5885-94d3-e662-220a-ec2c0c61218b",
-                        "type": "Javascript2",
-                        "label": "Drama",
-                        "x": 547.1121080951962,
-                        "y": 845.0997283120953,
-                        "parameters": {
-                            "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                msgA.rate = 2.5;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100,30,100]);\n            }\n    }\n});",
-                            "pageShowing": false
-                        },
-                        "ports": [],
-                        "dynamicports": [
-                            {
-                                "name": "pageShowing",
-                                "plug": "input",
-                                "type": {
-                                    "name": "boolean"
-                                },
-                                "group": "Inputs",
-                                "index": 2
-                            },
-                            {
-                                "name": "textToSpeach",
-                                "plug": "input",
-                                "type": {
-                                    "name": "string"
-                                },
-                                "group": "Inputs",
-                                "index": 3
-                            }
-                        ],
                         "children": []
                     },
                     {
@@ -24249,8 +23816,8 @@
                     {
                         "id": "9920d404-3976-5ce3-ee57-8ef74962e5c4",
                         "type": "Animation",
-                        "x": 325.57922273763575,
-                        "y": 852.0058354424709,
+                        "x": 759.5792227376357,
+                        "y": 868.0058354424709,
                         "parameters": {
                             "Blend.startMode": "explicit",
                             "Blend.startValue": 0.5,
@@ -24270,51 +23837,6 @@
                             }
                         ],
                         "dynamicports": [],
-                        "children": []
-                    },
-                    {
-                        "id": "58ce4c40-84d9-115e-5769-b1566654f510",
-                        "type": "Timer",
-                        "x": 758.2462081644808,
-                        "y": 857.4037572449515,
-                        "parameters": {
-                            "duration": 1000
-                        },
-                        "ports": [],
-                        "dynamicports": [],
-                        "children": []
-                    },
-                    {
-                        "id": "aba7ce9c-7c7a-7032-e759-ddf92e4845dc",
-                        "type": "Javascript2",
-                        "label": "Animation",
-                        "x": 540.5755718654218,
-                        "y": 981.4261189551223,
-                        "parameters": {
-                            "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                msgA.rate = 2.5;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100,30,100,30,100]);\n            }\n    }\n});",
-                            "pageShowing": false
-                        },
-                        "ports": [],
-                        "dynamicports": [
-                            {
-                                "name": "pageShowing",
-                                "plug": "input",
-                                "type": {
-                                    "name": "boolean"
-                                },
-                                "group": "Inputs",
-                                "index": 2
-                            },
-                            {
-                                "name": "textToSpeach",
-                                "plug": "input",
-                                "type": {
-                                    "name": "string"
-                                },
-                                "group": "Inputs",
-                                "index": 3
-                            }
-                        ],
                         "children": []
                     },
                     {
@@ -24333,8 +23855,8 @@
                     {
                         "id": "7542830d-3b46-b4de-e50f-d276eaa4aee4",
                         "type": "Animation",
-                        "x": 320.4204248661099,
-                        "y": 999.7860744493339,
+                        "x": 754.4204248661099,
+                        "y": 1015.7860744493339,
                         "parameters": {
                             "Blend.startMode": "explicit",
                             "Blend.startValue": 0.5,
@@ -24354,51 +23876,6 @@
                             }
                         ],
                         "dynamicports": [],
-                        "children": []
-                    },
-                    {
-                        "id": "4d802b63-5212-6c7c-3659-79b2616a74bc",
-                        "type": "Timer",
-                        "x": 753.5938631707252,
-                        "y": 1005.1839962518147,
-                        "parameters": {
-                            "duration": 1000
-                        },
-                        "ports": [],
-                        "dynamicports": [],
-                        "children": []
-                    },
-                    {
-                        "id": "c6bb8f63-01c6-b91e-3e3d-fa976b6133d1",
-                        "type": "Javascript2",
-                        "label": "Animation",
-                        "x": 539.9291292557665,
-                        "y": 1132.4139239350984,
-                        "parameters": {
-                            "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                msgA.rate = 2.5;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100,30,100,30,100,30,100]);\n            }\n    }\n});",
-                            "pageShowing": false
-                        },
-                        "ports": [],
-                        "dynamicports": [
-                            {
-                                "name": "pageShowing",
-                                "plug": "input",
-                                "type": {
-                                    "name": "boolean"
-                                },
-                                "group": "Inputs",
-                                "index": 2
-                            },
-                            {
-                                "name": "textToSpeach",
-                                "plug": "input",
-                                "type": {
-                                    "name": "string"
-                                },
-                                "group": "Inputs",
-                                "index": 3
-                            }
-                        ],
                         "children": []
                     },
                     {
@@ -24417,8 +23894,8 @@
                     {
                         "id": "e3c71b61-42d4-a29d-d3ee-626d8a85e551",
                         "type": "Animation",
-                        "x": 313,
-                        "y": 1114.2452613504418,
+                        "x": 747,
+                        "y": 1130.2452613504418,
                         "parameters": {
                             "Blend.startMode": "explicit",
                             "Blend.startValue": 0.5,
@@ -24437,18 +23914,6 @@
                                 "index": 1
                             }
                         ],
-                        "dynamicports": [],
-                        "children": []
-                    },
-                    {
-                        "id": "e80bb97a-c802-0e64-9964-f63fc98c5851",
-                        "type": "Timer",
-                        "x": 739.4661315554231,
-                        "y": 1155.215552615109,
-                        "parameters": {
-                            "duration": 1000
-                        },
-                        "ports": [],
                         "dynamicports": [],
                         "children": []
                     },
@@ -24612,6 +24077,109 @@
                         "ports": [],
                         "dynamicports": [],
                         "children": []
+                    },
+                    {
+                        "id": "62f3de0d-ce62-62ea-6d29-3a08ab7eb6a2",
+                        "type": "Javascript2",
+                        "x": 335.37088103946417,
+                        "y": 907.498184646253,
+                        "parameters": {
+                            "code": "define({\r\n    inputs: {\r\n        pageShow: \"boolean\",\r\n        cancelSpeak: \"boolean\",\r\n        text1: \"string\",\r\n        text2: \"string\",\r\n        text3: \"string\",\r\n        text4: \"string\",\r\n    },\r\n    outputs: {\r\n        vib1: \"boolean\",\r\n        vib2: \"boolean\",\r\n        vib3: \"boolean\",\r\n        vib4: \"boolean\",\r\n    },\r\n\r\n    run: function(inputs, outputs) {\r\n            var self2=this;\r\n            var synth = window.speechSynthesis;\r\n            var msg1 = new SpeechSynthesisUtterance(inputs.text1);\r\n            var msg2 = new SpeechSynthesisUtterance(inputs.text2);\r\n            var msg3 = new SpeechSynthesisUtterance(inputs.text3);\r\n            var msg4 = new SpeechSynthesisUtterance(inputs.text4);\r\n            if(inputs.pageShow){   \r\n                synth.speak(msg1);\r\n                synth.speak(msg2);\r\n                synth.speak(msg3);\r\n                synth.speak(msg4);\r\n            }\r\n             \r\n               msg1.onstart = function(event){\r\n                self2.sendSignalOnOutput(\"vib1\");\r\n               }\r\n               msg2.onstart = function(event){\r\n                self2.sendSignalOnOutput(\"vib2\");\r\n               }\r\n               msg3.onstart = function(event){\r\n                self2.sendSignalOnOutput(\"vib3\");\r\n               }\r\n               msg4.onstart = function(event){\r\n                self2.sendSignalOnOutput(\"vib4\");\r\n               }\r\n    }\r\n});"
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "name": "pageShow",
+                                "plug": "input",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "group": "Inputs",
+                                "index": 2
+                            },
+                            {
+                                "name": "cancelSpeak",
+                                "plug": "input",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "group": "Inputs",
+                                "index": 3
+                            },
+                            {
+                                "name": "text1",
+                                "plug": "input",
+                                "type": {
+                                    "name": "string"
+                                },
+                                "group": "Inputs",
+                                "index": 4
+                            },
+                            {
+                                "name": "text2",
+                                "plug": "input",
+                                "type": {
+                                    "name": "string"
+                                },
+                                "group": "Inputs",
+                                "index": 5
+                            },
+                            {
+                                "name": "text3",
+                                "plug": "input",
+                                "type": {
+                                    "name": "string"
+                                },
+                                "group": "Inputs",
+                                "index": 6
+                            },
+                            {
+                                "name": "text4",
+                                "plug": "input",
+                                "type": {
+                                    "name": "string"
+                                },
+                                "group": "Inputs",
+                                "index": 7
+                            },
+                            {
+                                "name": "vib1",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "plug": "output",
+                                "group": "Outputs",
+                                "index": 8
+                            },
+                            {
+                                "name": "vib2",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "plug": "output",
+                                "group": "Outputs",
+                                "index": 9
+                            },
+                            {
+                                "name": "vib3",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "plug": "output",
+                                "group": "Outputs",
+                                "index": 10
+                            },
+                            {
+                                "name": "vib4",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "plug": "output",
+                                "group": "Outputs",
+                                "index": 11
+                            }
+                        ],
+                        "children": []
                     }
                 ]
             }
@@ -24633,70 +24201,16 @@
                         "toProperty": "blendValue"
                     },
                     {
-                        "fromId": "27a2f0e1-ded7-60af-3d0e-a31bc25a731b",
-                        "fromProperty": "timerFinished",
-                        "toId": "6500255b-019e-e46b-49f6-84b0e201f69d",
-                        "toProperty": "start"
-                    },
-                    {
-                        "fromId": "6500255b-019e-e46b-49f6-84b0e201f69d",
-                        "fromProperty": "timerFinished",
-                        "toId": "426c88d1-5224-57cd-0e87-37259e98456a",
-                        "toProperty": "pageShowing"
-                    },
-                    {
                         "fromId": "5638be44-87fe-dd1d-cf1e-6c3b33fbc83e",
                         "fromProperty": "result",
                         "toId": "c9553d5b-d545-1d36-c374-5011eca22f24",
                         "toProperty": "Color"
                     },
                     {
-                        "fromId": "e5b3e5bc-d355-f9f0-8ff6-f44accfcb20b",
-                        "fromProperty": "messageReceived",
-                        "toId": "27a2f0e1-ded7-60af-3d0e-a31bc25a731b",
-                        "toProperty": "start"
-                    },
-                    {
-                        "fromId": "a1f16b6b-8d3e-3e6d-1338-7b3a1c8e8088",
-                        "fromProperty": "pageShowing",
-                        "toId": "27a2f0e1-ded7-60af-3d0e-a31bc25a731b",
-                        "toProperty": "start"
-                    },
-                    {
                         "fromId": "fb37547a-8725-5dc9-8692-6f183a0f41b7",
                         "fromProperty": "Blend",
                         "toId": "57dfec09-984d-c455-f219-e11a5d39de5c",
                         "toProperty": "blendValue"
-                    },
-                    {
-                        "fromId": "27a2f0e1-ded7-60af-3d0e-a31bc25a731b",
-                        "fromProperty": "timerFinished",
-                        "toId": "fb37547a-8725-5dc9-8692-6f183a0f41b7",
-                        "toProperty": "replayToEnd"
-                    },
-                    {
-                        "fromId": "27a2f0e1-ded7-60af-3d0e-a31bc25a731b",
-                        "fromProperty": "timerFinished",
-                        "toId": "1126ca6b-8adb-8b6c-9886-8f00e42ca20b",
-                        "toProperty": "pageShowing"
-                    },
-                    {
-                        "fromId": "6500255b-019e-e46b-49f6-84b0e201f69d",
-                        "fromProperty": "timerFinished",
-                        "toId": "15f7d6fc-6f5d-b3fb-e9ec-04dd8b91d27f",
-                        "toProperty": "replayToEnd"
-                    },
-                    {
-                        "fromId": "a1f16b6b-8d3e-3e6d-1338-7b3a1c8e8088",
-                        "fromProperty": "pageHiding",
-                        "toId": "27a2f0e1-ded7-60af-3d0e-a31bc25a731b",
-                        "toProperty": "stop"
-                    },
-                    {
-                        "fromId": "a1f16b6b-8d3e-3e6d-1338-7b3a1c8e8088",
-                        "fromProperty": "pageHiding",
-                        "toId": "6500255b-019e-e46b-49f6-84b0e201f69d",
-                        "toProperty": "stop"
                     },
                     {
                         "fromId": "17b47999-a407-447b-b6aa-57f3d811c55c",
@@ -24723,18 +24237,6 @@
                         "toProperty": "pause"
                     },
                     {
-                        "fromId": "17b47999-a407-447b-b6aa-57f3d811c55c",
-                        "fromProperty": "Label",
-                        "toId": "1126ca6b-8adb-8b6c-9886-8f00e42ca20b",
-                        "toProperty": "textToSpeech"
-                    },
-                    {
-                        "fromId": "c9553d5b-d545-1d36-c374-5011eca22f24",
-                        "fromProperty": "Label",
-                        "toId": "426c88d1-5224-57cd-0e87-37259e98456a",
-                        "toProperty": "textToSpeech"
-                    },
-                    {
                         "fromId": "e5b3e5bc-d355-f9f0-8ff6-f44accfcb20b",
                         "fromProperty": "messageReceived",
                         "toId": "215a5129-dcc8-e6b2-8ad1-19de9a6bc36a",
@@ -24751,6 +24253,42 @@
                         "fromProperty": "pageHiding",
                         "toId": "12d41309-28e0-c736-9652-fdebbf3ff069",
                         "toProperty": "pageHiding"
+                    },
+                    {
+                        "fromId": "e5b3e5bc-d355-f9f0-8ff6-f44accfcb20b",
+                        "fromProperty": "messageReceived",
+                        "toId": "e32ac67d-d7dc-6e2e-21f4-46478e3dc39f",
+                        "toProperty": "pageShow"
+                    },
+                    {
+                        "fromId": "a1f16b6b-8d3e-3e6d-1338-7b3a1c8e8088",
+                        "fromProperty": "pageShowing",
+                        "toId": "e32ac67d-d7dc-6e2e-21f4-46478e3dc39f",
+                        "toProperty": "pageShow"
+                    },
+                    {
+                        "fromId": "17b47999-a407-447b-b6aa-57f3d811c55c",
+                        "fromProperty": "Label",
+                        "toId": "e32ac67d-d7dc-6e2e-21f4-46478e3dc39f",
+                        "toProperty": "text1"
+                    },
+                    {
+                        "fromId": "c9553d5b-d545-1d36-c374-5011eca22f24",
+                        "fromProperty": "Label",
+                        "toId": "e32ac67d-d7dc-6e2e-21f4-46478e3dc39f",
+                        "toProperty": "text2"
+                    },
+                    {
+                        "fromId": "e32ac67d-d7dc-6e2e-21f4-46478e3dc39f",
+                        "fromProperty": "vib1",
+                        "toId": "fb37547a-8725-5dc9-8692-6f183a0f41b7",
+                        "toProperty": "replayToEnd"
+                    },
+                    {
+                        "fromId": "e32ac67d-d7dc-6e2e-21f4-46478e3dc39f",
+                        "fromProperty": "vib2",
+                        "toId": "15f7d6fc-6f5d-b3fb-e9ec-04dd8b91d27f",
+                        "toProperty": "replayToEnd"
                     }
                 ],
                 "roots": [
@@ -24833,39 +24371,6 @@
                         ]
                     },
                     {
-                        "id": "1126ca6b-8adb-8b6c-9886-8f00e42ca20b",
-                        "type": "Javascript2",
-                        "label": "Action",
-                        "x": 604.3822969247083,
-                        "y": 668.1362069960098,
-                        "parameters": {
-                            "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeech: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeech);\n                msgA.rate = 2.5;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100]);\n            }\n    }\n});",
-                            "pageShowing": false
-                        },
-                        "ports": [],
-                        "dynamicports": [
-                            {
-                                "name": "pageShowing",
-                                "plug": "input",
-                                "type": {
-                                    "name": "boolean"
-                                },
-                                "group": "Inputs",
-                                "index": 2
-                            },
-                            {
-                                "name": "textToSpeech",
-                                "plug": "input",
-                                "type": {
-                                    "name": "string"
-                                },
-                                "group": "Inputs",
-                                "index": 3
-                            }
-                        ],
-                        "children": []
-                    },
-                    {
                         "id": "57dfec09-984d-c455-f219-e11a5d39de5c",
                         "type": "Color Blend",
                         "x": 1029.4253746093852,
@@ -24880,23 +24385,10 @@
                         "children": []
                     },
                     {
-                        "id": "27a2f0e1-ded7-60af-3d0e-a31bc25a731b",
-                        "type": "Timer",
-                        "x": 819.6984997544495,
-                        "y": 685.0119575571889,
-                        "parameters": {
-                            "duration": 500,
-                            "startDelay": 100
-                        },
-                        "ports": [],
-                        "dynamicports": [],
-                        "children": []
-                    },
-                    {
                         "id": "fb37547a-8725-5dc9-8692-6f183a0f41b7",
                         "type": "Animation",
-                        "x": 379.8335242897688,
-                        "y": 679.8562848457278,
+                        "x": 810.8335242897688,
+                        "y": 688.8562848457278,
                         "parameters": {
                             "Blend.startMode": "explicit",
                             "Blend.startValue": 0.5,
@@ -24916,39 +24408,6 @@
                             }
                         ],
                         "dynamicports": [],
-                        "children": []
-                    },
-                    {
-                        "id": "426c88d1-5224-57cd-0e87-37259e98456a",
-                        "type": "Javascript2",
-                        "label": "Drama",
-                        "x": 605.1121080951962,
-                        "y": 802.0997283120953,
-                        "parameters": {
-                            "code": "var msgA;\ndefine({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeech: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                msgA = new SpeechSynthesisUtterance(inputs.textToSpeech);\n                msgA.rate = 2.5;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100,30,100]);\n            }\n    }\n});",
-                            "pageShowing": false
-                        },
-                        "ports": [],
-                        "dynamicports": [
-                            {
-                                "name": "pageShowing",
-                                "plug": "input",
-                                "type": {
-                                    "name": "boolean"
-                                },
-                                "group": "Inputs",
-                                "index": 2
-                            },
-                            {
-                                "name": "textToSpeech",
-                                "plug": "input",
-                                "type": {
-                                    "name": "string"
-                                },
-                                "group": "Inputs",
-                                "index": 3
-                            }
-                        ],
                         "children": []
                     },
                     {
@@ -24967,8 +24426,8 @@
                     {
                         "id": "15f7d6fc-6f5d-b3fb-e9ec-04dd8b91d27f",
                         "type": "Animation",
-                        "x": 384.57922273763575,
-                        "y": 809.0058354424709,
+                        "x": 815.5792227376357,
+                        "y": 818.0058354424709,
                         "parameters": {
                             "Blend.startMode": "explicit",
                             "Blend.startValue": 0.5,
@@ -24991,22 +24450,10 @@
                         "children": []
                     },
                     {
-                        "id": "6500255b-019e-e46b-49f6-84b0e201f69d",
-                        "type": "Timer",
-                        "x": 817.2462081644808,
-                        "y": 814.4037572449515,
-                        "parameters": {
-                            "duration": 1000
-                        },
-                        "ports": [],
-                        "dynamicports": [],
-                        "children": []
-                    },
-                    {
                         "id": "e5b3e5bc-d355-f9f0-8ff6-f44accfcb20b",
                         "type": "Receive Message",
-                        "x": 1047.9817379774502,
-                        "y": 372,
+                        "x": 1208.9817379774502,
+                        "y": 354,
                         "parameters": {
                             "topic": "/Rep/PodcastPlayback"
                         },
@@ -25128,6 +24575,73 @@
                                 },
                                 "group": "Inputs",
                                 "index": 3
+                            }
+                        ],
+                        "children": []
+                    },
+                    {
+                        "id": "e32ac67d-d7dc-6e2e-21f4-46478e3dc39f",
+                        "type": "Javascript2",
+                        "x": 407.2456255485579,
+                        "y": 756.280233282907,
+                        "parameters": {
+                            "code": "define({\r\n    inputs: {\r\n        pageShow: \"boolean\",\r\n        cancelSpeak: \"boolean\",\r\n        text1: \"string\",\r\n        text2: \"string\",\r\n    },\r\n    outputs: {\r\n        vib1: \"boolean\",\r\n        vib2: \"boolean\",\r\n    },\r\n\r\n    run: function(inputs, outputs) {\r\n            var self2=this;\r\n            var synth = window.speechSynthesis;\r\n            var msg1 = new SpeechSynthesisUtterance(inputs.text1);\r\n            var msg2 = new SpeechSynthesisUtterance(inputs.text2);\r\n            if(inputs.pageShow){   \r\n                synth.speak(msg1);\r\n                synth.speak(msg2);\r\n            }\r\n             \r\n               msg1.onstart = function(event){\r\n                self2.sendSignalOnOutput(\"vib1\");\r\n               }\r\n               msg2.onstart = function(event){\r\n                self2.sendSignalOnOutput(\"vib2\");\r\n               }\r\n    }\r\n});"
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "name": "pageShow",
+                                "plug": "input",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "group": "Inputs",
+                                "index": 2
+                            },
+                            {
+                                "name": "cancelSpeak",
+                                "plug": "input",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "group": "Inputs",
+                                "index": 3
+                            },
+                            {
+                                "name": "text1",
+                                "plug": "input",
+                                "type": {
+                                    "name": "string"
+                                },
+                                "group": "Inputs",
+                                "index": 4
+                            },
+                            {
+                                "name": "text2",
+                                "plug": "input",
+                                "type": {
+                                    "name": "string"
+                                },
+                                "group": "Inputs",
+                                "index": 5
+                            },
+                            {
+                                "name": "vib1",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "plug": "output",
+                                "group": "Outputs",
+                                "index": 6
+                            },
+                            {
+                                "name": "vib2",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "plug": "output",
+                                "group": "Outputs",
+                                "index": 7
                             }
                         ],
                         "children": []
@@ -25605,34 +25119,10 @@
                         "toProperty": "blendValue"
                     },
                     {
-                        "fromId": "aa8e0310-604b-f9f5-d3db-9696cc44ef0a",
-                        "fromProperty": "timerFinished",
-                        "toId": "01aa6ec5-2f97-c69d-e26a-ab06e5879a14",
-                        "toProperty": "start"
-                    },
-                    {
-                        "fromId": "01aa6ec5-2f97-c69d-e26a-ab06e5879a14",
-                        "fromProperty": "timerFinished",
-                        "toId": "0ac74c5c-870f-9e91-dc41-d3bbbf972e93",
-                        "toProperty": "pageShowing"
-                    },
-                    {
                         "fromId": "d7169cf4-09b7-2466-dc26-026bd04033e7",
                         "fromProperty": "result",
                         "toId": "5a8e1a6f-51c1-d559-1147-4b8981a73b68",
                         "toProperty": "Color"
-                    },
-                    {
-                        "fromId": "ce5f7e82-7bd2-72fc-7ebc-618a0aebe5b3",
-                        "fromProperty": "timerFinished",
-                        "toId": "de8db22c-dbf4-7a07-5727-f58b39a80861",
-                        "toProperty": "pageShowing"
-                    },
-                    {
-                        "fromId": "01aa6ec5-2f97-c69d-e26a-ab06e5879a14",
-                        "fromProperty": "timerFinished",
-                        "toId": "ce5f7e82-7bd2-72fc-7ebc-618a0aebe5b3",
-                        "toProperty": "start"
                     },
                     {
                         "fromId": "c4e127cb-5707-585d-d42b-60279f1480c0",
@@ -25641,34 +25131,10 @@
                         "toProperty": "Color"
                     },
                     {
-                        "fromId": "b7eb543e-dce0-33f0-a473-8f127f2acaa2",
-                        "fromProperty": "Label",
-                        "toId": "7c65cf4b-31d3-fbda-27b3-2c9228003321",
-                        "toProperty": "textToSpeach"
-                    },
-                    {
-                        "fromId": "5a8e1a6f-51c1-d559-1147-4b8981a73b68",
-                        "fromProperty": "Label",
-                        "toId": "0ac74c5c-870f-9e91-dc41-d3bbbf972e93",
-                        "toProperty": "textToSpeach"
-                    },
-                    {
-                        "fromId": "33124fe5-4269-a250-bf31-01d12ee415d8",
-                        "fromProperty": "Label",
-                        "toId": "de8db22c-dbf4-7a07-5727-f58b39a80861",
-                        "toProperty": "textToSpeach"
-                    },
-                    {
                         "fromId": "67c400df-abec-74b0-c27b-062085ba3661",
                         "fromProperty": "Blend",
                         "toId": "5ac4cfe1-f905-1a07-ac6b-42f716d74a8f",
                         "toProperty": "blendValue"
-                    },
-                    {
-                        "fromId": "68826ab0-d0dd-60cb-17af-7c421ba0b0e7",
-                        "fromProperty": "timerFinished",
-                        "toId": "f2a61590-7a09-4c32-1589-5d71a398c8e8",
-                        "toProperty": "pageShowing"
                     },
                     {
                         "fromId": "5ac4cfe1-f905-1a07-ac6b-42f716d74a8f",
@@ -25677,88 +25143,10 @@
                         "toProperty": "Color"
                     },
                     {
-                        "fromId": "6188b060-f7e1-23c4-3387-0684017ec206",
-                        "fromProperty": "Label",
-                        "toId": "f2a61590-7a09-4c32-1589-5d71a398c8e8",
-                        "toProperty": "textToSpeach"
-                    },
-                    {
-                        "fromId": "ce5f7e82-7bd2-72fc-7ebc-618a0aebe5b3",
-                        "fromProperty": "timerFinished",
-                        "toId": "68826ab0-d0dd-60cb-17af-7c421ba0b0e7",
-                        "toProperty": "start"
-                    },
-                    {
-                        "fromId": "3f70b825-b6f7-ee0a-4ff9-75acfff6219c",
-                        "fromProperty": "messageReceived",
-                        "toId": "aa8e0310-604b-f9f5-d3db-9696cc44ef0a",
-                        "toProperty": "start"
-                    },
-                    {
-                        "fromId": "30ba0aae-73e5-0e13-92a2-11086a2b4c24",
-                        "fromProperty": "pageShowing",
-                        "toId": "aa8e0310-604b-f9f5-d3db-9696cc44ef0a",
-                        "toProperty": "start"
-                    },
-                    {
                         "fromId": "2d37eed2-d79e-d27a-1dad-5584389be4fb",
                         "fromProperty": "Blend",
                         "toId": "a3c12e20-36ec-654b-f241-83494cc5ea42",
                         "toProperty": "blendValue"
-                    },
-                    {
-                        "fromId": "aa8e0310-604b-f9f5-d3db-9696cc44ef0a",
-                        "fromProperty": "timerFinished",
-                        "toId": "2d37eed2-d79e-d27a-1dad-5584389be4fb",
-                        "toProperty": "replayToEnd"
-                    },
-                    {
-                        "fromId": "aa8e0310-604b-f9f5-d3db-9696cc44ef0a",
-                        "fromProperty": "timerFinished",
-                        "toId": "7c65cf4b-31d3-fbda-27b3-2c9228003321",
-                        "toProperty": "pageShowing"
-                    },
-                    {
-                        "fromId": "01aa6ec5-2f97-c69d-e26a-ab06e5879a14",
-                        "fromProperty": "timerFinished",
-                        "toId": "230adde0-1b09-0803-f311-a2353b331175",
-                        "toProperty": "replayToEnd"
-                    },
-                    {
-                        "fromId": "ce5f7e82-7bd2-72fc-7ebc-618a0aebe5b3",
-                        "fromProperty": "timerFinished",
-                        "toId": "5f92b90f-70fd-b872-c7a3-53a06b815538",
-                        "toProperty": "replayToEnd"
-                    },
-                    {
-                        "fromId": "68826ab0-d0dd-60cb-17af-7c421ba0b0e7",
-                        "fromProperty": "timerFinished",
-                        "toId": "67c400df-abec-74b0-c27b-062085ba3661",
-                        "toProperty": "replayToEnd"
-                    },
-                    {
-                        "fromId": "30ba0aae-73e5-0e13-92a2-11086a2b4c24",
-                        "fromProperty": "pageHiding",
-                        "toId": "aa8e0310-604b-f9f5-d3db-9696cc44ef0a",
-                        "toProperty": "stop"
-                    },
-                    {
-                        "fromId": "30ba0aae-73e5-0e13-92a2-11086a2b4c24",
-                        "fromProperty": "pageHiding",
-                        "toId": "01aa6ec5-2f97-c69d-e26a-ab06e5879a14",
-                        "toProperty": "stop"
-                    },
-                    {
-                        "fromId": "30ba0aae-73e5-0e13-92a2-11086a2b4c24",
-                        "fromProperty": "pageHiding",
-                        "toId": "ce5f7e82-7bd2-72fc-7ebc-618a0aebe5b3",
-                        "toProperty": "stop"
-                    },
-                    {
-                        "fromId": "30ba0aae-73e5-0e13-92a2-11086a2b4c24",
-                        "fromProperty": "pageHiding",
-                        "toId": "68826ab0-d0dd-60cb-17af-7c421ba0b0e7",
-                        "toProperty": "stop"
                     },
                     {
                         "fromId": "5f92b90f-70fd-b872-c7a3-53a06b815538",
@@ -25825,6 +25213,54 @@
                         "fromProperty": "messageReceived",
                         "toId": "bb9507ef-08bc-a258-9239-dc7a0d7ddf53",
                         "toProperty": "navigate"
+                    },
+                    {
+                        "fromId": "b7eb543e-dce0-33f0-a473-8f127f2acaa2",
+                        "fromProperty": "Label",
+                        "toId": "3223974d-52ec-68e3-3f95-77703b543e93",
+                        "toProperty": "text1"
+                    },
+                    {
+                        "fromId": "5a8e1a6f-51c1-d559-1147-4b8981a73b68",
+                        "fromProperty": "Label",
+                        "toId": "3223974d-52ec-68e3-3f95-77703b543e93",
+                        "toProperty": "text2"
+                    },
+                    {
+                        "fromId": "33124fe5-4269-a250-bf31-01d12ee415d8",
+                        "fromProperty": "Label",
+                        "toId": "3223974d-52ec-68e3-3f95-77703b543e93",
+                        "toProperty": "text3"
+                    },
+                    {
+                        "fromId": "6188b060-f7e1-23c4-3387-0684017ec206",
+                        "fromProperty": "Label",
+                        "toId": "3223974d-52ec-68e3-3f95-77703b543e93",
+                        "toProperty": "text4"
+                    },
+                    {
+                        "fromId": "3223974d-52ec-68e3-3f95-77703b543e93",
+                        "fromProperty": "vib1",
+                        "toId": "2d37eed2-d79e-d27a-1dad-5584389be4fb",
+                        "toProperty": "replayToEnd"
+                    },
+                    {
+                        "fromId": "3223974d-52ec-68e3-3f95-77703b543e93",
+                        "fromProperty": "vib2",
+                        "toId": "230adde0-1b09-0803-f311-a2353b331175",
+                        "toProperty": "replayToEnd"
+                    },
+                    {
+                        "fromId": "3223974d-52ec-68e3-3f95-77703b543e93",
+                        "fromProperty": "vib3",
+                        "toId": "5f92b90f-70fd-b872-c7a3-53a06b815538",
+                        "toProperty": "replayToEnd"
+                    },
+                    {
+                        "fromId": "3223974d-52ec-68e3-3f95-77703b543e93",
+                        "fromProperty": "vib4",
+                        "toId": "67c400df-abec-74b0-c27b-062085ba3661",
+                        "toProperty": "replayToEnd"
                     }
                 ],
                 "roots": [
@@ -25972,39 +25408,6 @@
                         ]
                     },
                     {
-                        "id": "7c65cf4b-31d3-fbda-27b3-2c9228003321",
-                        "type": "Javascript2",
-                        "label": "Action",
-                        "x": 892.3822969247083,
-                        "y": 1063.9868248022317,
-                        "parameters": {
-                            "code": "//var msgA = new SpeechSynthesisUtterance('Action')\ndefine({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                msgA.rate = 2.5;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100]);\n            }\n    }\n});",
-                            "pageShowing": false
-                        },
-                        "ports": [],
-                        "dynamicports": [
-                            {
-                                "name": "pageShowing",
-                                "plug": "input",
-                                "type": {
-                                    "name": "boolean"
-                                },
-                                "group": "Inputs",
-                                "index": 2
-                            },
-                            {
-                                "name": "textToSpeach",
-                                "plug": "input",
-                                "type": {
-                                    "name": "string"
-                                },
-                                "group": "Inputs",
-                                "index": 3
-                            }
-                        ],
-                        "children": []
-                    },
-                    {
                         "id": "a3c12e20-36ec-654b-f241-83494cc5ea42",
                         "type": "Color Blend",
                         "x": 1317.4253746093855,
@@ -26019,23 +25422,10 @@
                         "children": []
                     },
                     {
-                        "id": "aa8e0310-604b-f9f5-d3db-9696cc44ef0a",
-                        "type": "Timer",
-                        "x": 1107.6984997544496,
-                        "y": 1079.011957557189,
-                        "parameters": {
-                            "duration": 500,
-                            "startDelay": 100
-                        },
-                        "ports": [],
-                        "dynamicports": [],
-                        "children": []
-                    },
-                    {
                         "id": "2d37eed2-d79e-d27a-1dad-5584389be4fb",
                         "type": "Animation",
-                        "x": 667.8335242897688,
-                        "y": 1073.8562848457277,
+                        "x": 1064.8335242897688,
+                        "y": 1086.8562848457277,
                         "parameters": {
                             "Blend.startMode": "explicit",
                             "Blend.startValue": 0.5,
@@ -26055,39 +25445,6 @@
                             }
                         ],
                         "dynamicports": [],
-                        "children": []
-                    },
-                    {
-                        "id": "0ac74c5c-870f-9e91-dc41-d3bbbf972e93",
-                        "type": "Javascript2",
-                        "label": "Drama",
-                        "x": 893.1121080951962,
-                        "y": 1196.0997283120953,
-                        "parameters": {
-                            "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                msgA.rate = 2.5;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100,30,100]);\n            }\n    }\n});",
-                            "pageShowing": false
-                        },
-                        "ports": [],
-                        "dynamicports": [
-                            {
-                                "name": "pageShowing",
-                                "plug": "input",
-                                "type": {
-                                    "name": "boolean"
-                                },
-                                "group": "Inputs",
-                                "index": 2
-                            },
-                            {
-                                "name": "textToSpeach",
-                                "plug": "input",
-                                "type": {
-                                    "name": "string"
-                                },
-                                "group": "Inputs",
-                                "index": 3
-                            }
-                        ],
                         "children": []
                     },
                     {
@@ -26106,8 +25463,8 @@
                     {
                         "id": "230adde0-1b09-0803-f311-a2353b331175",
                         "type": "Animation",
-                        "x": 672.5792227376357,
-                        "y": 1203.005835442471,
+                        "x": 1069.5792227376357,
+                        "y": 1216.005835442471,
                         "parameters": {
                             "Blend.startMode": "explicit",
                             "Blend.startValue": 0.5,
@@ -26127,51 +25484,6 @@
                             }
                         ],
                         "dynamicports": [],
-                        "children": []
-                    },
-                    {
-                        "id": "01aa6ec5-2f97-c69d-e26a-ab06e5879a14",
-                        "type": "Timer",
-                        "x": 1105.2462081644808,
-                        "y": 1208.4037572449515,
-                        "parameters": {
-                            "duration": 1000
-                        },
-                        "ports": [],
-                        "dynamicports": [],
-                        "children": []
-                    },
-                    {
-                        "id": "de8db22c-dbf4-7a07-5727-f58b39a80861",
-                        "type": "Javascript2",
-                        "label": "Animation",
-                        "x": 892.2547908197373,
-                        "y": 1332.4261189551223,
-                        "parameters": {
-                            "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                msgA.rate = 2.5;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100,30,100,30,100]);\n            }\n    }\n});",
-                            "pageShowing": false
-                        },
-                        "ports": [],
-                        "dynamicports": [
-                            {
-                                "name": "pageShowing",
-                                "plug": "input",
-                                "type": {
-                                    "name": "boolean"
-                                },
-                                "group": "Inputs",
-                                "index": 2
-                            },
-                            {
-                                "name": "textToSpeach",
-                                "plug": "input",
-                                "type": {
-                                    "name": "string"
-                                },
-                                "group": "Inputs",
-                                "index": 3
-                            }
-                        ],
                         "children": []
                     },
                     {
@@ -26190,8 +25502,8 @@
                     {
                         "id": "5f92b90f-70fd-b872-c7a3-53a06b815538",
                         "type": "Animation",
-                        "x": 667.4204248661099,
-                        "y": 1350.786074449334,
+                        "x": 1064.42042486611,
+                        "y": 1363.786074449334,
                         "parameters": {
                             "Blend.startMode": "explicit",
                             "Blend.startValue": 0.5,
@@ -26211,51 +25523,6 @@
                             }
                         ],
                         "dynamicports": [],
-                        "children": []
-                    },
-                    {
-                        "id": "ce5f7e82-7bd2-72fc-7ebc-618a0aebe5b3",
-                        "type": "Timer",
-                        "x": 1100.5938631707252,
-                        "y": 1356.1839962518147,
-                        "parameters": {
-                            "duration": 1000
-                        },
-                        "ports": [],
-                        "dynamicports": [],
-                        "children": []
-                    },
-                    {
-                        "id": "f2a61590-7a09-4c32-1589-5d71a398c8e8",
-                        "type": "Javascript2",
-                        "label": "Animation",
-                        "x": 891.9676583135125,
-                        "y": 1480.8946594062254,
-                        "parameters": {
-                            "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        textToSpeach: \"string\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                var msgA = new SpeechSynthesisUtterance(inputs.textToSpeach);\n                msgA.rate = 2.5;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([100,30,100,30,100,30,100]);\n            }\n    }\n});",
-                            "pageShowing": false
-                        },
-                        "ports": [],
-                        "dynamicports": [
-                            {
-                                "name": "pageShowing",
-                                "plug": "input",
-                                "type": {
-                                    "name": "boolean"
-                                },
-                                "group": "Inputs",
-                                "index": 2
-                            },
-                            {
-                                "name": "textToSpeach",
-                                "plug": "input",
-                                "type": {
-                                    "name": "string"
-                                },
-                                "group": "Inputs",
-                                "index": 3
-                            }
-                        ],
                         "children": []
                     },
                     {
@@ -26274,8 +25541,8 @@
                     {
                         "id": "67c400df-abec-74b0-c27b-062085ba3661",
                         "type": "Animation",
-                        "x": 660,
-                        "y": 1465.2452613504418,
+                        "x": 1057,
+                        "y": 1478.2452613504418,
                         "parameters": {
                             "Blend.startMode": "explicit",
                             "Blend.startValue": 0.5,
@@ -26294,18 +25561,6 @@
                                 "index": 1
                             }
                         ],
-                        "dynamicports": [],
-                        "children": []
-                    },
-                    {
-                        "id": "68826ab0-d0dd-60cb-17af-7c421ba0b0e7",
-                        "type": "Timer",
-                        "x": 1086.466131555423,
-                        "y": 1506.215552615109,
-                        "parameters": {
-                            "duration": 1000
-                        },
-                        "ports": [],
                         "dynamicports": [],
                         "children": []
                     },
@@ -26446,6 +25701,109 @@
                         },
                         "ports": [],
                         "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "3223974d-52ec-68e3-3f95-77703b543e93",
+                        "type": "Javascript2",
+                        "x": 741.0333840231658,
+                        "y": 1210.255998158504,
+                        "parameters": {
+                            "code": "define({\r\n    inputs: {\r\n        pageShow: \"boolean\",\r\n        cancelSpeak: \"boolean\",\r\n        text1: \"string\",\r\n        text2: \"string\",\r\n        text3: \"string\",\r\n        text4: \"string\",\r\n    },\r\n    outputs: {\r\n        vib1: \"boolean\",\r\n        vib2: \"boolean\",\r\n        vib3: \"boolean\",\r\n        vib4: \"boolean\",\r\n    },\r\n\r\n    run: function(inputs, outputs) {\r\n            var self2=this;\r\n            var synth = window.speechSynthesis;\r\n            var msg1 = new SpeechSynthesisUtterance(inputs.text1);\r\n            var msg2 = new SpeechSynthesisUtterance(inputs.text2);\r\n            var msg3 = new SpeechSynthesisUtterance(inputs.text3);\r\n            var msg4 = new SpeechSynthesisUtterance(inputs.text4);\r\n            if(inputs.pageShow){   \r\n                synth.speak(msg1);\r\n                synth.speak(msg2);\r\n                synth.speak(msg3);\r\n                synth.speak(msg4);\r\n            }\r\n             \r\n               msg1.onstart = function(event){\r\n                self2.sendSignalOnOutput(\"vib1\");\r\n               }\r\n               msg2.onstart = function(event){\r\n                self2.sendSignalOnOutput(\"vib2\");\r\n               }\r\n               msg3.onstart = function(event){\r\n                self2.sendSignalOnOutput(\"vib3\");\r\n               }\r\n               msg4.onstart = function(event){\r\n                self2.sendSignalOnOutput(\"vib4\");\r\n               }\r\n    }\r\n});"
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "name": "pageShow",
+                                "plug": "input",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "group": "Inputs",
+                                "index": 2
+                            },
+                            {
+                                "name": "cancelSpeak",
+                                "plug": "input",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "group": "Inputs",
+                                "index": 3
+                            },
+                            {
+                                "name": "text1",
+                                "plug": "input",
+                                "type": {
+                                    "name": "string"
+                                },
+                                "group": "Inputs",
+                                "index": 4
+                            },
+                            {
+                                "name": "text2",
+                                "plug": "input",
+                                "type": {
+                                    "name": "string"
+                                },
+                                "group": "Inputs",
+                                "index": 5
+                            },
+                            {
+                                "name": "text3",
+                                "plug": "input",
+                                "type": {
+                                    "name": "string"
+                                },
+                                "group": "Inputs",
+                                "index": 6
+                            },
+                            {
+                                "name": "text4",
+                                "plug": "input",
+                                "type": {
+                                    "name": "string"
+                                },
+                                "group": "Inputs",
+                                "index": 7
+                            },
+                            {
+                                "name": "vib1",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "plug": "output",
+                                "group": "Outputs",
+                                "index": 8
+                            },
+                            {
+                                "name": "vib2",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "plug": "output",
+                                "group": "Outputs",
+                                "index": 9
+                            },
+                            {
+                                "name": "vib3",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "plug": "output",
+                                "group": "Outputs",
+                                "index": 10
+                            },
+                            {
+                                "name": "vib4",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "plug": "output",
+                                "group": "Outputs",
+                                "index": 11
+                            }
+                        ],
                         "children": []
                     }
                 ]
