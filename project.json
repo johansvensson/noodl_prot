@@ -277,10 +277,10 @@
                     {
                         "id": "f73f976a-3730-0a7d-c335-862615f38de1",
                         "type": "Javascript2",
-                        "x": 932.3052135502559,
-                        "y": 273.63413041526553,
+                        "x": 928.4677174306762,
+                        "y": 276.192461161652,
                         "parameters": {
-                            "code": "define({\n    inputs:{\n       startSearch: \"bolean\",\n       currPage: \"string\",\n       prevPage: \"string\",\n       currentRate: \"number\",\n    },\n    outputs: {\n        keyLeft: \"boolean\",\n        keyRight: \"boolean\",\n        keyDown: \"boolean\",\n        topLeft: \"boolean\",\n        topRight: \"boolean\",\n        bottomLeft: \"boolean\",\n        bottomRight: \"boolean\",\n        backHome: \"boolean\",\n        repeat: \"boolean\",\n        toSer: \"boolean\",\n     },\n    setup: function(inputs, outputs) {\n        var self = this;\n        var newRate;\n        var synth2 =  window.speechSynthesis;\n        document.addEventListener(\"keydown\", function(e) {\n            if((e.keyCode === 100) ||(e.keyCode==52) ) {\n                synth2.cancel();\n                self.sendSignalOnOutput(\"topLeft\");\n            }\n            else if((e.keyCode === 101) || (e.keyCode==53)) {\n                synth2.cancel();\n                self.sendSignalOnOutput(\"topRight\");\n            }\n            else if((e.keyCode === 97)||(e.keyCode==49) ) {\n                    synth2.cancel();                \n                self.sendSignalOnOutput(\"bottomLeft\");\n            }\n            else if((e.keyCode === 98)||(e.keyCode==50)) {\n                synth2.cancel();\n                self.sendSignalOnOutput(\"bottomRight\");\n            }\n             else if((e.keyCode === 107)) {\n                 // Increase speak rate\n                 if(inputs.currentRate < 9.5){\n                     newRate = inputs.currentRate + 0.5;\n                     Noodl.setGlobalValue(\"rate.value\", newRate);\n                     //console.log(\"New rate after button-press are: \" + newRate);\n                 }\n            }\n             else if((e.keyCode === 109)) {\n                 // Decrease speak rate\n                if(inputs.currentRate > 0.5){\n                newRate = inputs.currentRate - 0.5;\n                Noodl.setGlobalValue(\"rate.value\", newRate);\n                //console.log(\"New rate after button-press are: \" + newRate);\n                }\n            }\n            else if(e.keyCode === 103||(e.keyCode==55)) {\n                    synth2.cancel();\n                   if(inputs.prevPage===\"\"){\n                    var msgA = new SpeechSynthesisUtterance(\"This is Main Menu\");\n                    msgA.rate = inputs.currentRate;\n                    synth2.speak(msgA);\n                   self.sendSignalOnOutput(\"repeat\");\n\n                }else{\n                   var msgB = new SpeechSynthesisUtterance(\"This is \" + inputs.prevPage + \"   \");\n                    msgB.rate = inputs.currentRate;\n                    synth2.speak(msgB);\n                    \n                self.sendSignalOnOutput(\"backHome\");\n  \n  \n                }\n                \n              \n                }\n            \n            else if((e.keyCode === 104) ||(e.keyCode==56)) {\n                synth2.cancel();\n                self.sendSignalOnOutput(\"repeat\");\n            }\n            \n          \n        });\n\n}   \n    });\n    "
+                            "code": "define({\n    inputs:{\n       startSearch: \"bolean\",\n       currPage: \"string\",\n       prevPage: \"string\",\n       currentRate: \"number\",\n    },\n    outputs: {\n        keyLeft: \"boolean\",\n        keyRight: \"boolean\",\n        keyDown: \"boolean\",\n        topLeft: \"boolean\",\n        topRight: \"boolean\",\n        bottomLeft: \"boolean\",\n        bottomRight: \"boolean\",\n        backHome: \"boolean\",\n        repeat: \"boolean\",\n        toSer: \"boolean\",\n     },\n    setup: function(inputs, outputs) {\n        var self = this;\n        var newRate;\n        var synth2 =  window.speechSynthesis;\n        var highAudio = new Audio('http://users.student.lth.se/dic12jsv/sounds/high.wav');\n        var lowAudio = new Audio('http://users.student.lth.se/dic12jsv/sounds/low.wav');\n        document.addEventListener(\"keydown\", function(e) {\n            if((e.keyCode === 100) ||(e.keyCode==52) ) {\n                synth2.cancel();\n                self.sendSignalOnOutput(\"topLeft\");\n            }\n            else if((e.keyCode === 101) || (e.keyCode==53)) {\n                synth2.cancel();\n                self.sendSignalOnOutput(\"topRight\");\n            }\n            else if((e.keyCode === 97)||(e.keyCode==49) ) {\n                    synth2.cancel();                \n                self.sendSignalOnOutput(\"bottomLeft\");\n            }\n            else if((e.keyCode === 98)||(e.keyCode==50)) {\n                synth2.cancel();\n                self.sendSignalOnOutput(\"bottomRight\");\n            }\n             else if((e.keyCode === 107)) {\n                 // Increase speak rate\n                 if(inputs.currentRate < 9.5){\n                     highAudio.load();\n                     newRate = inputs.currentRate + 0.5;\n                     Noodl.setGlobalValue(\"rate.value\", newRate);\n                     highAudio.play();\n                     //console.log(\"New rate after button-press are: \" + newRate);\n                 }\n            }\n             else if((e.keyCode === 109)) {\n                 // Decrease speak rate\n                if(inputs.currentRate > 0.5){\n                    lowAudio.load();\n                newRate = inputs.currentRate - 0.5;\n                Noodl.setGlobalValue(\"rate.value\", newRate);\n                lowAudio.play();\n                //console.log(\"New rate after button-press are: \" + newRate);\n                }\n            }\n            else if(e.keyCode === 103||(e.keyCode==55)) {\n                    synth2.cancel();\n                   if(inputs.prevPage===\"\"){\n                    var msgA = new SpeechSynthesisUtterance(\"This is Main Menu\");\n                    msgA.rate = inputs.currentRate;\n                    synth2.speak(msgA);\n                   self.sendSignalOnOutput(\"repeat\");\n\n                }else{\n                   var msgB = new SpeechSynthesisUtterance(\"This is \" + inputs.prevPage + \"   \");\n                    msgB.rate = inputs.currentRate;\n                    synth2.speak(msgB);\n                    \n                self.sendSignalOnOutput(\"backHome\");\n  \n  \n                }\n                \n              \n                }\n            \n            else if((e.keyCode === 104) ||(e.keyCode==56)) {\n                synth2.cancel();\n                self.sendSignalOnOutput(\"repeat\");\n            }\n            \n          \n        });\n\n}   \n    });\n    "
                         },
                         "ports": [],
                         "dynamicports": [
@@ -15911,7 +15911,7 @@
                                                 "value": 90,
                                                 "unit": "%"
                                             },
-                                            "Label": "Service",
+                                            "Label": "Food & Drinks",
                                             "Id": "B"
                                         },
                                         "ports": [],
@@ -15953,7 +15953,7 @@
                                                 "unit": "%"
                                             },
                                             "Color": "#4fa209",
-                                            "Label": "Food & Drinks",
+                                            "Label": "Service",
                                             "Id": "C"
                                         },
                                         "ports": [],
@@ -16172,10 +16172,10 @@
                     {
                         "id": "9cf90abc-0a1d-c456-4386-de196afd980e",
                         "type": "Page Navigation",
-                        "x": 561.3079752925405,
+                        "x": 559.8833287661796,
                         "y": 825.3672233263226,
                         "parameters": {
-                            "destination": "/Service"
+                            "destination": "/NI_pages/NI_food"
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -16262,9 +16262,9 @@
                         "id": "5646320c-f1a6-0a74-5600-9d0b37b560e4",
                         "type": "Page Navigation",
                         "x": 581.7293558460923,
-                        "y": 1015.0946582844797,
+                        "y": 1016.5193048108406,
                         "parameters": {
-                            "destination": "/NI_pages/NI_food"
+                            "destination": "/Service"
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -16489,10 +16489,10 @@
                     {
                         "id": "957966a9-3603-a94d-517a-b964fbbf6a2f",
                         "type": "Number",
-                        "x": -824.2239442869233,
+                        "x": -822.3446289632619,
                         "y": 401.06225753505805,
                         "parameters": {
-                            "value": 3
+                            "value": 1.5
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -16849,22 +16849,22 @@
                         "toProperty": "navigate"
                     },
                     {
-                        "fromId": "d36b74c9-62b8-3fc8-22fd-6d88ae13937a",
-                        "fromProperty": "Tap",
-                        "toId": "6c07e4df-8164-ede7-4d54-e60e96541f24",
-                        "toProperty": "navigate"
-                    },
-                    {
-                        "fromId": "088859b3-b164-86c8-f42f-bc488525638d",
-                        "fromProperty": "messageReceived",
-                        "toId": "6c07e4df-8164-ede7-4d54-e60e96541f24",
-                        "toProperty": "navigate"
-                    },
-                    {
                         "fromId": "3e7c953c-020f-4bee-8d0e-38cb0397f855",
                         "fromProperty": "rate.value",
                         "toId": "ca69b50f-4a17-262b-6df0-0258defde644",
                         "toProperty": "rate"
+                    },
+                    {
+                        "fromId": "088859b3-b164-86c8-f42f-bc488525638d",
+                        "fromProperty": "messageReceived",
+                        "toId": "deefb48b-94c3-9c16-3d0d-df82327ff465",
+                        "toProperty": "navigate"
+                    },
+                    {
+                        "fromId": "d36b74c9-62b8-3fc8-22fd-6d88ae13937a",
+                        "fromProperty": "Tap",
+                        "toId": "deefb48b-94c3-9c16-3d0d-df82327ff465",
+                        "toProperty": "navigate"
                     }
                 ],
                 "roots": [
@@ -17447,10 +17447,10 @@
                         "id": "6c07e4df-8164-ede7-4d54-e60e96541f24",
                         "type": "Page Navigation",
                         "label": "Empty page",
-                        "x": 1674.4851149429383,
+                        "x": 1675.4851149429383,
                         "y": 720.2975315860832,
                         "parameters": {
-                            "destination": "/EmptyPage"
+                            "destination": "/NI_pages/NI_flightinfo"
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -17473,6 +17473,18 @@
                                 "index": 1
                             }
                         ],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "deefb48b-94c3-9c16-3d0d-df82327ff465",
+                        "type": "Page Navigation",
+                        "x": 1678.878675427409,
+                        "y": 1113.5818071771355,
+                        "parameters": {
+                            "destination": "/NI_pages/NI_tripadvisor"
+                        },
+                        "ports": [],
                         "dynamicports": [],
                         "children": []
                     }
@@ -25303,14 +25315,7 @@
         {
             "name": "/For Test",
             "graph": {
-                "connections": [
-                    {
-                        "fromId": "a5aeb373-f9c3-72cf-6d6e-dcc089725362",
-                        "fromProperty": "TextGlobal.payload",
-                        "toId": "9f839616-29d5-66db-ee36-d82b03a585ef",
-                        "toProperty": "text"
-                    }
-                ],
+                "connections": [],
                 "roots": [
                     {
                         "id": "2626a13f-3242-ac6b-fa96-d43dbdf78179",
@@ -25341,7 +25346,7 @@
                                 "x": 20,
                                 "y": 92,
                                 "parameters": {
-                                    "text": "Not changed",
+                                    "text": "TEST PAGE",
                                     "alignX": "center",
                                     "alignY": "center",
                                     "color": "#000000",
@@ -25352,25 +25357,6 @@
                                 "children": []
                             }
                         ]
-                    },
-                    {
-                        "id": "a5aeb373-f9c3-72cf-6d6e-dcc089725362",
-                        "type": "Globals",
-                        "x": 119,
-                        "y": 389.5,
-                        "parameters": {},
-                        "ports": [
-                            {
-                                "name": "TextGlobal.payload",
-                                "plug": "input/output",
-                                "type": {
-                                    "name": "*"
-                                },
-                                "index": 1
-                            }
-                        ],
-                        "dynamicports": [],
-                        "children": []
                     }
                 ]
             }
@@ -25442,7 +25428,7 @@
                         "x": 1549.2408306284028,
                         "y": 621.1704373999901,
                         "parameters": {
-                            "title": "Weather Transit",
+                            "title": "Weather-Sun",
                             "transition": "none"
                         },
                         "ports": [],
@@ -25485,7 +25471,7 @@
                         "x": 1547.9817379774502,
                         "y": 454,
                         "parameters": {
-                            "topic": "/Rep/Weather"
+                            "topic": "/Rep/Weather-Sun"
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -25528,7 +25514,7 @@
                         "x": 845,
                         "y": 811.9689860139213,
                         "parameters": {
-                            "code": "var audio = new Audio('http://users.student.lth.se/dic12jsv/sounds/summer_birds.wav');\n\ndefine({\n    inputs: {\n        pageShowing: \"boolean\",\n        repeat: \"boolean\",\n        pageHiding: \"boolean\",\n        rate: \"number\"\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                audio.play();\n                var textToSpeak = \"The weather in Honkong is sunny today. No clouds to be seen. At lunch the temperature is expected to raise abowe 30 degrees celcius\";\n                var msgA = new SpeechSynthesisUtterance(textToSpeak);\n                msgA.rate= inputs.rate;\n                window.speechSynthesis.speak(msgA);\n            }\n            if(inputs.pageHiding){\n                    audio.pause();\n                    audio.load();\n                }\n    }\n});"
+                            "code": "var audio = new Audio('http://users.student.lth.se/dic12jsv/sounds/summer_birds.wav');\n\ndefine({\n    inputs: {\n        pageShowing: \"boolean\",\n        repeat: \"boolean\",\n        pageHiding: \"boolean\",\n        rate: \"number\"\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                audio.play();\n                var textToSpeak = \"At your transit, Hongkong, it is sunny today. No clouds to be seen. At lunch the temperature is expected to raise abowe 30 degrees celcius\";\n                var msgA = new SpeechSynthesisUtterance(textToSpeak);\n                msgA.rate= inputs.rate;\n                window.speechSynthesis.speak(msgA);\n            }\n            if(inputs.pageHiding){\n                    audio.pause();\n                    audio.load();\n                }\n    }\n});"
                         },
                         "ports": [],
                         "dynamicports": [
@@ -25670,6 +25656,12 @@
                         "fromProperty": "rate.value",
                         "toId": "f7c0cfbd-9bf0-5b0b-acc3-2e996125d975",
                         "toProperty": "rate"
+                    },
+                    {
+                        "fromId": "ca928a66-467a-fe35-b307-900840fa51e5",
+                        "fromProperty": "messageReceived",
+                        "toId": "f7c0cfbd-9bf0-5b0b-acc3-2e996125d975",
+                        "toProperty": "pageShowing"
                     }
                 ],
                 "roots": [
@@ -25680,7 +25672,7 @@
                         "x": 1066.494227898291,
                         "y": 654.1704373999901,
                         "parameters": {
-                            "title": "Weather Destination",
+                            "title": "Weather-Rain",
                             "transition": "none"
                         },
                         "ports": [],
@@ -25720,10 +25712,10 @@
                     {
                         "id": "ca928a66-467a-fe35-b307-900840fa51e5",
                         "type": "Receive Message",
-                        "x": 1063.2351352473383,
+                        "x": 1066.2351352473383,
                         "y": 487,
                         "parameters": {
-                            "topic": "/Rep/Weather"
+                            "topic": "/Rep/Weather-Rain"
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -25766,7 +25758,7 @@
                         "x": 366.76274627878286,
                         "y": 808.0566954218774,
                         "parameters": {
-                            "code": "var audio = new Audio('http://users.student.lth.se/dic12jsv/sounds/rainfall_converted.wav');\n\ndefine({\n    inputs: {\n        pageShowing: \"boolean\",\n        repeat: \"boolean\",\n        pageHiding: \"boolean\",\n        rate: \"number\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                audio.play();\n                var textToSpeak = \"Most parts becoming wet if rather cloudy, with rain returning to some areas from around midnight onwards. Light winds.\";\n                var msgA = new SpeechSynthesisUtterance(textToSpeak);\n                msgA.rate = inputs.rate;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([1000,500,1000]); // Add/adjust pattern when hardware is is place.\n            }\n            if(inputs.pageHiding){\n            audio.pause();\n            audio.load();\n        }\n    }\n});"
+                            "code": "var audio = new Audio('http://users.student.lth.se/dic12jsv/sounds/rainfall_converted.wav');\n\ndefine({\n    inputs: {\n        pageShowing: \"boolean\",\n        repeat: \"boolean\",\n        pageHiding: \"boolean\",\n        rate: \"number\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing){\n                audio.play();\n                var textToSpeak = \"Today, at destination, it will be cloudy and rather windy with further outbreaks of rain for all parts, locally heavy. The rain will also be interspersed with some drier spells at times.\";\n                var msgA = new SpeechSynthesisUtterance(textToSpeak);\n                msgA.rate = inputs.rate;\n                window.speechSynthesis.speak(msgA);\n                window.navigator.vibrate([1000,500,1000]); // Add/adjust pattern when hardware is is place.\n            }\n            if(inputs.pageHiding){\n            audio.pause();\n            audio.load();\n        }\n    }\n});"
                         },
                         "ports": [],
                         "dynamicports": [
@@ -26091,7 +26083,7 @@
                                                 "value": 90,
                                                 "unit": "%"
                                             },
-                                            "Label": "A to B",
+                                            "Label": "AA to B",
                                             "Id": "EA",
                                             "Color": "#ee462f"
                                         },
@@ -26363,8 +26355,8 @@
                     {
                         "id": "a2327501-a6e3-81cf-74ff-36e8ba7ea604",
                         "type": "Javascript2",
-                        "x": 898.259707286329,
-                        "y": 896.5545360525302,
+                        "x": 866.9286411401764,
+                        "y": 901.0304026448379,
                         "parameters": {
                             "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n        repeat: \"boolean\",\n    },\n    run: function(inputs, outputs) {\n            if(inputs.pageShowing || inputs.repeat){\n                var audio = new Audio('http://users.student.lth.se/dic12jsv/sounds/level2.wav');\n                audio.play();\n            }\n    }\n});"
                         },
@@ -26490,10 +26482,10 @@
                     {
                         "id": "3223974d-52ec-68e3-3f95-77703b543e93",
                         "type": "Javascript2",
-                        "x": 742.488309261814,
+                        "x": 743.9802647925832,
                         "y": 1209.255998158504,
                         "parameters": {
-                            "code": "define({\r\n    inputs: {\r\n        pageShow: \"boolean\",\r\n        cancelSpeak: \"boolean\",\r\n        text1: \"string\",\r\n        text2: \"string\",\r\n        text3: \"string\",\r\n        text4: \"string\",\r\n        rate: \"number\"\r\n    },\r\n    outputs: {\r\n        vib1: \"boolean\",\r\n        vib2: \"boolean\",\r\n        vib3: \"boolean\",\r\n        vib4: \"boolean\",\r\n    },\r\n\r\n    run: function(inputs, outputs) {\r\n            var self2=this;\r\n            var synth = window.speechSynthesis;\r\n            var infoMsg = new SpeechSynthesisUtterance(\"Browse the catalogue\");\r\n            var msg1 = new SpeechSynthesisUtterance(inputs.text1);\r\n            var msg2 = new SpeechSynthesisUtterance(inputs.text2);\r\n            var msg3 = new SpeechSynthesisUtterance(inputs.text3);\r\n            var msg4 = new SpeechSynthesisUtterance(inputs.text4);\r\n            \r\n            var speakRate = inputs.rate;\r\n            infoMsg.rate =speakRate;\r\n            msg1.rate =speakRate;\r\n            msg2.rate =speakRate;\r\n            msg3.rate =speakRate;\r\n            msg4.rate =speakRate;\r\n            \r\n            if(inputs.pageShow){\r\n                synth.speak(infoMsg);\r\n                synth.speak(msg1);\r\n                synth.speak(msg2);\r\n                synth.speak(msg3);\r\n                synth.speak(msg4);\r\n            }\r\n             \r\n               msg1.onstart = function(event){\r\n                self2.sendSignalOnOutput(\"vib1\");\r\n               }\r\n               msg2.onstart = function(event){\r\n                self2.sendSignalOnOutput(\"vib2\");\r\n               }\r\n               msg3.onstart = function(event){\r\n                self2.sendSignalOnOutput(\"vib3\");\r\n               }\r\n               msg4.onstart = function(event){\r\n                self2.sendSignalOnOutput(\"vib4\");\r\n               }\r\n    }\r\n});"
+                            "code": "define({\r\n    inputs: {\r\n        pageShow: \"boolean\",\r\n        cancelSpeak: \"boolean\",\r\n        text1: \"string\",\r\n        text2: \"string\",\r\n        text3: \"string\",\r\n        text4: \"string\",\r\n        rate: \"number\"\r\n    },\r\n    outputs: {\r\n        vib1: \"boolean\",\r\n        vib2: \"boolean\",\r\n        vib3: \"boolean\",\r\n        vib4: \"boolean\",\r\n    },\r\n\r\n    run: function(inputs, outputs) {\r\n            var self2=this;\r\n            var synth = window.speechSynthesis;\r\n            var infoMsg = new SpeechSynthesisUtterance(\"Browse the catalogue,,.\");\r\n            var msg1 = new SpeechSynthesisUtterance(inputs.text1);\r\n            var msg2 = new SpeechSynthesisUtterance(inputs.text2);\r\n            var msg3 = new SpeechSynthesisUtterance(inputs.text3);\r\n            var msg4 = new SpeechSynthesisUtterance(inputs.text4);\r\n            \r\n            var speakRate = inputs.rate;\r\n            infoMsg.rate =speakRate;\r\n            msg1.rate =speakRate;\r\n            msg2.rate =speakRate;\r\n            msg3.rate =speakRate;\r\n            msg4.rate =speakRate;\r\n            \r\n            if(inputs.pageShow){\r\n                synth.speak(infoMsg);\r\n                synth.speak(msg1);\r\n                synth.speak(msg2);\r\n                synth.speak(msg3);\r\n                synth.speak(msg4);\r\n            }\r\n             \r\n               msg1.onstart = function(event){\r\n                self2.sendSignalOnOutput(\"vib1\");\r\n               }\r\n               msg2.onstart = function(event){\r\n                self2.sendSignalOnOutput(\"vib2\");\r\n               }\r\n               msg3.onstart = function(event){\r\n                self2.sendSignalOnOutput(\"vib3\");\r\n               }\r\n               msg4.onstart = function(event){\r\n                self2.sendSignalOnOutput(\"vib4\");\r\n               }\r\n    }\r\n});"
                         },
                         "ports": [],
                         "dynamicports": [
@@ -27126,7 +27118,7 @@
                         "x": 541.0340353845917,
                         "y": 122.23957356472147,
                         "parameters": {
-                            "topic": "/Rep/MoviesAB"
+                            "topic": "/Rep/Movies A to B"
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -27534,7 +27526,7 @@
                         "type": "Page",
                         "label": "MoviesCD",
                         "x": 1604.1069630857883,
-                        "y": 645.5793761249297,
+                        "y": 642.7735923418029,
                         "parameters": {
                             "title": "Movies C to D",
                             "transition": "none"
@@ -27835,7 +27827,7 @@
                         "x": 1517.9461877657745,
                         "y": 468.61729819907646,
                         "parameters": {
-                            "topic": "/Rep/MoviesCD"
+                            "topic": "/Rep/Movies C to D"
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -28363,7 +28355,7 @@
                                                 "value": 90,
                                                 "unit": "%"
                                             },
-                                            "Label": "Enchanted",
+                                            "Label": "Edge of tomorrow",
                                             "Id": "EB"
                                         },
                                         "ports": [],
@@ -28602,7 +28594,7 @@
                         "x": 1306.3279673404484,
                         "y": 333.83664590437456,
                         "parameters": {
-                            "topic": "/Rep/MoviesEF"
+                            "topic": "/Rep/Movies E to F"
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -28642,7 +28634,7 @@
                     {
                         "id": "065ba389-b0f4-e368-28c9-6cf9d3921bb3",
                         "type": "Page Navigation",
-                        "x": 1771.5188315937453,
+                        "x": 1770.5033246007058,
                         "y": 990.045980418899,
                         "parameters": {
                             "destination": "/MoviesButtonSerch/MoviesCD"
@@ -28850,7 +28842,7 @@
                     {
                         "id": "dab2f90e-4cad-2016-dbcd-e852979f5d04",
                         "type": "Page Navigation",
-                        "x": 1773.8595974029986,
+                        "x": 1776.9061183821166,
                         "y": 863.6322466658196,
                         "parameters": {
                             "destination": "/MoviePlayback"
@@ -29048,7 +29040,7 @@
                         "id": "586488c6-65f9-9116-cb8d-c8473ce86409",
                         "type": "Page",
                         "label": "MoviesGH",
-                        "x": 1080.46079956067,
+                        "x": 1079.46079956067,
                         "y": 331.7383351568707,
                         "parameters": {
                             "title": "Movies G to H",
@@ -29350,7 +29342,7 @@
                         "x": 994.04039197622,
                         "y": 154.7762572310174,
                         "parameters": {
-                            "topic": "/Rep/MoviesGH"
+                            "topic": "/Rep/Movies G to H"
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -29832,6 +29824,12 @@
                         "fromProperty": "pageShowing",
                         "toId": "ecbd9c8e-6615-4edb-dd5f-66037d90d4f2",
                         "toProperty": "pageShowing"
+                    },
+                    {
+                        "fromId": "c3a44c9b-6bca-2863-a73a-0c59b8ba7b86",
+                        "fromProperty": "pageHiding",
+                        "toId": "ecbd9c8e-6615-4edb-dd5f-66037d90d4f2",
+                        "toProperty": "pageHiding"
                     }
                 ],
                 "roots": [
@@ -29863,7 +29861,7 @@
                                 "x": 20,
                                 "y": 128,
                                 "parameters": {
-                                    "text": "You are now\nplaying the movie\nEnchanted",
+                                    "text": "You are now\nEdge of tomorrow",
                                     "color": "#000000",
                                     "alignX": "center",
                                     "alignY": "center",
@@ -29882,7 +29880,7 @@
                         "x": 896,
                         "y": 480,
                         "parameters": {
-                            "code": "define({\n    inputs: {\n        pageShowing: \"boolean\"\n    },\n    outputs: {\n    },\n    setup: function(inputs, outputs) {\n\n    },\n    run: function(inputs, outputs) {\n        if(inputs.pageShowing){\n            window.speechSynthesis.cancel();\n                var msgA = new SpeechSynthesisUtterance(\"You are now playing the movie Enchanted.\");\n                msgA.rate = 1.0;\n                window.speechSynthesis.speak(msgA);\n        }\n    }\n});"
+                            "code": "var projector = new Audio(\"http://users.student.lth.se/dic12jsv/sounds/effects/projector.wav\");\n\ndefine({\n    inputs: {\n        pageShowing: \"boolean\",\n        pageHiding: \"boolean\"\n    },\n    outputs: {\n    },\n    setup: function(inputs, outputs) {\n\n    },\n    run: function(inputs, outputs) {\n        if(inputs.pageShowing){\n            projector.play();\n            window.speechSynthesis.cancel();\n                var msgA = new SpeechSynthesisUtterance(\"You are now playing the movie Edge of tomorrow.\");\n                msgA.rate = 1.0;\n                window.speechSynthesis.speak(msgA);\n        }\n        if(inputs.pageHiding){\n            projector.pause();\n            projector.load();\n        }\n    }\n});"
                         },
                         "ports": [],
                         "dynamicports": [
@@ -29894,6 +29892,15 @@
                                 },
                                 "group": "Inputs",
                                 "index": 2
+                            },
+                            {
+                                "name": "pageHiding",
+                                "plug": "input",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "group": "Inputs",
+                                "index": 3
                             }
                         ],
                         "children": []
@@ -30029,8 +30036,8 @@
                             {
                                 "id": "99aa7b4f-b7af-4485-f22f-cc9ba4f211f7",
                                 "type": "Rectangle",
-                                "x": 132,
-                                "y": 460,
+                                "x": 473.5,
+                                "y": 682.5,
                                 "parameters": {},
                                 "ports": [],
                                 "dynamicports": [],
@@ -30040,8 +30047,8 @@
                                 "id": "e7f234f8-2832-32e0-ed90-69a0c240679a",
                                 "type": "Text",
                                 "version": 2,
-                                "x": 20,
-                                "y": 128,
+                                "x": 473.5,
+                                "y": 728.5,
                                 "parameters": {
                                     "alignX": "center",
                                     "alignY": "center",
@@ -30565,6 +30572,198 @@
                         "y": 495,
                         "parameters": {
                             "topic": "/Rep/NI_science"
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    }
+                ]
+            }
+        },
+        {
+            "name": "/NI_pages/NI_tripadvisor",
+            "graph": {
+                "connections": [
+                    {
+                        "fromId": "13d7a545-c896-6d60-9287-17767ce3dac3",
+                        "fromProperty": "pageShowing",
+                        "toId": "c0b73c22-383c-9f57-bfa5-c0962aed09cd",
+                        "toProperty": "pageShowing"
+                    },
+                    {
+                        "fromId": "269d9ff7-e048-d2ec-9ce2-1226e7196485",
+                        "fromProperty": "messageReceived",
+                        "toId": "c0b73c22-383c-9f57-bfa5-c0962aed09cd",
+                        "toProperty": "pageShowing"
+                    }
+                ],
+                "roots": [
+                    {
+                        "id": "13d7a545-c896-6d60-9287-17767ce3dac3",
+                        "type": "Page",
+                        "x": 679.5,
+                        "y": 497.5,
+                        "parameters": {
+                            "title": "NI_tripad"
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": [
+                            {
+                                "id": "2ae80ae5-2fb8-8b55-fd80-d4b1ab6ed798",
+                                "type": "Rectangle",
+                                "x": 473.5,
+                                "y": 682.5,
+                                "parameters": {},
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": []
+                            },
+                            {
+                                "id": "a27a4cc3-156a-e3f0-e3d8-85bd25257819",
+                                "type": "Text",
+                                "version": 2,
+                                "x": 20,
+                                "y": 128,
+                                "parameters": {
+                                    "alignX": "center",
+                                    "alignY": "center",
+                                    "color": "#000000",
+                                    "text": "Tripadvisor\nis not implemented.\nPlease press return.",
+                                    "alignment": "center",
+                                    "fontSize": 80
+                                },
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "id": "c0b73c22-383c-9f57-bfa5-c0962aed09cd",
+                        "type": "Javascript2",
+                        "x": 993.5,
+                        "y": 532.5,
+                        "parameters": {
+                            "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n    },\n    outputs: {\n    },\n    setup: function(inputs, outputs) {\n\n    },\n    run: function(inputs, outputs) {\n        if(inputs.pageShowing){\n            window.speechSynthesis.cancel();\n            var text = \"Tripadvisor is not implemented. Please press return.\";\n                var msgA = new SpeechSynthesisUtterance(text);\n                msgA.rate = 1.0;\n                window.speechSynthesis.speak(msgA);\n        }\n    }\n});"
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "name": "pageShowing",
+                                "plug": "input",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "group": "Inputs",
+                                "index": 2
+                            }
+                        ],
+                        "children": []
+                    },
+                    {
+                        "id": "269d9ff7-e048-d2ec-9ce2-1226e7196485",
+                        "type": "Receive Message",
+                        "x": 662,
+                        "y": 368,
+                        "parameters": {
+                            "topic": "/Rep/NI_tripad"
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    }
+                ]
+            }
+        },
+        {
+            "name": "/NI_pages/NI_flightinfo",
+            "graph": {
+                "connections": [
+                    {
+                        "fromId": "dd354143-fea4-db48-31a1-cb2ee53ace86",
+                        "fromProperty": "pageShowing",
+                        "toId": "d516c32d-4ecb-0f14-891c-ee0f6c132dbb",
+                        "toProperty": "pageShowing"
+                    },
+                    {
+                        "fromId": "0930f6dc-779d-9238-b4d5-f7f78e90b5d0",
+                        "fromProperty": "messageReceived",
+                        "toId": "d516c32d-4ecb-0f14-891c-ee0f6c132dbb",
+                        "toProperty": "pageShowing"
+                    }
+                ],
+                "roots": [
+                    {
+                        "id": "dd354143-fea4-db48-31a1-cb2ee53ace86",
+                        "type": "Page",
+                        "x": 722.5,
+                        "y": 364.5,
+                        "parameters": {
+                            "title": "NI_flightinfo"
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": [
+                            {
+                                "id": "1ecbf427-9b34-9ae1-4731-5956e4286403",
+                                "type": "Rectangle",
+                                "x": 473.5,
+                                "y": 682.5,
+                                "parameters": {},
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": []
+                            },
+                            {
+                                "id": "382377ce-6f5c-0257-cf26-21069d68ea1e",
+                                "type": "Text",
+                                "version": 2,
+                                "x": 20,
+                                "y": 128,
+                                "parameters": {
+                                    "alignX": "center",
+                                    "alignY": "center",
+                                    "color": "#000000",
+                                    "text": "Flight info\nis not implemented.\nPlease press return.",
+                                    "alignment": "center",
+                                    "fontSize": 80
+                                },
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "id": "d516c32d-4ecb-0f14-891c-ee0f6c132dbb",
+                        "type": "Javascript2",
+                        "x": 1037.5,
+                        "y": 399.5,
+                        "parameters": {
+                            "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n    },\n    outputs: {\n    },\n    setup: function(inputs, outputs) {\n\n    },\n    run: function(inputs, outputs) {\n        if(inputs.pageShowing){\n            window.speechSynthesis.cancel();\n            var text = \"Flight info is not implemented. Please press return.\";\n                var msgA = new SpeechSynthesisUtterance(text);\n                msgA.rate = 1.0;\n                window.speechSynthesis.speak(msgA);\n        }\n    }\n});"
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "name": "pageShowing",
+                                "plug": "input",
+                                "type": {
+                                    "name": "boolean"
+                                },
+                                "group": "Inputs",
+                                "index": 2
+                            }
+                        ],
+                        "children": []
+                    },
+                    {
+                        "id": "0930f6dc-779d-9238-b4d5-f7f78e90b5d0",
+                        "type": "Receive Message",
+                        "x": 705,
+                        "y": 235,
+                        "parameters": {
+                            "topic": "/Rep/NI_flightinfo"
                         },
                         "ports": [],
                         "dynamicports": [],
