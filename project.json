@@ -277,7 +277,7 @@
                     {
                         "id": "f73f976a-3730-0a7d-c335-862615f38de1",
                         "type": "Javascript2",
-                        "x": 928.4677174306762,
+                        "x": 929.4832244237155,
                         "y": 276.192461161652,
                         "parameters": {
                             "code": "define({\n    inputs:{\n       startSearch: \"bolean\",\n       currPage: \"string\",\n       prevPage: \"string\",\n       currentRate: \"number\",\n    },\n    outputs: {\n        keyLeft: \"boolean\",\n        keyRight: \"boolean\",\n        keyDown: \"boolean\",\n        topLeft: \"boolean\",\n        topRight: \"boolean\",\n        bottomLeft: \"boolean\",\n        bottomRight: \"boolean\",\n        backHome: \"boolean\",\n        repeat: \"boolean\",\n        toSer: \"boolean\",\n     },\n    setup: function(inputs, outputs) {\n        var self = this;\n        var newRate;\n        var synth2 =  window.speechSynthesis;\n        var highAudio = new Audio('http://users.student.lth.se/dic12jsv/sounds/high.wav');\n        var lowAudio = new Audio('http://users.student.lth.se/dic12jsv/sounds/low.wav');\n        document.addEventListener(\"keydown\", function(e) {\n            if((e.keyCode === 101) ||(e.keyCode==53) ) {\n                synth2.cancel();\n                self.sendSignalOnOutput(\"topLeft\");\n            }\n            else if((e.keyCode === 102) || (e.keyCode==54)) {\n                synth2.cancel();\n                self.sendSignalOnOutput(\"topRight\");\n            }\n            else if((e.keyCode === 98)||(e.keyCode==50) ) {\n                    synth2.cancel();                \n                self.sendSignalOnOutput(\"bottomLeft\");\n            }\n            else if((e.keyCode === 99)||(e.keyCode==51)) {\n                synth2.cancel();\n                self.sendSignalOnOutput(\"bottomRight\");\n            }\n             else if((e.keyCode === 107)||(e.keyCode==38)) {\n                 // Increase speak rate\n                 if(inputs.currentRate < 9.5){\n                     highAudio.load();\n                     newRate = inputs.currentRate + 0.25;\n                     Noodl.setGlobalValue(\"rate.value\", newRate);\n                     highAudio.play();\n                     //console.log(\"New rate after button-press are: \" + newRate);\n                 }\n            }\n             else if((e.keyCode === 109)||(e.keyCode==40)) {\n                 // Decrease speak rate\n                if(inputs.currentRate > 0.5){\n                    lowAudio.load();\n                newRate = inputs.currentRate - 0.25;\n                Noodl.setGlobalValue(\"rate.value\", newRate);\n                lowAudio.play();\n                //console.log(\"New rate after button-press are: \" + newRate);\n                }\n            }\n            else if(e.keyCode === 111||(e.keyCode==111)) {\n                    synth2.cancel();\n                   if(inputs.prevPage===\"\"){\n                    var msgA = new SpeechSynthesisUtterance(\"This is Main Menu\");\n                    msgA.rate = inputs.currentRate;\n                    synth2.speak(msgA);\n                   self.sendSignalOnOutput(\"repeat\");\n\n                }else{\n                   var msgB = new SpeechSynthesisUtterance(\"This is \" + inputs.prevPage + \"   \");\n                    msgB.rate = inputs.currentRate;\n                    synth2.speak(msgB);\n                    \n                self.sendSignalOnOutput(\"backHome\");\n  \n  \n                }\n                \n              \n                }\n            \n            else if((e.keyCode === 106) ||(e.keyCode==106)) {\n                synth2.cancel();\n                self.sendSignalOnOutput(\"repeat\");\n            }\n            \n          \n        });\n\n}   \n    });\n    "
@@ -16492,7 +16492,7 @@
                         "x": -822.3446289632619,
                         "y": 401.06225753505805,
                         "parameters": {
-                            "value": 1.5
+                            "value": 1
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -26816,10 +26816,10 @@
                         "id": "0ad7f4c3-3877-a193-3e4f-ebd558b6e0e1",
                         "type": "Page",
                         "label": "MoviesAB",
-                        "x": 628.4544429690419,
-                        "y": 299.2016514905747,
+                        "x": 630.935237829285,
+                        "y": 300.44204892069627,
                         "parameters": {
-                            "title": "Movies A to B",
+                            "title": "MoviesAB",
                             "transition": "none"
                         },
                         "ports": [],
@@ -27118,7 +27118,7 @@
                         "x": 541.0340353845917,
                         "y": 122.23957356472147,
                         "parameters": {
-                            "topic": "/Rep/Movies A to B"
+                            "topic": "/Rep/MoviesAB"
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -27170,10 +27170,10 @@
                     {
                         "id": "cb5d88e7-f4f2-04db-74a8-e91d2f9c8b1f",
                         "type": "Receive Message",
-                        "x": 1359.5958394652407,
+                        "x": 1362.0766343254838,
                         "y": 727.1068079109845,
                         "parameters": {
-                            "topic": "/Movies A to B/3"
+                            "topic": "/MoviesAB/3"
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -27525,10 +27525,10 @@
                         "id": "620a554a-fced-b567-d883-cdbacb6e5315",
                         "type": "Page",
                         "label": "MoviesCD",
-                        "x": 1604.1069630857883,
+                        "x": 1602.1069630857883,
                         "y": 642.7735923418029,
                         "parameters": {
-                            "title": "Movies C to D",
+                            "title": "MoviesCD",
                             "transition": "none"
                         },
                         "ports": [],
@@ -27824,10 +27824,10 @@
                     {
                         "id": "9174f4ae-22df-518c-0626-988b1b075adf",
                         "type": "Receive Message",
-                        "x": 1517.9461877657745,
+                        "x": 1516.9461877657745,
                         "y": 468.61729819907646,
                         "parameters": {
-                            "topic": "/Rep/Movies C to D"
+                            "topic": "/Rep/MoviesCD"
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -27892,10 +27892,10 @@
                     {
                         "id": "2d578501-4f74-2755-2307-a99d1b26345e",
                         "type": "Receive Message",
-                        "x": 2202.4289040820213,
-                        "y": 1089.145000508729,
+                        "x": 2192.4289040820213,
+                        "y": 1082.145000508729,
                         "parameters": {
-                            "topic": "/Movies C to D/3"
+                            "topic": "/MoviesCD/3"
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -27904,10 +27904,10 @@
                     {
                         "id": "4503ffaf-c9d4-4a8d-d01e-c66373cf5afc",
                         "type": "Receive Message",
-                        "x": 2204.909698942265,
-                        "y": 1226.8291152522208,
+                        "x": 2203.909698942265,
+                        "y": 1225.8291152522208,
                         "parameters": {
-                            "topic": "/Movies C to D/4"
+                            "topic": "/MoviesCD/4"
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -28295,7 +28295,7 @@
                         "x": 1391.7483749248984,
                         "y": 510.7987238302278,
                         "parameters": {
-                            "title": "Movies E to F",
+                            "title": "MoviesEF",
                             "transition": "none"
                         },
                         "ports": [],
@@ -28594,7 +28594,7 @@
                         "x": 1306.3279673404484,
                         "y": 333.83664590437456,
                         "parameters": {
-                            "topic": "/Rep/Movies E to F"
+                            "topic": "/Rep/MoviesEF"
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -28661,7 +28661,7 @@
                         "x": 2039.5125375677076,
                         "y": 923.3876474609086,
                         "parameters": {
-                            "topic": "/Movies E to F/3"
+                            "topic": "/MoviesEF/3"
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -28673,7 +28673,7 @@
                         "x": 2042.233285851707,
                         "y": 1064.8665582288886,
                         "parameters": {
-                            "topic": "/Movies E to F/4"
+                            "topic": "/MoviesEF/4"
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -28857,7 +28857,7 @@
                         "x": 2046.8595974029986,
                         "y": 762.6322466658196,
                         "parameters": {
-                            "topic": "/Movies E to F/2"
+                            "topic": "/MoviesEF/2"
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -29043,7 +29043,7 @@
                         "x": 1079.46079956067,
                         "y": 331.7383351568707,
                         "parameters": {
-                            "title": "Movies G to H",
+                            "title": "MoviesGH",
                             "transition": "none"
                         },
                         "ports": [],
@@ -29342,7 +29342,7 @@
                         "x": 994.04039197622,
                         "y": 154.7762572310174,
                         "parameters": {
-                            "topic": "/Rep/Movies G to H"
+                            "topic": "/Rep/MoviesGH"
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -29397,7 +29397,7 @@
                         "x": 1731.6054062458174,
                         "y": 779.3855340491774,
                         "parameters": {
-                            "topic": "/Movies G to H/3"
+                            "topic": "/MoviesGH/3"
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -29839,7 +29839,7 @@
                         "x": 516,
                         "y": 437,
                         "parameters": {
-                            "title": "Enchanted Playback"
+                            "title": "EnchantedPlayback"
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -30783,7 +30783,9 @@
         "Default Device.renderer": "webgl",
         "BackButtom.rootComponent": "/HomeButtom",
         "Remote Control.rootComponent": "/HomeButtom",
-        "Vibrator.rootComponent": "/Vibrator"
+        "Vibrator.rootComponent": "/Vibrator",
+        "mqttUseExternalBroker": true,
+        "mqttBrokerUrl": "wss://a3ed28b4:cc7eb8b74a255a50@broker.shiftr.io"
     },
     "rootNodeId": "2626a13f-3242-ac6b-fa96-d43dbdf78179",
     "version": "1"
