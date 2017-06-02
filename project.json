@@ -17827,7 +17827,7 @@
                                                 "value": 90,
                                                 "unit": "%"
                                             },
-                                            "Label": "Pictures",
+                                            "Label": "Books",
                                             "Id": "D"
                                         },
                                         "ports": [],
@@ -18342,7 +18342,7 @@
                         "x": 1688.005563599933,
                         "y": 1412.7720688137265,
                         "parameters": {
-                            "destination": "/NI_pages/NI_pictures"
+                            "destination": "/NI_pages/NI_books"
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -30197,7 +30197,7 @@
             }
         },
         {
-            "name": "/NI_pages/NI_pictures",
+            "name": "/NI_pages/NI_books",
             "graph": {
                 "connections": [
                     {
@@ -30220,7 +30220,7 @@
                         "x": 419.5,
                         "y": 640.5,
                         "parameters": {
-                            "title": "NI_pictures"
+                            "title": "NI_books"
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -30245,7 +30245,7 @@
                                     "alignX": "center",
                                     "alignY": "center",
                                     "color": "#000000",
-                                    "text": "Pictures\nis not implemented.\nPlease press return.",
+                                    "text": "Books\nis not implemented.\nPlease press return.",
                                     "alignment": "center",
                                     "fontSize": 80
                                 },
@@ -30261,7 +30261,7 @@
                         "x": 732.5,
                         "y": 675.5,
                         "parameters": {
-                            "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n    },\n    outputs: {\n    },\n    setup: function(inputs, outputs) {\n\n    },\n    run: function(inputs, outputs) {\n        if(inputs.pageShowing){\n            window.speechSynthesis.cancel();\n            var text = \"Pictures is not implemented. Please press return.\";\n                var msgA = new SpeechSynthesisUtterance(text);\n                msgA.rate = 1.0;\n                window.speechSynthesis.speak(msgA);\n        }\n    }\n});"
+                            "code": "define({\n    inputs: {\n        pageShowing: \"boolean\",\n    },\n    outputs: {\n    },\n    setup: function(inputs, outputs) {\n\n    },\n    run: function(inputs, outputs) {\n        if(inputs.pageShowing){\n            window.speechSynthesis.cancel();\n            var text = \"Books is not implemented. Please press return.\";\n                var msgA = new SpeechSynthesisUtterance(text);\n                msgA.rate = 1.0;\n                window.speechSynthesis.speak(msgA);\n        }\n    }\n});"
                         },
                         "ports": [],
                         "dynamicports": [
@@ -30283,7 +30283,7 @@
                         "x": 401,
                         "y": 511,
                         "parameters": {
-                            "topic": "/Rep/NI_pictures"
+                            "topic": "/Rep/NI_books"
                         },
                         "ports": [],
                         "dynamicports": [],
